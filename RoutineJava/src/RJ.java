@@ -3,6 +3,8 @@ public class RJ {
     private int count;
     private int[] intArray;
     private double[] doubleArray;
+    private int[][] twoDimArray;
+    private double[][] twoDimArrayDoub;
     public RJ()
     {
 
@@ -41,6 +43,38 @@ public class RJ {
         count = c;
         intArray = iA;
         doubleArray = dA;
+    }
+    public RJ(double[][] twoDimAD)
+    {
+        twoDimArrayDoub = twoDimAD;
+    }
+    public RJ(int[][] twoDimAD)
+    {
+        twoDimAD = twoDimAD;
+    }
+    public RJ(int c, int[] iA, double[] dA, int[][] twoDimA)
+    {
+        count = c;
+        intArray = iA;
+        doubleArray = dA;
+        twoDimArray = twoDimA;
+    }
+
+    public RJ(int c, int[] iA, double[] dA, double[][] twoDimAD)
+    {
+        count = c;
+        intArray = iA;
+        doubleArray = dA;
+        twoDimArrayDoub = twoDimAD;
+    }
+    public RJ(int c, int[] iA, double[] dA, int[][] twoDimA, double[][] twoDimAD)
+    {
+        count = c;
+        intArray = iA;
+        doubleArray = dA;
+        twoDimArray = twoDimA;
+        twoDimArrayDoub = twoDimAD;
+
     }
 
     public boolean SearchArray(int[] arr,int number, int min, int max, int increment)
@@ -155,6 +189,18 @@ public class RJ {
             }
         }
         return numberFound;
+    }
+
+    public void PrintTwoDimensionalArray(int[][] arr)
+    {
+        for (int i = 0; i < arr.length; i++)
+        {
+            for (int j = 0; j < arr[0].length; j++)
+            {
+                System.out.print(arr[i][j] + " ");
+            }
+            System.out.println();
+        }
     }
     public void PrintArray(int[] arr)
     {
@@ -350,6 +396,15 @@ public class RJ {
     public double[] GetDouble()
     {
         return doubleArray;
+    }
+
+    public double[][] GetTwoDimArr()
+    {
+        return twoDimArrayDoub;
+    }
+    public int[][] GetTwoDimArrInt()
+    {
+        return twoDimArray;
     }
 
 

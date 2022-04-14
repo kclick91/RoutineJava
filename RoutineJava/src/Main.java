@@ -15,6 +15,7 @@ public class Main {
         int[][] twoDim = new int[][]{{2,3,5},{5,6,4}};
         System.out.println(rj.SearchforIntegerTwoDimensionalArray(twoDim, 6));
         System.out.println(rj.SearchforIntegerTwoDimensionalArray(twoDim, 1));
+        rj.PrintTwoDimensionalArray(twoDim);
 
         int count = 5;
         boolean bl = true;
