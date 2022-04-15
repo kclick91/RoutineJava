@@ -358,27 +358,44 @@ public class RJ {
 
     }
 
-    public void IncrementIfTrue(int num, boolean b, int inc)
+    public int IncrementIfTrue(int num, boolean b, int inc)
     {
         if (b == true)
         {
             num = num + inc;
         }
-        SetCount(num);
+        return num;
     }
 
-    public void IncrementIfFalse(int num, boolean b, int inc)
+    public int IncrementIfFalse(int num, boolean b, int inc)
     {
         if (b == false)
         {
             num = num + inc;
         }
-        SetCount(num);
+        return num;
     }
     public void IncrementCount(int amount)
     {
         count = count + amount;
     }
+
+    public void IncrementCountIfFalse(int amount, boolean b)
+    {
+        if (b == false)
+        {
+            count = count + amount;
+        }
+    }
+
+    public void IncrementCountIfTrue(int amount, boolean b)
+    {
+        if (b == true)
+        {
+            count = count + amount;
+        }
+    }
+
     public void SetCount(int c)
     {
         count = c;
@@ -406,6 +423,55 @@ public class RJ {
     {
         return twoDimArray;
     }
+
+    public int[] AddToEnd(int[] arr, int n)
+    {
+        int[] newArray = new int[arr.length + 1];
+        for (int i = 0; i < arr.length; i++)
+        {
+            newArray[i] = arr[i];
+        }
+        newArray[newArray.length - 1] = n;
+        return newArray;
+    }
+
+    public int[] AddToBeginning(int[] arr, int n)
+    {
+        int[] newArray = new int[arr.length + 1];
+        for (int i = newArray.length - 1; i > 0; i--)
+        {
+            newArray[i] = arr[i - 1];
+        }
+        newArray[0] = n;
+
+        return newArray;
+
+    }
+    public double[] AddToEnd(double[] arr, double n)
+    {
+        double[] newArray = new double[arr.length + 1];
+        for (int i = 0; i < arr.length; i++)
+        {
+            newArray[i] = arr[i];
+        }
+        newArray[newArray.length - 1] = n;
+        return newArray;
+    }
+
+    public double[] AddToBeginning(double[] arr, double n)
+    {
+        double[] newArray = new double[arr.length + 1];
+        for (int i = newArray.length - 1; i > 0; i--)
+        {
+            newArray[i] = arr[i - 1];
+        }
+        newArray[0] = n;
+
+        return newArray;
+
+    }
+
+
 
 
 }

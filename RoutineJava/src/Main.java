@@ -47,6 +47,41 @@ public class Main {
         System.out.println();
         rj.PrintArray(arThree);
 
+        int[] arrayOne = new int[]{7,4,6,2};
+        int[] arrayTwo = new int[]{5,4,6,1};
+        System.out.println();
+        System.out.println("Matched positions and values: " + rj.CountofMatchValueandPosition(arrayOne, arrayTwo));
+        boolean bool = false;
+        System.out.println(rj.IncrementIfFalse(2,bool, 2));
+        System.out.println(rj.GetCount());
+        int abc = 10;
+        System.out.println(rj.IncrementIfFalse(abc,bool,5));
+        rj.IncrementCountIfFalse(abc,bool);
+        System.out.println(rj.GetCount());
+
+
+        int[] testArray = new int[]{3,7,8,6,6,7};
+        rj.PrintArray(testArray);
+        System.out.println();
+        int[] newTestArray = rj.AddToBeginning(testArray, 5);
+        rj.PrintArray(newTestArray);
+        System.out.println();
+        int[] newNewTestArray = rj.AddToEnd(newTestArray, 10);
+        rj.PrintArray(newNewTestArray);
+        System.out.println();
+
+        double[] testArrayD = new double[]{3.1,7.7,8.4,6.1,6.7,7.25};
+        rj.PrintArray(testArrayD);
+        System.out.println();
+        double[] newTestArrayD = rj.AddToBeginning(testArrayD, 5.76);
+        rj.PrintArray(newTestArrayD);
+        System.out.println();
+        double[] newNewTestArrayD = rj.AddToEnd(newTestArrayD, 10.98);
+        rj.PrintArray(newNewTestArrayD);
+        System.out.println();
+
+
+
 
 
 
