@@ -447,6 +447,15 @@ public class RJ {
         return newArray;
 
     }
+    /*
+
+    public int[] Insert(int[] arr, int n, int loc)
+    {
+
+    }
+    */
+
+
     public double[] AddToEnd(double[] arr, double n)
     {
         double[] newArray = new double[arr.length + 1];
@@ -471,6 +480,73 @@ public class RJ {
 
     }
 
+    public int GetSum(int[] arr)
+    {
+        int sum = 0;
+        for (int i = 0; i < arr.length; i++)
+        {
+            sum = sum + arr[i];
+        }
+        return sum;
+    }
+
+    public double GetSum(double[] arr)
+    {
+        double sum = 0;
+        for (int i = 0; i < arr.length; i++)
+        {
+            sum = sum + arr[i];
+        }
+        return sum;
+    }
+
+
+    public void PrintArrayAndSum(int[] arr)
+    {
+        PrintArray(arr);
+        System.out.println();
+        System.out.println("Sum " + GetSum(arr));
+    }
+
+    public void PrintArrayAndSum(double[] arr)
+    {
+        PrintArray(arr);
+        System.out.println();
+        System.out.println("Sum: " + GetSum(arr));
+    }
+
+
+    public String Comparison(int[] arr, int[] arrTwo)
+    {
+        int count = 0;
+        int length = arr.length;
+        if (arr.length == arrTwo.length)
+        {
+            for (int i = 0; i < arr.length; i++)
+            {
+                if (arr[i] == arrTwo[i])
+                {
+                    count = count + 1;
+                }
+            }
+        }
+        else
+        {
+            System.out.println("Must have same array length.");
+        }
+        double percentage = ((double)count/(double)length) * 100;
+        return percentage + "%";
+    }
+
+
+
+
+    /*
+    public double[] Insert(double[] arr, double n, int loc)
+    {
+
+    }
+    */
 
 
 

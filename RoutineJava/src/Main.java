@@ -80,6 +80,21 @@ public class Main {
         rj.PrintArray(newNewTestArrayD);
         System.out.println();
 
+        rj.PrintArrayAndSum(testArray);
+        rj.PrintArrayAndSum(testArrayD);
+
+        //What percentage of the two arrays are the same
+        int[] first = new int[]{5,2,5,5,1,7,9,9,9,4,8,8,3,7,8,6};
+        int[] second = new int[]{5,2,2,5,1,7,8,9,9,9,4,8,8,3,7,2};
+        System.out.println(rj.Comparison(first, second));
+
+        int[] f = new int[]{7,4,4,5};
+        int[] fTwo = new int[]{7,4,3,5};
+        System.out.println(rj.Comparison(f, fTwo));
+
+
+
+
 
 
 
