@@ -541,12 +541,37 @@ public class RJ {
 
 
 
-    /*
+
+    public int[] Insert(int[] arr, int n, int loc)
+    {
+        int[] arrTwo = new int[arr.length + 1];
+        for (int i = 0; i < loc; i++)
+        {
+            arrTwo[i] = arr[i];
+        }
+        for (int i = loc; i < arrTwo.length; i++)
+        {
+            arrTwo[i] = arr[i - 1];
+        }
+        arrTwo[loc - 1] = n;
+        return arrTwo;
+    }
+
     public double[] Insert(double[] arr, double n, int loc)
     {
-
+        double[] arrTwo = new double[arr.length + 1];
+        for (int i = 0; i < loc; i++)
+        {
+            arrTwo[i] = arr[i];
+        }
+        for (int i = loc; i < arrTwo.length; i++)
+        {
+            arrTwo[i] = arr[i - 1];
+        }
+        arrTwo[loc - 1] = n;
+        return arrTwo;
     }
-    */
+
 
 
 

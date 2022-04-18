@@ -93,6 +93,12 @@ public class Main {
         System.out.println(rj.Comparison(f, fTwo));
 
 
+        int[] intArray = new int[]{5,8,3,3,4,8,5,6,2};
+        rj.PrintArrayAndSum(rj.Insert(intArray,1, 2));
+        double[] doubleArray = new double[]{9.5, 6.7, 1.7, 9.4, 3.1};
+        rj.PrintArrayAndSum(rj.Insert(doubleArray,5.33, 3));
+
+
 
 
 
