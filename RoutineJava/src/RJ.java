@@ -90,6 +90,20 @@ public class RJ {
         return isFound;
     }
 
+
+    public boolean SearchArray(String[] arr,String str, int min, int max, int increment)
+    {
+        boolean isFound = false;
+        for (int i = min; i < max; i+=increment)
+        {
+            if (arr[i].equals(str))
+            {
+                isFound = true;
+            }
+        }
+        return isFound;
+    }
+
     public boolean SearchArray(double[] arr,double number, int min, int max, int increment)
     {
         boolean isFound = false;
@@ -209,6 +223,14 @@ public class RJ {
             System.out.print(arr[i] + " ");
         }
     }
+    public void PrintArray(String[] arr)
+    {
+        for (int i = 0; i < arr.length; i++)
+        {
+            System.out.print(arr[i] + " ");
+        }
+    }
+
     public void PrintArray(double[] arr)
     {
         for (int i = 0; i < arr.length; i++)
@@ -447,6 +469,30 @@ public class RJ {
         return newArray;
 
     }
+
+    public String[] AddToEnd(String[] arr, String s)
+    {
+        String[] newArray = new String[arr.length + 1];
+        for (int i = 0; i < arr.length; i++)
+        {
+            newArray[i] = arr[i];
+        }
+        newArray[newArray.length - 1] = s;
+        return newArray;
+    }
+
+    public String[] AddToBeginning(String[] arr, String s)
+    {
+        String[] newArray = new String[arr.length + 1];
+        for (int i = newArray.length - 1; i > 0; i--)
+        {
+            newArray[i] = arr[i - 1];
+        }
+        newArray[0] = s;
+
+        return newArray;
+
+    }
     /*
 
     public int[] Insert(int[] arr, int n, int loc)
@@ -553,7 +599,22 @@ public class RJ {
         {
             arrTwo[i] = arr[i - 1];
         }
-        arrTwo[loc - 1] = n;
+        arrTwo[loc] = n;
+        return arrTwo;
+    }
+
+    public String[] Insert(String[] arr, String s, int loc)
+    {
+        String[] arrTwo = new String[arr.length + 1];
+        for (int i = 0; i < loc; i++)
+        {
+            arrTwo[i] = arr[i];
+        }
+        for (int i = loc; i < arrTwo.length; i++)
+        {
+            arrTwo[i] = arr[i - 1];
+        }
+        arrTwo[loc] = s;
         return arrTwo;
     }
 
@@ -568,7 +629,7 @@ public class RJ {
         {
             arrTwo[i] = arr[i - 1];
         }
-        arrTwo[loc - 1] = n;
+        arrTwo[loc] = n;
         return arrTwo;
     }
 

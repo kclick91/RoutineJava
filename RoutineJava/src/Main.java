@@ -98,6 +98,14 @@ public class Main {
         double[] doubleArray = new double[]{9.5, 6.7, 1.7, 9.4, 3.1};
         rj.PrintArrayAndSum(rj.Insert(doubleArray,5.33, 3));
 
+        String[] names = new String[]{"cat", "dog", "horse", "donkey"};
+        rj.PrintArray(names);
+        System.out.println();
+        System.out.println(rj.SearchArray(names, "donkey", 0, names.length, 1));
+        String[] namesNew = rj.Insert(names, "New_Input", 4);
+        rj.PrintArray(namesNew);
+
+
 
 
 
