@@ -105,6 +105,13 @@ public class Main {
         String[] namesNew = rj.Insert(names, "New_Input", 4);
         rj.PrintArray(namesNew);
 
+        //Compare using two different objects
+        RJ routineOne = new RJ(new int[]{3,6,7}, new double[]{1.5, 5.6});
+        RJ routineTwo = new RJ(new int[]{3,6,7}, new double[]{1.5,7.8});
+        System.out.println();
+        System.out.println(routineOne.Comparison(routineTwo.GetIntArray()));
+        System.out.println(routineOne.Comparison(routineTwo.GetDouble()));
+
 
 
 

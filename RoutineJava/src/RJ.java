@@ -639,6 +639,49 @@ public class RJ {
         System.out.println("Sum: " + GetSum(arr));
     }
 
+    public String Comparison(int[] arr)
+    {
+        int count = 0;
+        int length = arr.length;
+        if (arr.length == intArray.length)
+        {
+            for (int i = 0; i < arr.length; i++)
+            {
+                if (arr[i] == intArray[i])
+                {
+                    count = count + 1;
+                }
+            }
+        }
+        else
+        {
+            System.out.println("Must have same array length.");
+        }
+        double percentage = ((double)count/(double)length) * 100;
+        return percentage + "%";
+    }
+
+    public String Comparison(double[] arr)
+    {
+        int count = 0;
+        int length = arr.length;
+        if (arr.length == doubleArray.length)
+        {
+            for (int i = 0; i < arr.length; i++)
+            {
+                if (arr[i] == doubleArray[i])
+                {
+                    count = count + 1;
+                }
+            }
+        }
+        else
+        {
+            System.out.println("Must have same array length.");
+        }
+        double percentage = ((double)count/(double)length) * 100;
+        return percentage + "%";
+    }
 
     public String Comparison(int[] arr, int[] arrTwo)
     {
@@ -649,6 +692,28 @@ public class RJ {
             for (int i = 0; i < arr.length; i++)
             {
                 if (arr[i] == arrTwo[i])
+                {
+                    count = count + 1;
+                }
+            }
+        }
+        else
+        {
+            System.out.println("Must have same array length.");
+        }
+        double percentage = ((double)count/(double)length) * 100;
+        return percentage + "%";
+    }
+
+    public String Comparison(String[] arr)
+    {
+        int count = 0;
+        int length = arr.length;
+        if (arr.length == stringArray.length)
+        {
+            for (int i = 0; i < arr.length; i++)
+            {
+                if (arr[i] == stringArray[i])
                 {
                     count = count + 1;
                 }
