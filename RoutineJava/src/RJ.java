@@ -5,6 +5,7 @@ public class RJ {
     private double[] doubleArray;
     private int[][] twoDimArray;
     private double[][] twoDimArrayDoub;
+    public String[] stringArray;
     public RJ()
     {
 
@@ -74,6 +75,90 @@ public class RJ {
         doubleArray = dA;
         twoDimArray = twoDimA;
         twoDimArrayDoub = twoDimAD;
+
+    }
+
+    public RJ(String[] arrS)
+    {
+        stringArray = arrS;
+    }
+
+    public RJ(int c, String[] arrS)
+    {
+        count = c;
+        stringArray = arrS;
+    }
+
+    public RJ(int c, int[] iA, String[] arrS)
+    {
+        count = c;
+        intArray = iA;
+        stringArray = arrS;
+    }
+    public RJ(int c, double[] dA, String[] arrS)
+    {
+        count = c;
+        doubleArray = dA;
+        stringArray = arrS;
+    }
+    public RJ(int[] iA, double[] dA, String[] arrS)
+    {
+        intArray = iA;
+        doubleArray = dA;
+        stringArray = arrS;
+    }
+    public RJ(int[] iA, String[] arrS)
+    {
+        intArray = iA;
+        stringArray = arrS;
+    }
+    public RJ(double[] dA, String[] arrS)
+    {
+        doubleArray = dA;
+        stringArray = arrS;
+    }
+    public RJ(int c, int[] iA, double[] dA, String[] arrS)
+    {
+        count = c;
+        intArray = iA;
+        doubleArray = dA;
+        stringArray = arrS;
+    }
+    public RJ(double[][] twoDimAD, String[] arrS)
+    {
+        twoDimArrayDoub = twoDimAD;
+        stringArray = arrS;
+    }
+    public RJ(int[][] twoDimAD, String[] arrS)
+    {
+        twoDimAD = twoDimAD;
+        stringArray = arrS;
+    }
+    public RJ(int c, int[] iA, double[] dA, int[][] twoDimA, String[] arrS)
+    {
+        count = c;
+        intArray = iA;
+        doubleArray = dA;
+        twoDimArray = twoDimA;
+        stringArray = arrS;
+    }
+
+    public RJ(int c, int[] iA, double[] dA, double[][] twoDimAD, String[] arrS)
+    {
+        count = c;
+        intArray = iA;
+        doubleArray = dA;
+        twoDimArrayDoub = twoDimAD;
+        stringArray = arrS;
+    }
+    public RJ(int c, int[] iA, double[] dA, int[][] twoDimA, double[][] twoDimAD, String[] arrS)
+    {
+        count = c;
+        intArray = iA;
+        doubleArray = dA;
+        twoDimArray = twoDimA;
+        twoDimArrayDoub = twoDimAD;
+        stringArray = arrS;
 
     }
 
@@ -493,13 +578,6 @@ public class RJ {
         return newArray;
 
     }
-    /*
-
-    public int[] Insert(int[] arr, int n, int loc)
-    {
-
-    }
-    */
 
 
     public double[] AddToEnd(double[] arr, double n)
