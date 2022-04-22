@@ -507,6 +507,32 @@ public class RJ {
     {
         count = c;
     }
+
+    public void SetIntArray(int[] arr)
+    {
+        intArray = arr;
+    }
+
+    public void SetDoubleArray(double[] arr)
+    {
+        doubleArray = arr;
+    }
+
+    public void SetStringArray(String[] arr)
+    {
+        stringArray = arr;
+    }
+
+    public void SetIntTwo(int[][] arr)
+    {
+        twoDimArray = arr;
+    }
+
+    public void SetDoubleTwo(double[][] arr)
+    {
+        twoDimArrayDoub = arr;
+    }
+
     public int GetCount()
     {
         return count;
