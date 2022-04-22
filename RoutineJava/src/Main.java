@@ -132,6 +132,23 @@ public class Main {
         System.out.println(rjTest.PeekLast(peekTestArrayDouble));
 
 
+        //Next/Prev RJ
+        RJ rjZero = new RJ();
+        rjZero.SetIntArray(new int[]{2,1,8,5,5});
+        RJ rjOne = new RJ(new int[]{3,1,2,4,2});
+        RJ rjTwo = new RJ(new int[]{7,7,7,5,5});
+
+
+        rjOne.AddPrevRJ(rjZero);
+        rjOne.AddNextRJ(rjTwo);
+
+        rjOne.PrintArray(rjOne.GetPrevRJ().GetIntArray());
+        System.out.println();
+        rjOne.PrintArrayInt();
+        System.out.println();
+        rjOne.PrintArray(rjOne.GetNextRJ().GetIntArray());
+
+
 
 
 
