@@ -162,6 +162,46 @@ public class RJ {
 
     }
 
+    public int PeekFirst(int[] arr)
+    {
+        return arr[0];
+    }
+
+    public int PeekLast(int[] arr)
+    {
+        return arr[arr.length - 1];
+    }
+
+    public double PeekFirst(double[] arr)
+    {
+        return arr[0];
+    }
+
+    public double PeekLast(double[] arr)
+    {
+        return arr[arr.length - 1];
+    }
+
+    public int PeekFirst()
+    {
+        return intArray[0];
+    }
+
+    public int PeekLast()
+    {
+        return intArray[intArray.length - 1];
+    }
+
+    public double PeekFirstDouble()
+    {
+        return doubleArray[0];
+    }
+
+    public double PeekLastDouble()
+    {
+        return doubleArray[doubleArray.length - 1];
+    }
+
     public boolean SearchArray(int[] arr,int number, int min, int max, int increment)
     {
         boolean isFound = false;

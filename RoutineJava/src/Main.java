@@ -112,6 +112,29 @@ public class Main {
         System.out.println(routineOne.Comparison(routineTwo.GetIntArray()));
         System.out.println(routineOne.Comparison(routineTwo.GetDouble()));
 
+        System.out.println(routineOne.PeekFirst());
+        System.out.println(routineOne.PeekFirstDouble());
+        System.out.println(routineOne.PeekLast());
+        System.out.println(routineOne.PeekLastDouble());
+
+        System.out.println(routineTwo.PeekFirst());
+        System.out.println(routineTwo.PeekFirstDouble());
+        System.out.println(routineTwo.PeekLast());
+        System.out.println(routineTwo.PeekLastDouble());
+
+        int[] peekTestArray = new int[]{6,9,9,10,11,2};
+        double[] peekTestArrayDouble = new double[]{5.5,4.1,5.3,5.4,8.4,9.9,10.9,2.9,1.3,4.3};
+
+        RJ rjTest = new RJ();
+        System.out.println(rjTest.PeekFirst(peekTestArray));
+        System.out.println(rjTest.PeekLast(peekTestArray));
+        System.out.println(rjTest.PeekFirst(peekTestArrayDouble));
+        System.out.println(rjTest.PeekLast(peekTestArrayDouble));
+
+
+
+
+
 
 
 
