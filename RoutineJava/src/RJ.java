@@ -7,8 +7,9 @@ public class RJ {
     protected double[][] twoDimArrayDoub;
     protected String[] stringArray;
 
-    private RJ nextRJ;
-    private RJ prevRJ;
+    protected RJ nextRJ;
+    protected RJ prevRJ;
+
 
     public RJ()
     {
