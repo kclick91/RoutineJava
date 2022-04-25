@@ -1,11 +1,11 @@
 public class RJ {
 
-    private int count;
-    private int[] intArray;
-    private double[] doubleArray;
-    private int[][] twoDimArray;
-    private double[][] twoDimArrayDoub;
-    public String[] stringArray;
+    protected int count;
+    protected int[] intArray;
+    protected double[] doubleArray;
+    protected int[][] twoDimArray;
+    protected double[][] twoDimArrayDoub;
+    protected String[] stringArray;
 
     private RJ nextRJ;
     private RJ prevRJ;

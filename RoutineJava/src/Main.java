@@ -159,6 +159,11 @@ public class Main {
         System.out.println("Occurs: " + rjQWERTY.CountOccurrences(arrayForCountingDouble, 6.0));
         System.out.println("Occurs: " + rjQWERTY.CountOccurrencesRangeInclusive(arrayForCountingDouble,3.0, 6.0));
 
+        ProductSale ps = new ProductSale(new int[]{2,4,3,3,7,7,7,2,3}, new double[]{8.50,8.99,6.25,8.90,3.00,7.13, 4.99, 4.99, 2.99});
+        ps.PrintProductsAndPrices();
+
+
+
 
 
 
