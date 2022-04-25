@@ -1094,8 +1094,134 @@ public class RJ {
         return arrTwo;
     }
 
+    public int CountOccurrences(int[] arr, int n)
+    {
+        int count = 0;
+        for (int i = 0; i < arr.length; i++)
+        {
+            if(arr[i] == n)
+            {
+                count = count + 1;
+            }
+        }
+        return count;
+    }
+
+    public int CountOccurrences(double[] arr, double n)
+    {
+        int count = 0;
+        for (int i = 0; i < arr.length; i++)
+        {
+            if(arr[i] == n)
+            {
+                count = count + 1;
+            }
+        }
+        return count;
+    }
+
+    public int CountOccurrences(String[] arr, String s)
+    {
+        int count = 0;
+        for (int i = 0; i < arr.length; i++)
+        {
+            if(arr[i].equals(s))
+            {
+                count = count + 1;
+            }
+        }
+        return count;
+    }
+
+    public int CountOccurrences(int n)
+    {
+        int count = 0;
+        for (int i = 0; i < intArray.length; i++)
+        {
+            if(intArray[i] == n)
+            {
+                count = count + 1;
+            }
+        }
+        return count;
+    }
+
+    public int CountOccurrences(double n)
+    {
+        int count = 0;
+        for (int i = 0; i < doubleArray.length; i++)
+        {
+            if(doubleArray[i] == n)
+            {
+                count = count + 1;
+            }
+        }
+        return count;
+    }
 
 
+    public int CountOccurrences(String s)
+    {
+        int count = 0;
+        for (int i = 0; i < stringArray.length; i++)
+        {
+            if(stringArray[i].equals(s))
+            {
+                count = count + 1;
+            }
+        }
+        return count;
+    }
 
+    public int CountOccurrencesRangeInclusive(int low, int high)
+    {
+        int count = 0;
+        for (int i = 0; i < doubleArray.length; i++)
+        {
+            if(intArray[i] >= low && intArray[i] <= high)
+            {
+                count = count + 1;
+            }
+        }
+        return count;
+    }
 
+    public int CountOccurrencesRangeInclusive(double[] arr, double low, double high)
+    {
+        int count = 0;
+        for (int i = 0; i < arr.length; i++)
+        {
+            if(arr[i] >= low && arr[i] <= high)
+            {
+                count = count + 1;
+            }
+        }
+        return count;
+    }
+
+    public int CountOccurrencesRangeInclusive(int[] arr, int low, int high)
+    {
+        int count = 0;
+        for (int i = 0; i < arr.length; i++)
+        {
+            if(arr[i] >= low && arr[i] <= high)
+            {
+                count = count + 1;
+            }
+        }
+        return count;
+    }
+
+    public int CountOccurrencesRangeInclusive(double low, double high)
+    {
+        int count = 0;
+        for (int i = 0; i < doubleArray.length; i++)
+        {
+            if(doubleArray[i] >= low && doubleArray[i] <= high)
+            {
+                count = count + 1;
+            }
+        }
+        return count;
+    }
 }

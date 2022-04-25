@@ -149,10 +149,15 @@ public class Main {
         rjOne.PrintArray(rjOne.GetNextRJ().GetIntArray());
 
 
-
-
-
-
+        String[] arrayForCountingString = new String[]{"one", "two", "three", "one"};
+        int[] arrayForCountingInt = new int[]{3,8,8,7,2,3,3,3,7,8,5,5};
+        double[] arrayForCountingDouble = new double[]{6.4,3.5,6.0,6.0,2.3,1.25, 6.0};
+        System.out.println();
+        RJ rjQWERTY = new RJ();
+        System.out.println("Occurs: " + rjQWERTY.CountOccurrences(arrayForCountingString, "one"));
+        System.out.println("Occurs: " + rjQWERTY.CountOccurrences(arrayForCountingInt, 5));
+        System.out.println("Occurs: " + rjQWERTY.CountOccurrences(arrayForCountingDouble, 6.0));
+        System.out.println("Occurs: " + rjQWERTY.CountOccurrencesRangeInclusive(arrayForCountingDouble,3.0, 6.0));
 
 
 
