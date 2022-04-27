@@ -171,6 +171,12 @@ public class Main {
         rjrj.PrintArray(newStringArray);
 
 
+        //Compare int arrays in linked RJ objects
+        rjrj.SetIntArray(new int[]{4,5,5,4,2,2,3,9,9});
+        rjrj.AddNextRJ(new RJ(new int[]{3,5,5,4,2,2,3,7,9}));
+        System.out.println(rjrj.Comparison(rjrj.GetNextRJ().GetIntArray()));
+
+
 
 
 
