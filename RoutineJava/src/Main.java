@@ -176,6 +176,21 @@ public class Main {
         rjrj.AddNextRJ(new RJ(new int[]{3,5,5,4,2,2,3,7,9}));
         System.out.println(rjrj.Comparison(rjrj.GetNextRJ().GetIntArray()));
 
+        RJ rjSO = new RJ(new int[]{8,5,6,6});
+        RJ rjSOTwo = new RJ(new int[]{4,4,4,4});
+        System.out.println();
+        rjSO.PrintArrayInt();
+        rjSOTwo.PrintArrayInt();
+        System.out.println();
+        rjSO.SwapIntArray(rjSOTwo);
+        System.out.println("  |");
+        System.out.println("  |");
+        System.out.println("  v");
+        rjSO.PrintArrayInt();
+        rjSOTwo.PrintArrayInt();
+
+
+
 
 
 

@@ -1265,6 +1265,11 @@ public class RJ {
         return doubleArray;
     }
 
+    public String[] GetStringArray()
+    {
+        return stringArray;
+    }
+
     public double[][] GetTwoDimArr()
     {
         return twoDimArrayDoub;
@@ -1716,5 +1721,27 @@ public class RJ {
             }
         }
     }
+
+    public void SwapIntArray(RJ rj)
+    {
+        int[] temp = intArray;
+        SetIntArray(rj.GetIntArray());
+        rj.SetIntArray(temp);
+    }
+
+    public void SwapDoubleArray(RJ rj)
+    {
+        double[] temp = doubleArray;
+        SetDoubleArray(rj.GetDouble());
+        rj.SetDoubleArray(temp);
+    }
+
+    public void SwapStringArray(RJ rj)
+    {
+        String[] temp = stringArray;
+        SetStringArray(rj.GetStringArray());
+        rj.SetStringArray(temp);
+    }
+
 
 }
