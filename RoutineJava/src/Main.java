@@ -162,6 +162,20 @@ public class Main {
         ProductSale ps = new ProductSale(new int[]{2,4,3,3,7,7,7,2,3}, new double[]{8.50,8.99,6.25,8.90,3.00,7.13, 4.99, 4.99, 2.99});
         ps.PrintProductsAndPrices();
 
+        RJ rjrj = new RJ();
+        int[] newInt = rjrj.ReplaceAll(new int[]{5,5,3,5,8,8,7,1,2,1,3}, 5, 6);
+        rjrj.PrintArray(newInt);
+        double[] newDouble = rjrj.ReplaceAll(new double[]{5.2,5.4,3.1,5.7,8.1,8.2,7.9,1.3,2.8,1.1,3.7}, 5, 6);
+        rjrj.PrintArray(newDouble);
+        String[] newStringArray = rjrj.ReplaceAll(new String[]{"Front", "Next", "Next", "Next", "Last"}, "Next", "Medium");
+        rjrj.PrintArray(newStringArray);
+
+
+
+
+
+
+
 
 
 

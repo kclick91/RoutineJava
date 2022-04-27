@@ -576,6 +576,7 @@ public class RJ {
         {
             System.out.print(arr[i] + " ");
         }
+        System.out.println();
     }
 
     public void PrintArrayInt()
@@ -584,6 +585,7 @@ public class RJ {
         {
             System.out.print(intArray[i] + " ");
         }
+        System.out.println();
     }
     public void PrintArray(String[] arr)
     {
@@ -591,6 +593,7 @@ public class RJ {
         {
             System.out.print(arr[i] + " ");
         }
+        System.out.println();
     }
 
     public void PrintArrayStr()
@@ -599,6 +602,7 @@ public class RJ {
         {
             System.out.print(stringArray[i] + " ");
         }
+        System.out.println();
     }
 
     public void PrintArray(double[] arr)
@@ -607,6 +611,7 @@ public class RJ {
         {
             System.out.print(arr[i] + " ");
         }
+        System.out.println();
     }
 
     public void PrintArrayDoub()
@@ -615,6 +620,7 @@ public class RJ {
         {
             System.out.print(doubleArray[i] + " ");
         }
+        System.out.println();
     }
 
     public void SortArrayAscending(int[] array)
@@ -1225,4 +1231,72 @@ public class RJ {
         }
         return count;
     }
+
+    public int[] ReplaceAll(int[] arr, int n, int newN)
+    {
+          for (int j = 0; j < arr.length; j++)
+          {
+              if(arr[j] == n)
+              {
+                  arr[j] = newN;
+              }
+          }
+          return arr;
+    }
+
+    public double[] ReplaceAll(double[] arr, double n, double newN)
+    {
+        for (int j = 0; j < arr.length; j++)
+        {
+            if(arr[j] == n)
+            {
+                arr[j] = newN;
+            }
+        }
+        return arr;
+    }
+    public String[] ReplaceAll(String[] arr, String s, String newS)
+    {
+        for (int j = 0; j < arr.length; j++)
+        {
+            if(arr[j].equals(s))
+            {
+                arr[j] = newS;
+            }
+        }
+        return arr;
+    }
+
+    public void ReplaceAll(int n, int newN)
+    {
+        for (int j = 0; j < intArray.length; j++)
+        {
+            if(intArray[j] == n)
+            {
+                intArray[j] = newN;
+            }
+        }
+    }
+
+    public void ReplaceAll(double n, double newN)
+    {
+        for (int j = 0; j < doubleArray.length; j++)
+        {
+            if(doubleArray[j] == n)
+            {
+                doubleArray[j] = newN;
+            }
+        }
+    }
+    public void ReplaceAll(String s, String newS)
+    {
+        for (int j = 0; j < stringArray.length; j++)
+        {
+            if(stringArray[j].equals(s))
+            {
+                stringArray[j] = newS;
+            }
+        }
+    }
+
 }
