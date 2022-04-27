@@ -6,6 +6,7 @@ public class RJ {
     protected int[][] twoDimArray;
     protected double[][] twoDimArrayDoub;
     protected String[] stringArray;
+    private String name = "";
 
     protected RJ nextRJ;
     protected RJ prevRJ;
@@ -15,6 +16,7 @@ public class RJ {
     {
 
     }
+
 
     public RJ(int c)
     {
@@ -370,6 +372,422 @@ public class RJ {
         stringArray = arrS;
         prevRJ = pRJ;
         nextRJ = nRJ;
+
+    }
+
+    //Name
+
+    public RJ(String nam)
+    {
+        name = nam;
+    }
+
+
+    public RJ(int c, String nam)
+    {
+        count = c;
+        name = nam;
+    }
+
+    public RJ(int c, int[] iA, String nam)
+    {
+        count = c;
+        intArray = iA;
+        name = nam;
+    }
+    public RJ(int c, double[] dA, String nam)
+    {
+        count = c;
+        doubleArray = dA;
+        name = nam;
+    }
+    public RJ(int[] iA, double[] dA, String nam)
+    {
+        intArray = iA;
+        doubleArray = dA;
+        name = nam;
+
+    }
+    public RJ(int[] iA, String nam)
+    {
+        intArray = iA;
+        name = nam;
+    }
+    public RJ(double[] dA, String nam)
+    {
+        doubleArray = dA;
+        name = nam;
+    }
+    public RJ(int c, int[] iA, double[] dA, String nam)
+    {
+        count = c;
+        intArray = iA;
+        doubleArray = dA;
+        name = nam;
+    }
+    public RJ(double[][] twoDimAD, String nam)
+    {
+        twoDimArrayDoub = twoDimAD;
+        name = nam;
+    }
+    public RJ(int[][] twoDimAD, String nam)
+    {
+        twoDimAD = twoDimAD;
+        name = nam;
+    }
+    public RJ(int c, int[] iA, double[] dA, int[][] twoDimA, String nam)
+    {
+        count = c;
+        intArray = iA;
+        doubleArray = dA;
+        twoDimArray = twoDimA;
+        name = nam;
+    }
+
+    public RJ(int c, int[] iA, double[] dA, double[][] twoDimAD, String nam)
+    {
+        count = c;
+        intArray = iA;
+        doubleArray = dA;
+        twoDimArrayDoub = twoDimAD;
+        name = nam;
+    }
+    public RJ(int c, int[] iA, double[] dA, int[][] twoDimA, double[][] twoDimAD, String nam)
+    {
+        count = c;
+        intArray = iA;
+        doubleArray = dA;
+        twoDimArray = twoDimA;
+        twoDimArrayDoub = twoDimAD;
+        name = nam;
+    }
+
+    public RJ(String[] arrS, String nam)
+    {
+        stringArray = arrS;
+        name = nam;
+    }
+
+    public RJ(int c, String[] arrS, String nam)
+    {
+        count = c;
+        stringArray = arrS;
+        name = nam;
+    }
+
+    public RJ(int c, int[] iA, String[] arrS, String nam)
+    {
+        count = c;
+        intArray = iA;
+        stringArray = arrS;
+        name = nam;
+    }
+    public RJ(int c, double[] dA, String[] arrS, String nam)
+    {
+        count = c;
+        doubleArray = dA;
+        stringArray = arrS;
+        name = nam;
+    }
+    public RJ(int[] iA, double[] dA, String[] arrS, String nam)
+    {
+        intArray = iA;
+        doubleArray = dA;
+        stringArray = arrS;
+        name = nam;
+    }
+    public RJ(int[] iA, String[] arrS, String nam)
+    {
+        intArray = iA;
+        stringArray = arrS;
+        name = nam;
+    }
+    public RJ(double[] dA, String[] arrS, String nam)
+    {
+        doubleArray = dA;
+        stringArray = arrS;
+        name = nam;
+    }
+    public RJ(int c, int[] iA, double[] dA, String[] arrS, String nam)
+    {
+        count = c;
+        intArray = iA;
+        doubleArray = dA;
+        stringArray = arrS;
+        name = nam;
+    }
+    public RJ(double[][] twoDimAD, String[] arrS, String nam)
+    {
+        twoDimArrayDoub = twoDimAD;
+        stringArray = arrS;
+        name = nam;
+    }
+    public RJ(int[][] twoDimAD, String[] arrS, String nam)
+    {
+        twoDimAD = twoDimAD;
+        stringArray = arrS;
+        name = nam;
+    }
+    public RJ(int c, int[] iA, double[] dA, int[][] twoDimA, String[] arrS, String nam)
+    {
+        count = c;
+        intArray = iA;
+        doubleArray = dA;
+        twoDimArray = twoDimA;
+        stringArray = arrS;
+        name = nam;
+    }
+
+    public RJ(int c, int[] iA, double[] dA, double[][] twoDimAD, String[] arrS, String nam)
+    {
+        count = c;
+        intArray = iA;
+        doubleArray = dA;
+        twoDimArrayDoub = twoDimAD;
+        stringArray = arrS;
+        name = nam;
+    }
+    public RJ(int c, int[] iA, double[] dA, int[][] twoDimA, double[][] twoDimAD, String[] arrS, String nam)
+    {
+        count = c;
+        intArray = iA;
+        doubleArray = dA;
+        twoDimArray = twoDimA;
+        twoDimArrayDoub = twoDimAD;
+        stringArray = arrS;
+        name = nam;
+
+    }
+
+    public RJ(RJ pRJ, RJ nRJ, String nam)
+    {
+        prevRJ = pRJ;
+        nextRJ = nRJ;
+        name = nam;
+    }
+
+    public RJ(RJ pRJ, RJ nRJ, int c, String nam)
+    {
+        count = c;
+        prevRJ = pRJ;
+        nextRJ = nextRJ;
+        name = nam;
+    }
+
+    public RJ(RJ pRJ, RJ nRJ, int c, int[] iA, String nam)
+    {
+        count = c;
+        intArray = iA;
+        prevRJ = pRJ;
+        nextRJ = nRJ;
+        name = nam;
+    }
+    public RJ(RJ pRJ, RJ nRJ, int c, double[] dA, String nam)
+    {
+        count = c;
+        doubleArray = dA;
+        prevRJ = pRJ;
+        nextRJ = nRJ;
+        name = nam;
+    }
+    public RJ(RJ pRJ, RJ nRJ, int[] iA, double[] dA, String nam)
+    {
+        intArray = iA;
+        doubleArray = dA;
+        prevRJ = pRJ;
+        nextRJ = nRJ;
+        name = nam;
+    }
+    public RJ(RJ pRJ, RJ nRJ, int[] iA, String nam)
+    {
+        intArray = iA;
+        prevRJ = pRJ;
+        nextRJ = nRJ;
+        name = nam;
+    }
+    public RJ(RJ pRJ, RJ nRJ, double[] dA, String nam)
+    {
+        doubleArray = dA;
+        prevRJ = pRJ;
+        nextRJ = nRJ;
+        name = nam;
+    }
+    public RJ(RJ pRJ, RJ nRJ, int c, int[] iA, double[] dA, String nam)
+    {
+        count = c;
+        intArray = iA;
+        doubleArray = dA;prevRJ = pRJ;
+        nextRJ = nRJ;
+        name = nam;
+    }
+    public RJ(RJ pRJ, RJ nRJ, double[][] twoDimAD, String nam)
+    {
+        twoDimArrayDoub = twoDimAD;
+        prevRJ = pRJ;
+        nextRJ = nRJ;
+        name = nam;
+    }
+    public RJ(RJ pRJ, RJ nRJ, int[][] twoDimAD, String nam)
+    {
+        twoDimAD = twoDimAD;
+        prevRJ = pRJ;
+        nextRJ = nRJ;
+        name = nam;
+    }
+    public RJ(RJ pRJ, RJ nRJ, int c, int[] iA, double[] dA, int[][] twoDimA, String nam)
+    {
+        count = c;
+        intArray = iA;
+        doubleArray = dA;
+        twoDimArray = twoDimA;
+        prevRJ = pRJ;
+        nextRJ = nRJ;
+        name = nam;
+    }
+
+    public RJ(RJ pRJ, RJ nRJ, int c, int[] iA, double[] dA, double[][] twoDimAD, String nam)
+    {
+        count = c;
+        intArray = iA;
+        doubleArray = dA;
+        twoDimArrayDoub = twoDimAD;
+        prevRJ = pRJ;
+        nextRJ = nRJ;
+        name = nam;
+    }
+    public RJ(RJ pRJ, RJ nRJ, int c, int[] iA, double[] dA, int[][] twoDimA, double[][] twoDimAD, String nam)
+    {
+        count = c;
+        intArray = iA;
+        doubleArray = dA;
+        twoDimArray = twoDimA;
+        twoDimArrayDoub = twoDimAD;
+        prevRJ = pRJ;
+        nextRJ = nRJ;
+        name = nam;
+
+    }
+
+    public RJ(RJ pRJ, RJ nRJ, String[] arrS, String nam)
+    {
+        stringArray = arrS;
+        prevRJ = pRJ;
+        nextRJ = nRJ;
+        name = nam;
+    }
+
+    public RJ(RJ pRJ, RJ nRJ, int c, String[] arrS, String nam)
+    {
+        count = c;
+        stringArray = arrS;
+        prevRJ = pRJ;
+        nextRJ = nRJ;
+        name = nam;
+    }
+
+    public RJ(RJ pRJ, RJ nRJ, int c, int[] iA, String[] arrS, String nam)
+    {
+        count = c;
+        intArray = iA;
+        stringArray = arrS;
+        prevRJ = pRJ;
+        nextRJ = nRJ;
+        name = nam;
+    }
+    public RJ(RJ pRJ, RJ nRJ, int c, double[] dA, String[] arrS, String nam)
+    {
+        count = c;
+        doubleArray = dA;
+        stringArray = arrS;
+        prevRJ = pRJ;
+        nextRJ = nRJ;
+        name = nam;
+    }
+    public RJ(RJ pRJ, RJ nRJ, int[] iA, double[] dA, String[] arrS, String nam)
+    {
+        intArray = iA;
+        doubleArray = dA;
+        stringArray = arrS;
+        prevRJ = pRJ;
+        nextRJ = nRJ;
+        name = nam;
+    }
+    public RJ(RJ pRJ, RJ nRJ,int[] iA, String[] arrS, String nam)
+    {
+        intArray = iA;
+        stringArray = arrS;
+        prevRJ = pRJ;
+        nextRJ = nRJ;
+        name = nam;
+    }
+    public RJ(RJ pRJ, RJ nRJ, double[] dA, String[] arrS, String nam)
+    {
+        doubleArray = dA;
+        stringArray = arrS;
+        prevRJ = pRJ;
+        nextRJ = nRJ;
+        name = nam;
+    }
+    public RJ(RJ pRJ, RJ nRJ, int c, int[] iA, double[] dA, String[] arrS, String nam)
+    {
+        count = c;
+        intArray = iA;
+        doubleArray = dA;
+        stringArray = arrS;
+        prevRJ = pRJ;
+        nextRJ = nRJ;
+        name = nam;
+    }
+    public RJ(RJ pRJ, RJ nRJ, double[][] twoDimAD, String[] arrS, String nam)
+    {
+        twoDimArrayDoub = twoDimAD;
+        stringArray = arrS;
+        prevRJ = pRJ;
+        nextRJ = nRJ;
+        name = nam;
+    }
+    public RJ(RJ pRJ, RJ nRJ, int[][] twoDimAD, String[] arrS, String nam)
+    {
+        twoDimAD = twoDimAD;
+        stringArray = arrS;
+        prevRJ = pRJ;
+        nextRJ = nRJ;
+        name = nam;
+    }
+    public RJ(RJ pRJ, RJ nRJ, int c, int[] iA, double[] dA, int[][] twoDimA, String[] arrS, String nam)
+    {
+        count = c;
+        intArray = iA;
+        doubleArray = dA;
+        twoDimArray = twoDimA;
+        stringArray = arrS;
+        prevRJ = pRJ;
+        nextRJ = nRJ;
+        name = nam;
+    }
+
+    public RJ(RJ pRJ, RJ nRJ, int c, int[] iA, double[] dA, double[][] twoDimAD, String[] arrS, String nam)
+    {
+        count = c;
+        intArray = iA;
+        doubleArray = dA;
+        twoDimArrayDoub = twoDimAD;
+        stringArray = arrS;
+        prevRJ = pRJ;
+        nextRJ = nRJ;
+        name = nam;
+    }
+    public RJ(RJ pRJ, RJ nRJ, int c, int[] iA, double[] dA, int[][] twoDimA, double[][] twoDimAD, String[] arrS, String nam)
+    {
+        count = c;
+        intArray = iA;
+        doubleArray = dA;
+        twoDimArray = twoDimA;
+        twoDimArrayDoub = twoDimAD;
+        stringArray = arrS;
+        prevRJ = pRJ;
+        nextRJ = nRJ;
+        name = nam;
 
     }
 
