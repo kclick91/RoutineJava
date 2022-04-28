@@ -31,17 +31,21 @@ public class Main {
         int[] ar = new int[]{4,2,8,7};
         rj.SortArrayAscending(ar);
 
+
         rj.PrintArray(ar);
         int[] arTwo = new int[]{5,2,1,3,3,10,2,18,15,12};
         System.out.println();
         rj.SortArrayAscending(arTwo);
+
         rj.PrintArray(arTwo);
         double[] arThree = new double[]{4.7, 3.28, 5.79,6.12, 4.14};
         rj.SortArrayAscending(arThree);
+
         System.out.println();
         rj.PrintArray(arThree);
         rj.SortArrayDescending(arTwo);
         rj.SortArrayDescending(arThree);
+
         System.out.println();
         rj.PrintArray(arTwo);
         System.out.println();
@@ -188,6 +192,23 @@ public class Main {
         System.out.println("  v");
         rjSO.PrintArrayInt();
         rjSOTwo.PrintArrayInt();
+
+
+        System.out.println();
+        //Find the largest numbers in an array
+        RJ testRJ = new RJ();
+        int[] arr = new int[]{6,4,7,8,3,6,9};
+        testRJ.SortArrayDescending(arr);
+        System.out.println("Max: " + testRJ.PeekFirst(arr));
+
+        int[] countNumberofUnique = new int[]{6,1,1,3,2,2,5,8,8,9};
+        RJ counter = new RJ();
+        System.out.println(counter.CountUnique(countNumberofUnique));
+
+
+
+
+
 
 
 

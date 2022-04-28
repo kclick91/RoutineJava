@@ -1,3 +1,5 @@
+import java.util.Random;
+
 public class RJ {
 
     protected int count;
@@ -1113,6 +1115,86 @@ public class RJ {
         }
 
     }
+    public int[] SortArrayAscendingRet(int[] array)
+    {
+        while (IsSortedAscending(array) == false)
+        {
+            for (int i = 0; i < array.length - 1; i++)
+            {
+                if(array[i + 1] < array[i])
+                {
+                    int temp = array[i];
+                    array[i] = array[i + 1];
+                    array[i + 1] = temp;
+
+                }
+
+            }
+        }
+        return array;
+
+    }
+    public double[] SortArrayAscendingRet(double[] array)
+    {
+        while (IsSortedAscending(array) == false)
+        {
+            for (int i = 0; i < array.length - 1; i++)
+            {
+                if(array[i + 1] < array[i])
+                {
+                    double temp = array[i];
+                    array[i] = array[i + 1];
+                    array[i + 1] = temp;
+
+                }
+
+            }
+        }
+        return array;
+
+    }
+    public int[] SortArrayDescendingRet(int[] array)
+    {
+        while (IsSortedDescending(array) == false)
+        {
+            for (int i = 0; i < array.length - 1; i++)
+            {
+                if(array[i + 1] > array[i])
+                {
+                    int temp = array[i];
+                    array[i] = array[i + 1];
+                    array[i + 1] = temp;
+
+                }
+
+            }
+        }
+        return array;
+
+    }
+    public double[] SortArrayDescendingRet(double[] array)
+    {
+        while (IsSortedDescending(array) == false)
+        {
+            for (int i = 0; i < array.length - 1; i++)
+            {
+                if(array[i + 1] > array[i])
+                {
+                    double temp = array[i];
+                    array[i] = array[i + 1];
+                    array[i + 1] = temp;
+
+                }
+
+            }
+        }
+        return array;
+
+    }
+
+
+
+
     public int CountofMatchValueandPosition(int[] arrOne, int[] arrTwo)
     {
         int count = 0;
@@ -1742,6 +1824,89 @@ public class RJ {
         SetStringArray(rj.GetStringArray());
         rj.SetStringArray(temp);
     }
+
+    public int[] ReturnRandomInt(int size)
+    {
+        Random r = new Random();
+        int[] array = new int[size];
+        for (int i = 0; i < size; i++)
+        {
+            array[i] = r.nextInt();
+        }
+        return array;
+    }
+
+    public double[] ReturnRandomDouble(int size)
+    {
+        Random r = new Random();
+        double[] array = new double[size];
+        for (int i = 0; i < size; i++)
+        {
+            array[i] = r.nextDouble();
+        }
+        return array;
+
+    }
+
+    public int CountUnique(int[] arr)
+    {
+        int count = 1;
+        int[] newArr = SortArrayAscendingRet(arr);
+        int newLoc = 0;
+        for (int i = 1; i < newArr.length;i++)
+        {
+            if (newArr[i] == newArr[newLoc])
+            {
+                //nothing
+            }
+            else if (newArr[i] > newArr[newLoc])
+            {
+                count = count + 1;
+                newLoc = i;
+            }
+        }
+        return count;
+    }
+
+
+    public int CountUnique(double[] arr)
+    {
+        int count = 1;
+        double[] newArr = SortArrayAscendingRet(arr);
+        int newLoc = 0;
+        for (int i = 1; i < newArr.length;i++)
+        {
+            if (newArr[i] == newArr[newLoc])
+            {
+                //nothing
+            }
+            else if (newArr[i] > newArr[newLoc])
+            {
+                count = count + 1;
+                newLoc = i;
+            }
+        }
+        return count;
+    }
+
+    /*
+    public int[] GetByFrequency(int[] arr)
+    {
+        int[] newArr = SortArrayAscendingRet(arr);
+        for (int i = 0; i < newArr.length; i++)
+        {
+
+        }
+
+
+    }
+     */
+
+
+
+
+
+
 
 
 }
