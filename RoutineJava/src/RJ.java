@@ -13,6 +13,9 @@ public class RJ {
     protected RJ nextRJ;
     protected RJ prevRJ;
 
+    protected double independent;
+    protected double dependent;
+
 
     public RJ()
     {
@@ -793,6 +796,20 @@ public class RJ {
 
     }
 
+    public void SetIndependentAndDependent(int i, int d)
+    {
+        independent = i;
+        dependent = d;
+    }
+    public void SetIndependent(int i)
+    {
+        independent = i;
+    }
+    public void SetDependent(int d)
+    {
+        dependent = d;
+    }
+
     public void AddPrevRJ(RJ rj)
     {
         prevRJ = rj;
@@ -1061,6 +1078,56 @@ public class RJ {
         }
 
     }
+
+
+
+    /*
+    public int[][] SortTDArrayAscending(int[] array)
+    {
+
+        int[][] tdArr = new int[2][];
+        for (int i = 0; i < tdArr.length; i++)
+        {
+            tdArr[]
+        }
+        while (IsSortedAscending(array) == false)
+        {
+            for (int i = 0; i < array.length - 1; i++)
+            {
+                if(array[0][i + 1] < array[0][i])
+                {
+                    int temp = array[0][i];
+                    array[0][i] = array[0][i + 1];
+                    array[0][i + 1] = temp;
+                    int tempTwo = array[1][i];
+                    array[1][i] = array[1][i + 1];
+                    array[1][i + 1] = tempTwo;
+
+
+                }
+
+            }
+        }
+
+    }
+
+
+
+    public boolean IsSortedAscending(int[][] arr)
+    {
+        boolean isSorted = true;
+        for (int i = 0; i < (arr.length - 1); i++)
+        {
+            if (arr[0][i + 1] < arr[0][i])
+            {
+                isSorted = false;
+                break;
+            }
+        }
+        return isSorted;
+    }
+    */
+
     public void SortArrayAscending(double[] array)
     {
         while (IsSortedAscending(array) == false)
@@ -1889,24 +1956,68 @@ public class RJ {
         return count;
     }
 
-    /*
+
+    public int[][] CountedArray(int size)
+    {
+        int[][] twoDim = new int[size][2];
+
+        return twoDim;
+
+    }
+
+
+
+    //In Progress
     public int[] GetByFrequency(int[] arr)
     {
+        //arr has initial values
         int[] newArr = SortArrayAscendingRet(arr);
-        for (int i = 0; i < newArr.length; i++)
+        int count = CountUnique(arr);
+        int[] countOcc = new int[count];
+        int[][] countedTwoDim = CountedArray(count);
+        for (int i = 0; i < countOcc.length; i++)
         {
-
+            countOcc[i] = 0;
         }
+        int place = 0;
+        countOcc[place] = 1;
+        for (int i = 1; i < newArr.length; i++)
+        {
+            if (newArr[i] == newArr[i - 1])
+            {
+                countOcc[place] = countOcc[place] + 1;
+            }
+            else
+            {
+                place = place + 1;
+                countOcc[place] = countOcc[place] + 1;
+            }
+        }
+        countOcc = SortArrayAscendingRet(countOcc);
+        return countOcc;
+
+    }
+
+
+    public double ChangeFromRate(double changeDependent, double changeIndependent, double actualChangeIndependent)
+    {
+        return (changeDependent / changeIndependent) * actualChangeIndependent;
+    }
+
+    public double DifferenceFromAcutalChange(double start, double startTwo, double[] pair, double[] pairTwo, double ac)
+    {
+        double d = 0;
+
+        return ((ChangeFromRate(pair[0], pair[1], ac) + start) - (ChangeFromRate(pairTwo[0], pairTwo[1], ac) + startTwo));
 
 
     }
-     */
 
+    public double RatioFromActualChange(double start, double startTwo, double[] pair, double[] pairTwo, double ac)
+    {
+        double d = 0;
 
-
-
-
-
-
+        return ((ChangeFromRate(pair[0], pair[1], ac) + start) / (ChangeFromRate(pairTwo[0], pairTwo[1], ac) + startTwo));
+    }
 
 }

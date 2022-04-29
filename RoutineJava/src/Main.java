@@ -205,6 +205,25 @@ public class Main {
         RJ counter = new RJ();
         System.out.println(counter.CountUnique(countNumberofUnique));
 
+        //Currently prints out counts in ascending order
+        counter.PrintArray(counter.GetByFrequency(countNumberofUnique));
+
+        RJ indANDDep = new RJ();
+
+        System.out.println(rj.ChangeFromRate(1, 2, 10));
+        System.out.println(rj.ChangeFromRate(2.4, 1.3, 3.9));
+
+        double[] p = new double[]{3.4, 4.5};
+        double[] ptwo = new double[]{3.1, 8.7};
+
+        System.out.println("Ratio: " + indANDDep.RatioFromActualChange(0,0,p, ptwo, 3));
+        System.out.println("Difference: " + indANDDep.DifferenceFromAcutalChange(0,2, p, ptwo, 10.7));
+
+        
+
+
+
+
 
 
 
