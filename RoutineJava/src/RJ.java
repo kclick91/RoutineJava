@@ -982,19 +982,20 @@ public class RJ {
 
     public boolean SearchforIntegerTwoDimensionalArray(int[][] arr, double number)
     {
-        boolean numberFound = false;
+        boolean doubleFound = false;
         for (int i = 0; i < arr.length; i++)
         {
             for (int j = 0; j < arr[0].length; j++)
             {
-                if (number == arr[i][j])
+                if(arr[i][j] == number)
                 {
-                    numberFound = true;
+                    doubleFound = true;
                 }
             }
         }
-        return numberFound;
+        return doubleFound;
     }
+
 
     public void PrintTwoDimensionalArray(int[][] arr)
     {
@@ -1007,6 +1008,31 @@ public class RJ {
             System.out.println();
         }
     }
+
+    public void PrintTwoDimensionalArray(double[][] arr)
+    {
+        for (int i = 0; i < arr.length; i++)
+        {
+            for (int j = 0; j < arr[0].length; j++)
+            {
+                System.out.print(arr[i][j] + " ");
+            }
+            System.out.println();
+        }
+    }
+
+    public void PrintTwoDimensionalArray(boolean[][] arr)
+    {
+        for (int i = 0; i < arr.length; i++)
+        {
+            for (int j = 0; j < arr[0].length; j++)
+            {
+                System.out.print(arr[i][j] + " ");
+            }
+            System.out.println();
+        }
+    }
+
     public void PrintArray(int[] arr)
     {
         for (int i = 0; i < arr.length; i++)
@@ -1056,6 +1082,15 @@ public class RJ {
         for (int i = 0; i < doubleArray.length; i++)
         {
             System.out.print(doubleArray[i] + " ");
+        }
+        System.out.println();
+    }
+
+    public void PrintArray(boolean[] arr)
+    {
+        for (int i = 0; i < arr.length; i++)
+        {
+            System.out.print(arr[i] + " ");
         }
         System.out.println();
     }
@@ -1871,6 +1906,8 @@ public class RJ {
         }
     }
 
+
+
     public void SwapIntArray(RJ rj)
     {
         int[] temp = intArray;
@@ -1913,6 +1950,61 @@ public class RJ {
         }
         return array;
 
+    }
+
+    public boolean[] ReturnRandomBool(int size)
+    {
+        Random r = new Random();
+        boolean[] array = new boolean[size];
+        for (int i = 0; i < size; i++)
+        {
+            array[i] = r.nextBoolean();
+        }
+        return array;
+
+    }
+
+
+    public int[][] ReturnRandomTwoDimInt(int size, int sizeTwo)
+    {
+        Random r = new Random();
+        int[][] randTD = new int[size][sizeTwo];
+        for (int i = 0; i < size; i++)
+        {
+            for (int j = 0; j < sizeTwo; j++)
+            {
+                randTD[i][j] = r.nextInt();
+            }
+        }
+        return randTD;
+    }
+
+    public double[][] ReturnRandomTwoDimDouble(int size, int sizeTwo)
+    {
+        Random r = new Random();
+        double[][] randTD = new double[size][sizeTwo];
+        for (int i = 0; i < size; i++)
+        {
+            for (int j = 0; j < sizeTwo; j++)
+            {
+                randTD[i][j] = r.nextDouble();
+            }
+        }
+        return randTD;
+    }
+
+    public boolean[][] ReturnRandomTwoDimBool(int size, int sizeTwo)
+    {
+        Random r = new Random();
+        boolean[][] randTD = new boolean[size][sizeTwo];
+        for (int i = 0; i < size; i++)
+        {
+            for (int j = 0; j < sizeTwo; j++)
+            {
+                randTD[i][j] = r.nextBoolean();
+            }
+        }
+        return randTD;
     }
 
     public int CountUnique(int[] arr)

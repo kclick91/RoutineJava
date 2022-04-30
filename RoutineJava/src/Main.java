@@ -219,7 +219,16 @@ public class Main {
         System.out.println("Ratio: " + indANDDep.RatioFromActualChange(0,0,p, ptwo, 3));
         System.out.println("Difference: " + indANDDep.DifferenceFromAcutalChange(0,2, p, ptwo, 10.7));
 
-        
+
+        RJ rjTesttest = new RJ();
+        rjTesttest.PrintArray(rjTesttest.ReturnRandomBool(5));
+        rjTesttest.PrintTwoDimensionalArray(rjTesttest.ReturnRandomTwoDimInt(3,4));
+        rjTesttest.PrintTwoDimensionalArray(rjTesttest.ReturnRandomTwoDimDouble(7,4));
+        rjTesttest.PrintTwoDimensionalArray(rjTesttest.ReturnRandomTwoDimBool(2,2));
+
+
+
+
 
 
 
