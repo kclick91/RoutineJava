@@ -2096,7 +2096,7 @@ public class RJ {
         return (changeDependent / changeIndependent) * actualChangeIndependent;
     }
 
-    public double DifferenceFromAcutalChange(double start, double startTwo, double[] pair, double[] pairTwo, double ac)
+    public double DifferenceFromActualChange(double start, double startTwo, double[] pair, double[] pairTwo, double ac)
     {
         double d = 0;
 

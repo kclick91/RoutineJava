@@ -217,7 +217,7 @@ public class Main {
         double[] ptwo = new double[]{3.1, 8.7};
 
         System.out.println("Ratio: " + indANDDep.RatioFromActualChange(0,0,p, ptwo, 3));
-        System.out.println("Difference: " + indANDDep.DifferenceFromAcutalChange(0,2, p, ptwo, 10.7));
+        System.out.println("Difference: " + indANDDep.DifferenceFromActualChange(0,2, p, ptwo, 10.7));
 
 
         RJ rjTesttest = new RJ();
@@ -225,6 +225,11 @@ public class Main {
         rjTesttest.PrintTwoDimensionalArray(rjTesttest.ReturnRandomTwoDimInt(3,4));
         rjTesttest.PrintTwoDimensionalArray(rjTesttest.ReturnRandomTwoDimDouble(7,4));
         rjTesttest.PrintTwoDimensionalArray(rjTesttest.ReturnRandomTwoDimBool(2,2));
+
+        //A Game//
+
+
+
 
 
 
