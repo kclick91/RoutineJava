@@ -238,6 +238,11 @@ public class Main {
         System.out.println(testEul.ReLU(-.35));
         System.out.println(testEul.ReLU(.98));
 
+        RJ rjThree = new RJ();
+        System.out.println(rjThree.PercOutput(5.0, 2.0, 4));
+
+
+
 
 
 

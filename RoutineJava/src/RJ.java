@@ -1907,6 +1907,35 @@ public class RJ {
         }
     }
 
+    public void ReplaceSpecific(int[] intArr, int val, int loc)
+    {
+        intArr[loc] = val;
+    }
+
+
+    public void ReplaceSpecific(int val, int loc)
+    {
+        intArray[loc] = val;
+    }
+    public void ReplaceSpecific(double val, int loc)
+    {
+        doubleArray[loc] = val;
+    }
+
+    public void ReplaceSpecific(double[] doubArr, double val, int loc)
+    {
+        doubArr[loc] = val;
+    }
+
+    public void ReplaceSpecific(String val, int loc)
+    {
+        stringArray[loc] = val;
+    }
+
+    public void ReplaceSpecific(String[] stringArr, String val, int loc)
+    {
+        stringArr[loc] = val;
+    }
 
 
     public void SwapIntArray(RJ rj)
