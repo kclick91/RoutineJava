@@ -16,7 +16,7 @@ public class RJ {
     protected double independent;
     protected double dependent;
 
-    protected double CONSTANTEULERS = 2.7182818284590452353602874713;
+    protected final double  CONSTANTEULERS = 2.7182818284590452353602874713;
 
     public RJ()
     {
@@ -2135,6 +2135,10 @@ public class RJ {
         return ret;
     }
 
+    public double PercOutput(double W, double bias, double doub)
+    {
+        return W * doub + bias;
+    }
 
 
 }
