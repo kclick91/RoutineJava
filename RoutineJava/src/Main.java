@@ -230,6 +230,16 @@ public class Main {
 
 
 
+        //End Game//
+
+        RJ testEul = new RJ();
+        System.out.println(testEul.SigmoidFunction(.78));
+        System.out.println(testEul.SigmoidFunction(2));
+        System.out.println(testEul.ReLU(-.35));
+        System.out.println(testEul.ReLU(.98));
+
+
+
 
 
 

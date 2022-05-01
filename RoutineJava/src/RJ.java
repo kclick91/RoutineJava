@@ -16,6 +16,7 @@ public class RJ {
     protected double independent;
     protected double dependent;
 
+    protected double CONSTANTEULERS = 2.7182818284590452353602874713;
 
     public RJ()
     {
@@ -2111,5 +2112,29 @@ public class RJ {
 
         return ((ChangeFromRate(pair[0], pair[1], ac) + start) / (ChangeFromRate(pairTwo[0], pairTwo[1], ac) + startTwo));
     }
+
+    //S(x)
+
+
+    public double SigmoidFunction(double x)
+    {
+        return 1 / (1 + Math.pow(CONSTANTEULERS, -x));
+    }
+
+    public double ReLU(double x)
+    {
+        double ret;
+        if (x > 0)
+        {
+            ret = x;
+        }
+        else
+        {
+            ret = 0.0;
+        }
+        return ret;
+    }
+
+
 
 }
