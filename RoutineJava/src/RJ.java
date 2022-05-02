@@ -1917,6 +1917,24 @@ public class RJ {
     {
         intArray[loc] = val;
     }
+
+    public void ReplaceSpecificTD(int val , int locOne, int locTwo)
+    {
+        twoDimArray[locOne][locTwo] = val;
+    }
+
+    public void ReplaceSpecificTD(double val , int locOne, int locTwo)
+    {
+        twoDimArrayDoub[locOne][locTwo] = val;
+    }
+
+
+    //Two dimensional string array
+    public void ReplaceSpecificTD(String val, int locOne, int locTwo)
+    {
+
+    }
+
     public void ReplaceSpecific(double val, int loc)
     {
         doubleArray[loc] = val;

@@ -228,7 +228,32 @@ public class Main {
 
         //A Game//
 
-
+        RJ tictactoe = new RJ();
+        System.out.println("Tic-tac-toe");
+        System.out.println("------------");
+        //Replace specific in two dimensional arrays!!!
+        tictactoe.SetIntTwo(new int[][]{{0,0,0},{0,0,0},{0,0,0}});
+        tictactoe.PrintTwoDimensionalArray(tictactoe.GetTwoDimArrInt());
+        System.out.println("--------------------");
+        tictactoe.ReplaceSpecificTD(1, 1, 1);
+        tictactoe.PrintTwoDimensionalArray(tictactoe.GetTwoDimArrInt());
+        System.out.println("--------------------");
+        tictactoe.ReplaceSpecificTD(2, 0,1);
+        tictactoe.PrintTwoDimensionalArray(tictactoe.GetTwoDimArrInt());
+        System.out.println("--------------------");
+        tictactoe.ReplaceSpecificTD(1, 2, 0);
+        tictactoe.PrintTwoDimensionalArray(tictactoe.GetTwoDimArrInt());
+        System.out.println("--------------------");
+        tictactoe.ReplaceSpecificTD(2, 0, 2);
+        tictactoe.PrintTwoDimensionalArray(tictactoe.GetTwoDimArrInt());
+        System.out.println("--------------------");
+        tictactoe.ReplaceSpecificTD(1, 1, 2);
+        tictactoe.PrintTwoDimensionalArray(tictactoe.GetTwoDimArrInt());
+        System.out.println("--------------------");
+        tictactoe.ReplaceSpecificTD(2, 0, 0);
+        tictactoe.PrintTwoDimensionalArray(tictactoe.GetTwoDimArrInt());
+        System.out.println("--------------------");
+        
 
         //End Game//
 
@@ -240,6 +265,10 @@ public class Main {
 
         RJ rjThree = new RJ();
         System.out.println(rjThree.PercOutput(5.0, 2.0, 4));
+
+
+
+
 
 
 
