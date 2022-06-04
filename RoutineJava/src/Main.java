@@ -46,6 +46,21 @@ public class Main {
         rj.SortArrayDescending(arTwo);
         rj.SortArrayDescending(arThree);
 
+
+        //Merge Sort
+        System.out.println("MERGE SORT!!!");
+        int[] newArr = new int[]{2,6,7,9,4};
+        rj.mergeSort(newArr, newArr.length);
+        rj.PrintArray(newArr);
+        int[] newArrTwo = new int[]{8,4,6,3,2,7,8,1,15,24,21,5};
+        rj.mergeSort(newArrTwo, newArrTwo.length);
+        rj.PrintArray(newArrTwo);
+        rj.ReverseArrayInt(newArr);
+        rj.PrintArray(newArr);
+
+
+        //End of Merge Sort
+
         System.out.println();
         rj.PrintArray(arTwo);
         System.out.println();
@@ -231,7 +246,10 @@ public class Main {
         RJ tictactoe = new RJ();
         System.out.println("Tic-tac-toe");
         System.out.println("------------");
-        //Replace specific in two dimensional arrays!!!
+
+        //Check if positions are taken or not
+        //
+
         tictactoe.SetIntTwo(new int[][]{{0,0,0},{0,0,0},{0,0,0}});
         tictactoe.PrintTwoDimensionalArray(tictactoe.GetTwoDimArrInt());
         System.out.println("--------------------");
@@ -253,7 +271,7 @@ public class Main {
         tictactoe.ReplaceSpecificTD(2, 0, 0);
         tictactoe.PrintTwoDimensionalArray(tictactoe.GetTwoDimArrInt());
         System.out.println("--------------------");
-        
+
 
         //End Game//
 
