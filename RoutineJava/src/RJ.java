@@ -1116,7 +1116,7 @@ public class RJ {
     }
     //Credit to https://www.baeldung.com/java-merge-sort
     //
-    public static void mergeSort(int[] array, int n) {
+    public void mergeSort(int[] array, int n) {
         if (n < 2) {
             return;
         }
@@ -1136,7 +1136,7 @@ public class RJ {
         merge(array, l, r, mid, n - mid);
     }
 
-    public static void merge(int[] array, int[] l, int[] r, int left, int right) {
+    public void merge(int[] array, int[] l, int[] r, int left, int right) {
 
         int i = 0, j = 0, k = 0;
         while (i < left && j < right) {
@@ -1155,6 +1155,31 @@ public class RJ {
         }
     }
 
+    public void mergeSort() {
+        if (intArray != null)
+        {
+            int n = intArray.length;
+            if (n < 2) {
+                return;
+            }
+            int mid = n / 2;
+            int[] l = new int[mid];
+            int[] r = new int[n - mid];
+
+            for (int i = 0; i < mid; i++) {
+                l[i] =  intArray[i];
+            }
+            for (int i = mid; i < n; i++) {
+                r[i - mid] = intArray[i];
+            }
+            mergeSort(l, mid);
+            mergeSort(r, n - mid);
+
+            merge(intArray, l, r, mid, n - mid);
+        }
+    }
+
+
     public void PrintReversedArrayInt(int[] arrInt)
     {
         for (int i = arrInt.length - 1; i >= 0; i--)
@@ -1162,6 +1187,14 @@ public class RJ {
             System.out.print(arrInt[i] + " ");
         }
     }
+    public void PrintReversedArrayInt()
+    {
+        for (int i = intArray.length - 1; i >= 0; i--)
+        {
+            System.out.print(intArray[i] + " ");
+        }
+    }
+
     public void PrintReversedArrayDoub(double[] arrDoub)
     {
         for (int i = arrDoub.length - 1; i >= 0; i--)
@@ -1169,6 +1202,16 @@ public class RJ {
             System.out.print(arrDoub[i] + " ");
         }
     }
+
+    public void PrintReversedArrayDoub()
+    {
+        for (int i = doubleArray.length - 1; i >= 0; i--)
+        {
+            System.out.print(doubleArray[i] + " ");
+        }
+    }
+
+
 
     public int[] ReverseArrayInt(int[] arrInt)
     {
@@ -1180,7 +1223,17 @@ public class RJ {
         return revArrInt;
     }
 
-    public double[] ReverseDoubInt(double[] arrDoub)
+    public int[] ReverseArrayInt()
+    {
+        int[] revArrInt = new int[intArray.length];
+        for (int i = intArray.length - 1; i >= 0; i--)
+        {
+            revArrInt[(intArray.length - 1) - i] = intArray[i];
+        }
+        return revArrInt;
+    }
+
+    public double[] ReverseArrayDoub(double[] arrDoub)
     {
         double[] revArrDoub = new double[arrDoub.length];
         for (int i = arrDoub.length - 1; i >= 0; i--)
@@ -1190,7 +1243,15 @@ public class RJ {
         return revArrDoub;
     }
 
-
+    public double[] ReverseArrDoub()
+    {
+        double[] revArrDoub = new double[doubleArray.length];
+        for (int i = doubleArray.length - 1; i >= 0; i--)
+        {
+            revArrDoub[(doubleArray.length - 1) - i] = doubleArray[i];
+        }
+        return revArrDoub;
+    }
 
     /*
     public int[][] SortTDArrayAscending(int[] array)

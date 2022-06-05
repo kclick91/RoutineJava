@@ -58,6 +58,18 @@ public class Main {
         rj.ReverseArrayInt(newArr);
         rj.PrintArray(newArr);
 
+        rj.SetIntArray(new int[]{7,8,6,4,6,1,1,2});
+        rj.mergeSort();
+        rj.PrintArrayInt();
+        rj.ReverseArrayInt();
+
+        rj.SetDoubleArray(new double[]{4.6, 7.6, 5.5, 1.2, 1.1});
+        rj.PrintArrayDoub();
+        rj.mergeSort();
+        //rj.PrintReversedArrayDoub();
+        rj.PrintReversedArrayDoub();
+
+
 
         //End of Merge Sort
 
