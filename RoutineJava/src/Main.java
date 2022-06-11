@@ -70,7 +70,6 @@ public class Main {
         rj.PrintReversedArrayDoub();
 
 
-
         //End of Merge Sort
 
         System.out.println();
@@ -297,7 +296,26 @@ public class Main {
         System.out.println(rjThree.PercOutput(5.0, 2.0, 4));
 
 
+        //Playing Testing
+        System.out.println("PLAYING/TESTING");
+        rj.PrintArrayAndSum(new int[]{5,3,4,4});
+        RJ rjPT = new RJ(new int[]{6,5,3,4,4,5,9,9,7,3});
+        rjPT.ReplaceSpecific(5, 3);
+        rjPT.PrintArrayAndSum(rjPT.GetIntArray());
 
+        System.out.println("------");
+        int[] testIntArray = new int[]{4,4,3,7,19,34,23,5,8};
+        double[] testDoubArray = new double[]{4.7, 1.2, 8.8, 7,5, 1.1};
+        RJ routineJava = new RJ(testIntArray, testDoubArray);
+
+        //Merge sort double array!!!!
+        routineJava.mergeSort();
+        routineJava.PrintArrayInt();
+
+
+        routineJava.SetNames("Name", "Integer Array", "Double Array", "Two Dim Integer Array Name", "Two Dim Double Array Name", "String array name");
+        System.out.println();
+        System.out.println(routineJava.GetNameOfIntArray() + ", " + routineJava.GetNameOfDoubleArray() + ", " +  routineJava.GetNameOfTDIntArray() + ", " + routineJava.GetNameofTDDoubleArray() + ", " + routineJava.GetNameOfStringArray());
 
 
 

@@ -9,6 +9,11 @@ public class RJ {
     protected double[][] twoDimArrayDoub;
     protected String[] stringArray;
     private String name = "";
+    private String intarrayName = "";
+    private String doubleArrayName = "";
+    private String twodimarrayName = "";
+    private String twodimarrayDoubName = "";
+    private String stringarrayName = "";
 
     protected RJ nextRJ;
     protected RJ prevRJ;
@@ -795,6 +800,51 @@ public class RJ {
         nextRJ = nRJ;
         name = nam;
 
+    }
+
+    /*
+    private String name = "";
+    private String intarrayName = "";
+    private String doubleArrayName = "";
+    private String twodimarrayName = "";
+    private String twodimarrayDoubName = "";
+    private String stringarrayName = "";
+    */
+    public void SetNames(String n, String iaN, String dAN, String tdaN, String tdaDN, String saN)
+    {
+        name = n;
+        intarrayName = iaN;
+        doubleArrayName = dAN;
+        twodimarrayName = tdaN;
+        twodimarrayDoubName = tdaDN;
+        stringarrayName = saN;
+
+    }
+
+    //Access arrays by name
+
+    
+    public String GetNameOfIntArray()
+    {
+        return intarrayName;
+    }
+    public String GetNameOfDoubleArray()
+    {
+        return doubleArrayName;
+    }
+
+    public String GetNameOfTDIntArray()
+    {
+        return twodimarrayName;
+    }
+
+    public String GetNameofTDDoubleArray()
+    {
+        return twodimarrayDoubName;
+    }
+    public String GetNameOfStringArray()
+    {
+        return stringarrayName;
     }
 
     public void SetIndependentAndDependent(int i, int d)
@@ -2322,6 +2372,8 @@ public class RJ {
     {
         return W * doub + bias;
     }
+
+
 
 
 }
