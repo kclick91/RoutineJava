@@ -17,6 +17,8 @@ public class RJ {
 
     protected RJ nextRJ;
     protected RJ prevRJ;
+    protected RJ leftRJ;
+    protected RJ rightRJ;
 
     protected double independent;
     protected double dependent;
@@ -180,10 +182,20 @@ public class RJ {
 
     }
 
-    public RJ(RJ pRJ, RJ nRJ)
+    public RJ(boolean isTree, RJ pRJ, RJ nRJ)
     {
-        prevRJ = pRJ;
-        nextRJ = nRJ;
+        //previous/next
+        if (isTree == false)
+        {
+            prevRJ = pRJ;
+            nextRJ = nRJ;
+        }
+        //left/right
+        else if (isTree == true)
+        {
+            leftRJ = pRJ;
+            rightRJ = nRJ;
+        }
     }
 
     public RJ(RJ pRJ, RJ nRJ, int c)
@@ -879,6 +891,15 @@ public class RJ {
         return nextRJ;
     }
 
+    public RJ GetLeftRJ()
+    {
+        return leftRJ;
+    }
+    public RJ GetRightRJ()
+    {
+        return rightRJ;
+    }
+
     public int PeekFirst(int[] arr)
     {
         return arr[0];
@@ -1070,7 +1091,7 @@ public class RJ {
         }
     }
 
-    
+
 
     public void PrintTwoDimensionalArray(int[][] arr)
     {
@@ -1655,7 +1676,7 @@ public class RJ {
         return intArray;
     }
 
-    public double[] GetDouble()
+    public double[] GetDoubleArray()
     {
         return doubleArray;
     }
@@ -2176,7 +2197,7 @@ public class RJ {
     public void SwapDoubleArray(RJ rj)
     {
         double[] temp = doubleArray;
-        SetDoubleArray(rj.GetDouble());
+        SetDoubleArray(rj.GetDoubleArray());
         rj.SetDoubleArray(temp);
     }
 

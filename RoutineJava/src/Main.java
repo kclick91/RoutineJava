@@ -140,7 +140,7 @@ public class Main {
         RJ routineTwo = new RJ(new int[]{3,6,7}, new double[]{1.5,7.8});
         System.out.println();
         System.out.println(routineOne.Comparison(routineTwo.GetIntArray()));
-        System.out.println(routineOne.Comparison(routineTwo.GetDouble()));
+        System.out.println(routineOne.Comparison(routineTwo.GetDoubleArray()));
 
         System.out.println(routineOne.PeekFirst());
         System.out.println(routineOne.PeekFirstDouble());
@@ -316,6 +316,31 @@ public class Main {
         routineJava.SetNames("Name", "Integer Array", "Double Array", "Two Dim Integer Array Name", "Two Dim Double Array Name", "String array name");
         System.out.println();
         System.out.println(routineJava.GetNameOfIntArray() + ", " + routineJava.GetNameOfDoubleArray() + ", " +  routineJava.GetNameOfTDIntArray() + ", " + routineJava.GetNameofTDDoubleArray() + ", " + routineJava.GetNameOfStringArray());
+
+
+
+        System.out.println("1. Replace Specific 2. Sort");
+
+        routineJava.SetDoubleArray(new double[]{6.7,5.9,2.1,4.4, 6.9});
+        routineJava.PrintArrayDoub();
+        routineJava.ReplaceSpecific(3.2, 3);
+        routineJava.PrintArrayDoub();
+        routineJava.SortArrayAscending(routineJava.GetDoubleArray());
+        routineJava.PrintArrayDoub();
+
+        RJ linkOne = new RJ();
+        RJ linkTwo = new RJ();
+        RJ top = new RJ(true, linkOne, linkTwo);
+        linkOne.SetDoubleArray(new double[]{6.3,4.1,5.6,1.1,1.2,9.8});
+        linkTwo.SetDoubleArray(new double[]{3.3,1.1,1.9,1.2,5.2,5.6});
+        top.GetLeftRJ().PrintArrayDoub();
+        top.GetRightRJ().PrintArrayDoub();
+
+
+
+
+
+
 
 
 
