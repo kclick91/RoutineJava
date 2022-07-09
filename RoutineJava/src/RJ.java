@@ -2418,6 +2418,90 @@ public class RJ {
         return W * doub + bias;
     }
 
+    public int[] KeepLargestInt(int[] integerArr, int[] integerArrTwo)
+    {
+        int[] newArr = new int[integerArr.length];
+        if (integerArr.length != integerArrTwo.length)
+        {
+            System.out.println("Unequal Lengths");
+        }
+        for (int i = 0; i < integerArr.length; i++)
+        {
+            if(integerArr[i] > integerArrTwo[i])
+            {
+                newArr[i] = integerArr[i];
+            }
+            else
+            {
+                newArr[i] = integerArrTwo[i];
+            }
+        }
+        return newArr;
+    }
+    public int[] KeepSmallestInt(int[] integerArr, int[] integerArrTwo)
+    {
+        int[] newArr = new int[integerArr.length];
+        if (integerArr.length != integerArrTwo.length)
+        {
+            System.out.println("Unequal Lengths");
+        }
+        for (int i = 0; i < integerArr.length; i++)
+        {
+            if(integerArr[i] < integerArrTwo[i])
+            {
+                newArr[i] = integerArr[i];
+            }
+            else
+            {
+                newArr[i] = integerArrTwo[i];
+            }
+        }
+        return newArr;
+    }
+    public double[] KeepLargestDouble(double[] doubleArr, double[] doubleArrTwo)
+    {
+        double[] newArr = new double[doubleArr.length];
+        if (doubleArr.length != doubleArrTwo.length)
+        {
+            System.out.println("Unequal Lengths");
+        }
+        for (int i = 0; i < doubleArr.length; i++)
+        {
+            if(doubleArr[i] > doubleArrTwo[i])
+            {
+                newArr[i] = doubleArr[i];
+            }
+            else
+            {
+                newArr[i] = doubleArrTwo[i];
+            }
+        }
+        return newArr;
+    }
+    public double[] KeepSmallestDouble(double[] doubleArr, double[] doubleArrTwo)
+    {
+        double[] newArr = new double[doubleArr.length];
+        if (doubleArr.length != doubleArrTwo.length)
+        {
+            System.out.println("Unequal Lengths");
+        }
+        for (int i = 0; i < doubleArr.length; i++)
+        {
+            if(doubleArr[i] < doubleArrTwo[i])
+            {
+                newArr[i] = doubleArr[i];
+            }
+            else
+            {
+                newArr[i] = doubleArrTwo[i];
+            }
+        }
+        return newArr;
+    }
+
+
+
+
 
 
 

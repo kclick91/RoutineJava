@@ -336,6 +336,21 @@ public class Main {
         top.GetLeftRJ().PrintArrayDoub();
         top.GetRightRJ().PrintArrayDoub();
 
+        System.out.println("");
+        RJ routJava = new RJ(new int[]{5,8,9,4,5,5,2,7,2});
+        routJava.PrintArrayInt();
+        routJava.SetDoubleArray(routJava.KeepLargestDouble(linkOne.GetDoubleArray(), linkTwo.GetDoubleArray()));
+        
+        routJava.PrintArrayDoub();
+
+
+
+
+
+
+
+
+
 
 
 
