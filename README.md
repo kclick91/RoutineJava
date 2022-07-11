@@ -3,7 +3,7 @@
 Commonly used functions in Java.
 
 An RJ object can operate on its own data or other data.
-## RJ Class and constructors and methods
+## RJ Class constructors and methods
 
     public RJ()
    
