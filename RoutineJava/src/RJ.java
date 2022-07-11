@@ -1210,7 +1210,7 @@ public class RJ {
 
     }
     //Credit to https://www.baeldung.com/java-merge-sort
-    //
+    //Implement for double
     public void mergeSort(int[] array, int n) {
         if (n < 2) {
             return;
@@ -2497,6 +2497,50 @@ public class RJ {
             }
         }
         return newArr;
+    }
+
+    public void AddIntArrayToIntArray(int[] addInt)
+    {
+        int[] finalInt = new int[addInt.length];
+        if(addInt.length != intArray.length)
+        {
+            System.out.println("Lengths of Arrays Do Not Match.");
+            finalInt = null;
+
+        }
+        else
+        {
+
+            for (int i = 0; i < intArray.length; i++)
+            {
+                finalInt[i] = addInt[i] + intArray[i];
+            }
+        }
+        intArray = finalInt;
+
+
+
+    }
+
+    public void AddDoubToDoubArray(double[] addDoub)
+    {
+        double[] finalDoub = new double[addDoub.length];
+        if(addDoub.length != doubleArray.length)
+        {
+            System.out.println("Lengths of Arrays Do Not Match.");
+            finalDoub = null;
+
+        }
+        else
+        {
+
+            for (int i = 0; i < doubleArray.length; i++)
+            {
+                finalDoub[i] = addDoub[i] + doubleArray[i];
+            }
+        }
+
+        doubleArray = finalDoub;
     }
 
 

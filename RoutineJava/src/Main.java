@@ -2,7 +2,7 @@ public class Main {
 
     public static void main(String[] args)
     {
-        RJ rj = new RJ();
+        /*RJ rj = new RJ();
         int[] numbers = new int[]{3,2,3,7,8};
         System.out.println(rj.SearchArray(numbers, 7, 0,numbers.length, 1));
         System.out.println(rj.SearchArray(numbers, 9, 0,numbers.length, 1));
@@ -336,65 +336,28 @@ public class Main {
         top.GetLeftRJ().PrintArrayDoub();
         top.GetRightRJ().PrintArrayDoub();
 
-        System.out.println("");
+
         RJ routJava = new RJ(new int[]{5,8,9,4,5,5,2,7,2});
         routJava.PrintArrayInt();
         routJava.SetDoubleArray(routJava.KeepLargestDouble(linkOne.GetDoubleArray(), linkTwo.GetDoubleArray()));
-        
+
         routJava.PrintArrayDoub();
+        System.out.println("==========");
+        RJ jr = new RJ(new int[]{9,4,4,9,7});
+        jr.PrintArrayInt();
+        jr.AddIntArrayToIntArray(new int[]{6,7,7,6,5});
+        jr.PrintArrayInt();*/
 
+        RJ sameObject = new RJ(new int[]{8,7,9,9,1,2,9,4,3}, new double[]{7.7, 9.9, 9.5, 7.6, 1.6});
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        sameObject.PrintArrayInt();
+        sameObject.PrintArrayDoub();
+        sameObject.AddIntArrayToIntArray(new int[]{7,5,5,2,2,3,3,1,8});
+        sameObject.AddDoubToDoubArray(new double[]{4.4, 5.8, 6.6, 3.3, 2.1});
+        sameObject.PrintArrayInt();
+        sameObject.PrintArrayDoub();
+        sameObject.mergeSort();
+        sameObject.PrintArrayInt();
 
 
 
