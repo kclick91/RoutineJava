@@ -351,14 +351,25 @@ public class Main {
         RJ sameObject = new RJ(new int[]{8,7,9,9,1,2,9,4,3}, new double[]{7.7, 9.9, 9.5, 7.6, 1.6});
 
         sameObject.PrintArrayInt();
-        sameObject.PrintArrayDoub();
+        //sameObject.PrintArrayDoub();
         sameObject.AddIntArrayToIntArray(new int[]{7,5,5,2,2,3,3,1,8});
-        sameObject.AddDoubToDoubArray(new double[]{4.4, 5.8, 6.6, 3.3, 2.1});
+        //sameObject.AddDoubToDoubArray(new double[]{4.4, 5.8, 6.6, 3.3, 2.1});
         sameObject.PrintArrayInt();
-        sameObject.PrintArrayDoub();
+        //sameObject.PrintArrayDoub();
         sameObject.mergeSort();
         sameObject.PrintArrayInt();
-
+        sameObject.ReplaceSpecific(sameObject.GetIntArray(), 16, 5);
+        sameObject.PrintArrayInt();
+        sameObject.mergeSort();
+        sameObject.PrintArrayInt();
+        int[] arrOne = sameObject.MultiplyByScalarInteger(new int[]{7,4,9}, 3);
+        double[] arrTwo = sameObject.MultiplyByScalarDouble(new double[]{4.78, 6.41, 9.99}, 7);
+        sameObject.PrintArray(arrOne);
+        sameObject.PrintArray(arrTwo);
+        int[] integerArray = new int[]{5,6,1};
+        String[] array = {"One", "Two", "Three", "Four", "Five", "Six", "Seven"};
+        System.out.println(sameObject.GetSwitch(1,integerArray, array));
+        System.out.println(sameObject.GetSwitch(5, integerArray, array));
 
 
 
