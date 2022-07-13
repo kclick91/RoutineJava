@@ -676,4 +676,11 @@ An RJ object can operate on its own data or other data.
 
     public void AddDoubToDoubArray(double[] addDoub)
     
+    public int[] MultiplyByScalarInteger(int[] arr, int s)
+    
+
+    public double[] MultiplyByScalarDouble(double[] arr, int s)
+   
+
+    public String GetSwitch(int numb, int[] results, String[] messages)
 
