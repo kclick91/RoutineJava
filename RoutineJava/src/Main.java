@@ -372,6 +372,23 @@ public class Main {
         System.out.println(sameObject.GetSwitch(5, integerArray, array));
 
 
+        System.out.println("Multiply 2D Arrays");
+
+        sameObject.PrintTwoDimensionalArray(sameObject.Multiply(new int[][]{{2,2},{2,2}}, new int[][]{{2,2}, {2,2}}));
+
+
+        int[][] one = new int[][]{{2,3,3}, {4,1,1}};
+        int[][] two = new int[][]{{2,3,3}, {4,1,1}, {3,7,7}};
+        sameObject.Multiply(one, two);
+
+
+
+        sameObject.PrintTwoDimensionalArray(one);
+        System.out.println("==========");
+        sameObject.PrintTwoDimensionalArray(two);
+
+
+
 
 
 

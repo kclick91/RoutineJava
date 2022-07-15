@@ -2579,6 +2579,67 @@ public class RJ {
     }
 
 
+    //multiply matrices
+
+    public int[][] Multiply(int[][] first, int[][] second)
+    {
+        int one = first[0].length;
+        int two = second.length;
+        System.out.println("First: " + one);
+        System.out.println("Second " + two);
+
+        int[][] mult = new int[first.length][second[0].length];
+        for (int i = 0; i < first.length; i++)
+        {
+            for (int j = 0; j < second[0].length; j++)
+            {
+                mult[i][j] = 0;
+            }
+
+
+        }
+        if (one == two)
+        {
+            System.out.println("One equals Two.");
+            PrintTwoDimensionalArray(mult);
+            //First Row and First Column
+            //
+            //Last Row and Last Column
+            //i is row and j is Column
+            int[][] returnedArray = new int[first[0].length][second.length];
+
+           for (int i = 0; i < first[0].length; i++)
+           {
+               int collectedSum = 0;
+               for (int j = 0; j < second.length; j++)
+               {
+                   //System.out.print("Print Array ");
+                    //returnedArray[i][j]
+                   //For a 2 x 2, i = 0, j = 0:
+                   //(first Row,firstColumn) of first times (first Row, first Column) of second
+                   //plus
+                   //(first Row, Second Column) of first time (second Row, first Column) of second
+                   //
+
+
+
+               }
+               System.out.println();
+           }
+
+
+
+        }
+        else
+            {
+                System.out.println("Wrong dimensions");
+        }
+        return mult;
+
+    }
+
+
+
 
 
 
