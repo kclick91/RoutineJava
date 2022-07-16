@@ -380,7 +380,7 @@ public class Main {
         //int[][] one = new int[][]{{2,3,3}, {4,1,1}};
         //int[][] two = new int[][]{{2,3,3}, {4,1,1}, {3,7,7}};
         //sameObject.Multiply(one, two);
-        
+
 
         sameObject.PrintTwoDimensionalArray(sameObject.Multiply(new int[][]{{1,5},{3,4}},new int[][]{{3,2}, {4,1}}));
 

@@ -2650,6 +2650,73 @@ public class RJ {
 
     }
 
+    public double[][] Multiply(double[][] first, double[][] second)
+    {
+        int one = first[0].length;
+        int two = second.length;
+        System.out.println("First: " + one);
+        System.out.println("Second " + two);
+
+
+
+        double[][] mult = new double[first.length][second[0].length];
+        for (int i = 0; i < first.length; i++)
+        {
+            for (int j = 0; j < second[0].length; j++)
+            {
+                mult[i][j] = 0;
+            }
+
+
+        }
+        PrintTwoDimensionalArray(first);
+        PrintTwoDimensionalArray(second);
+        if (one == two)
+        {
+            System.out.println("One equals Two.");
+            PrintTwoDimensionalArray(mult);
+            double[][] returnedArray = new double[first[0].length][second.length];
+            System.out.println("first.length:" + first.length);
+            System.out.println("first[0].length:" + first[0].length);
+            System.out.println("second.length:" + second.length);
+            System.out.println("second[0].length:" + second[0].length);
+
+            for (int i = 0; i < first.length; i++)
+            {
+
+                for (int j = 0; j < second[0].length; j++)
+                {
+                    double collectedSum = 0;
+                    int count = 0;
+
+                    while(count < first[0].length)//or second.length
+                    {
+                        collectedSum = collectedSum + (first[i][count] * second[count][j]);
+                        count = count + 1;
+                        System.out.println(count);
+                    }
+                    System.out.println("Collected Sum:" + collectedSum);
+                    mult[i][j] = collectedSum;
+
+
+
+                }
+                System.out.println();
+
+            }
+
+
+
+        }
+        else
+        {
+            System.out.println("Wrong dimensions");
+        }
+        return mult;
+
+    }
+
+
     public int[][] AddTwoDimensionalArr(int[][] arr, int[][] arrTwo)
     {
         int[][] newArray = new int[arr.length][arrTwo.length];
@@ -2671,6 +2738,27 @@ public class RJ {
         return newArray;
     }
 
+
+    public double[][] AddTwoDimensionalArr(double[][] arr, double[][] arrTwo)
+    {
+        double[][] newArray = new double[arr.length][arrTwo.length];
+        if (newArray.length == arrTwo.length && arr[0].length == arrTwo[0].length)
+        {
+            for (int i = 0; i < arr.length; i++)
+            {
+                for (int j = 0; j < arr[0].length; j++)
+                {
+                    newArray[i][j] = arr[i][j] + arrTwo[i][j];
+                }
+            }
+
+        }
+        else
+        {
+            System.out.println("Mismatching dimensions");
+        }
+        return newArray;
+    }
 
 
 
