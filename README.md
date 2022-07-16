@@ -685,8 +685,13 @@ An RJ object can operate on its own data or other data.
     public String GetSwitch(int numb, int[] results, String[] messages)
     
     public int[][] Multiply(int[][] first, int[][] second)
+    
+    public double[][] Multiply(double[][] first, double[][] second)
 
     public int[][] AddTwoDimensionalArr(int[][] arr, int[][] arrTwo)
+    
+    public double[][] AddTwoDimensionalArr(double[][] arr, double[][] arrTwo)
+   
    
 
 
