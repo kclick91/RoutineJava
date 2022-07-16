@@ -1077,6 +1077,7 @@ public class RJ {
                 System.out.print(twoDimArray[i][j] + " ");
             }
             System.out.println();
+            System.out.print("-----");
         }
     }
     public void PrintTwoDimensionalArrayDoub()
@@ -1102,7 +1103,9 @@ public class RJ {
                 System.out.print(arr[i][j] + " ");
             }
             System.out.println();
+
         }
+        System.out.println("-----");
     }
 
     public void PrintTwoDimensionalArray(double[][] arr)
@@ -2588,6 +2591,8 @@ public class RJ {
         System.out.println("First: " + one);
         System.out.println("Second " + two);
 
+
+
         int[][] mult = new int[first.length][second[0].length];
         for (int i = 0; i < first.length; i++)
         {
@@ -2598,33 +2603,40 @@ public class RJ {
 
 
         }
+        PrintTwoDimensionalArray(first);
+        PrintTwoDimensionalArray(second);
         if (one == two)
         {
             System.out.println("One equals Two.");
             PrintTwoDimensionalArray(mult);
-            //First Row and First Column
-            //
-            //Last Row and Last Column
-            //i is row and j is Column
             int[][] returnedArray = new int[first[0].length][second.length];
+            System.out.println("first.length:" + first.length);
+            System.out.println("first[0].length:" + first[0].length);
+            System.out.println("second.length:" + second.length);
+            System.out.println("second[0].length:" + second[0].length);
 
-           for (int i = 0; i < first[0].length; i++)
+           for (int i = 0; i < first.length; i++)
            {
-               int collectedSum = 0;
-               for (int j = 0; j < second.length; j++)
+
+               for (int j = 0; j < second[0].length; j++)
                {
-                   //System.out.print("Print Array ");
-                    //returnedArray[i][j]
-                   //For a 2 x 2, i = 0, j = 0:
-                   //(first Row,firstColumn) of first times (first Row, first Column) of second
-                   //plus
-                   //(first Row, Second Column) of first time (second Row, first Column) of second
-                   //
+                   int collectedSum = 0;
+                   int count = 0;
+
+                   while(count < first[0].length)//or second.length
+                   {
+                        collectedSum = collectedSum + (first[i][count] * second[count][j]);
+                       count = count + 1;
+                       System.out.println(count);
+                   }
+                   System.out.println("Collected Sum:" + collectedSum);
+                   mult[i][j] = collectedSum;
 
 
 
                }
                System.out.println();
+
            }
 
 
@@ -2638,6 +2650,26 @@ public class RJ {
 
     }
 
+    public int[][] AddTwoDimensionalArr(int[][] arr, int[][] arrTwo)
+    {
+        int[][] newArray = new int[arr.length][arrTwo.length];
+        if (newArray.length == arrTwo.length && arr[0].length == arrTwo[0].length)
+        {
+            for (int i = 0; i < arr.length; i++)
+            {
+                for (int j = 0; j < arr[0].length; j++)
+                {
+                    newArray[i][j] = arr[i][j] + arrTwo[i][j];
+                }
+            }
+
+        }
+        else
+        {
+            System.out.println("Mismatching dimensions");
+        }
+        return newArray;
+    }
 
 
 

@@ -374,19 +374,21 @@ public class Main {
 
         System.out.println("Multiply 2D Arrays");
 
-        sameObject.PrintTwoDimensionalArray(sameObject.Multiply(new int[][]{{2,2},{2,2}}, new int[][]{{2,2}, {2,2}}));
+        //sameObject.PrintTwoDimensionalArray(sameObject.Multiply(new int[][]{{2,2},{2,2}}, new int[][]{{2,2}, {2,2}}));
 
 
-        int[][] one = new int[][]{{2,3,3}, {4,1,1}};
-        int[][] two = new int[][]{{2,3,3}, {4,1,1}, {3,7,7}};
-        sameObject.Multiply(one, two);
+        //int[][] one = new int[][]{{2,3,3}, {4,1,1}};
+        //int[][] two = new int[][]{{2,3,3}, {4,1,1}, {3,7,7}};
+        //sameObject.Multiply(one, two);
+        
 
+        sameObject.PrintTwoDimensionalArray(sameObject.Multiply(new int[][]{{1,5},{3,4}},new int[][]{{3,2}, {4,1}}));
 
+        sameObject.PrintTwoDimensionalArray(sameObject.Multiply(new int[][]{{1,5,4},{3,4,0}},new int[][]{{3,2}, {4,1}, {1,1}}));
 
-        sameObject.PrintTwoDimensionalArray(one);
-        System.out.println("==========");
-        sameObject.PrintTwoDimensionalArray(two);
+        sameObject.PrintTwoDimensionalArray(sameObject.Multiply(new int[][]{{6,5},{8,4}},new int[][]{{3,2}, {4,1}}));
 
+        sameObject.PrintTwoDimensionalArray(sameObject.AddTwoDimensionalArr(new int[][]{{9,8},{3,3}}, new int[][]{{9,7}, {2,1}}));
 
 
 
