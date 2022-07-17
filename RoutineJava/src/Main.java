@@ -390,6 +390,22 @@ public class Main {
 
         sameObject.PrintTwoDimensionalArray(sameObject.AddTwoDimensionalArr(new int[][]{{9,8},{3,3}}, new int[][]{{9,7}, {2,1}}));
 
+        //3 x 2
+        //2 x anything
+
+        sameObject.SetDoubleTwo(new double[][]{{3,4},{4,1},{5,1}});
+
+        sameObject.PrintTwoDimensionalArray(sameObject.MultiplyTwoDoub(new double[][]{{7,7,2}, {6,2,2}}));
+
+        sameObject.PrintTwoDimensionalArray(sameObject.MultiplyDoub(new double[][]{{7,7,2}, {6,2,2}}));
+
+        sameObject.SetIntTwo((new int[][]{{3,4},{4,1},{5,1}}));
+
+        sameObject.PrintTwoDimensionalArray(sameObject.MultiplyTwoInt(new int[][]{{7,7,2}, {6,2,2}}));
+
+        sameObject.PrintTwoDimensionalArray(sameObject.MultiplyInt(new int[][]{{7,7,2}, {6,2,2}}));
+
+
 
 
 

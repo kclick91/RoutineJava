@@ -2650,17 +2650,84 @@ public class RJ {
 
     }
 
-    public double[][] Multiply(double[][] first, double[][] second)
+    public int[][] MultiplyInt(int[][] first)
     {
         int one = first[0].length;
+        int two = twoDimArray.length;
+        System.out.println("First: " + one);
+        System.out.println("Second " + two);
+
+
+
+        int[][] mult = new int[first.length][twoDimArray[0].length];
+        for (int i = 0; i < first.length; i++)
+        {
+            for (int j = 0; j < twoDimArray[0].length; j++)
+            {
+                mult[i][j] = 0;
+            }
+
+
+        }
+        PrintTwoDimensionalArray(first);
+        PrintTwoDimensionalArray(twoDimArray);
+        if (one == two)
+        {
+            System.out.println("One equals Two.");
+            PrintTwoDimensionalArray(mult);
+            int[][] returnedArray = new int[first[0].length][twoDimArray.length];
+            System.out.println("first.length:" + first.length);
+            System.out.println("first[0].length:" + first[0].length);
+            System.out.println("second.length:" + twoDimArray.length);
+            System.out.println("second[0].length:" + twoDimArray[0].length);
+
+            for (int i = 0; i < first.length; i++)
+            {
+
+                for (int j = 0; j < twoDimArray[0].length; j++)
+                {
+                    int collectedSum = 0;
+                    int count = 0;
+
+                    while(count < first[0].length)//or second.length
+                    {
+                        collectedSum = collectedSum + (first[i][count] * twoDimArray[count][j]);
+                        count = count + 1;
+                        System.out.println(count);
+                    }
+                    System.out.println("Collected Sum:" + collectedSum);
+                    mult[i][j] = collectedSum;
+
+
+
+                }
+                System.out.println();
+
+            }
+
+
+
+        }
+        else
+        {
+            System.out.println("Wrong dimensions");
+        }
+        return mult;
+
+
+    }
+
+    public int[][] MultiplyTwoInt(int[][] second)
+    {
+        int one = twoDimArray[0].length;
         int two = second.length;
         System.out.println("First: " + one);
         System.out.println("Second " + two);
 
 
 
-        double[][] mult = new double[first.length][second[0].length];
-        for (int i = 0; i < first.length; i++)
+        int[][] mult = new int[twoDimArray.length][second[0].length];
+        for (int i = 0; i < twoDimArray.length; i++)
         {
             for (int j = 0; j < second[0].length; j++)
             {
@@ -2669,19 +2736,86 @@ public class RJ {
 
 
         }
-        PrintTwoDimensionalArray(first);
+        PrintTwoDimensionalArray(twoDimArray);
         PrintTwoDimensionalArray(second);
         if (one == two)
         {
             System.out.println("One equals Two.");
             PrintTwoDimensionalArray(mult);
-            double[][] returnedArray = new double[first[0].length][second.length];
-            System.out.println("first.length:" + first.length);
-            System.out.println("first[0].length:" + first[0].length);
+            int[][] returnedArray = new int[twoDimArray[0].length][second.length];
+            System.out.println("first.length:" + twoDimArray.length);
+            System.out.println("first[0].length:" + twoDimArray[0].length);
             System.out.println("second.length:" + second.length);
             System.out.println("second[0].length:" + second[0].length);
 
-            for (int i = 0; i < first.length; i++)
+            for (int i = 0; i < twoDimArray.length; i++)
+            {
+
+                for (int j = 0; j < second[0].length; j++)
+                {
+                    int collectedSum = 0;
+                    int count = 0;
+
+                    while(count < twoDimArray[0].length)//or second.length
+                    {
+                        collectedSum = collectedSum + (twoDimArray[i][count] * second[count][j]);
+                        count = count + 1;
+                        System.out.println(count);
+                    }
+                    System.out.println("Collected Sum:" + collectedSum);
+                    mult[i][j] = collectedSum;
+
+
+
+                }
+                System.out.println();
+
+            }
+
+
+
+        }
+        else
+        {
+            System.out.println("Wrong dimensions");
+        }
+        return mult;
+
+    }
+
+    public double[][] MultiplyDoub(double[][] second)
+    {
+        int one = twoDimArrayDoub[0].length;
+        int two = second.length;
+        System.out.println("First: " + one);
+        System.out.println("Second " + two);
+
+
+
+        double[][] mult = new double[twoDimArrayDoub.length][second[0].length];
+        for (int i = 0; i < twoDimArrayDoub.length; i++)
+        {
+            for (int j = 0; j < second[0].length; j++)
+            {
+                mult[i][j] = 0;
+            }
+
+
+        }
+        PrintTwoDimensionalArray(twoDimArrayDoub);
+        PrintTwoDimensionalArray(second);
+        if (one == two)
+        {
+            System.out.println("******");
+            System.out.println("One equals Two.");
+            PrintTwoDimensionalArray(mult);
+            double[][] returnedArray = new double[twoDimArrayDoub[0].length][second.length];
+            System.out.println("first.length:" + twoDimArrayDoub.length);
+            System.out.println("first[0].length:" + twoDimArrayDoub[0].length);
+            System.out.println("second.length:" + second.length);
+            System.out.println("second[0].length:" + second[0].length);
+
+            for (int i = 0; i < twoDimArrayDoub.length; i++)
             {
 
                 for (int j = 0; j < second[0].length; j++)
@@ -2689,9 +2823,75 @@ public class RJ {
                     double collectedSum = 0;
                     int count = 0;
 
+                    while(count < twoDimArrayDoub[0].length)//or second.length
+                    {
+                        collectedSum = collectedSum + (twoDimArrayDoub[i][count] * second[count][j]);
+                        count = count + 1;
+                        System.out.println(count);
+                    }
+                    System.out.println("Collected Sum:" + collectedSum);
+                    mult[i][j] = collectedSum;
+
+
+
+                }
+                System.out.println();
+
+            }
+
+
+
+        }
+        else
+        {
+            System.out.println("Wrong dimensions");
+        }
+        return mult;
+
+    }
+
+    public double[][] MultiplyTwoDoub(double[][] first)
+    {
+        int one = first[0].length;
+        int two = twoDimArrayDoub.length;
+        System.out.println("First: " + one);
+        System.out.println("Second: " + two);
+
+
+
+        double[][] mult = new double[first.length][twoDimArrayDoub[0].length];
+        for (int i = 0; i < first.length; i++)
+        {
+            for (int j = 0; j < twoDimArrayDoub[0].length; j++)
+            {
+                mult[i][j] = 0;
+            }
+
+
+        }
+        PrintTwoDimensionalArray(first);
+        PrintTwoDimensionalArray(twoDimArrayDoub);
+        if (one == two)
+        {
+            System.out.println("One equals Two.");
+            PrintTwoDimensionalArray(mult);
+            double[][] returnedArray = new double[first[0].length][twoDimArrayDoub.length];
+            System.out.println("first.length:" + first.length);
+            System.out.println("first[0].length:" + first[0].length);
+            System.out.println("second.length:" + twoDimArrayDoub.length);
+            System.out.println("second[0].length:" + twoDimArrayDoub[0].length);
+
+            for (int i = 0; i < first.length; i++)
+            {
+
+                for (int j = 0; j < twoDimArrayDoub[0].length; j++)
+                {
+                    double collectedSum = 0;
+                    int count = 0;
+
                     while(count < first[0].length)//or second.length
                     {
-                        collectedSum = collectedSum + (first[i][count] * second[count][j]);
+                        collectedSum = collectedSum + (first[i][count] * twoDimArrayDoub[count][j]);
                         count = count + 1;
                         System.out.println(count);
                     }
