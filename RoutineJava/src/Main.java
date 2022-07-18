@@ -404,7 +404,8 @@ public class Main {
         sameObject.PrintTwoDimensionalArray(sameObject.MultiplyTwoInt(new int[][]{{7,7,2}, {6,2,2}}));
 
         sameObject.PrintTwoDimensionalArray(sameObject.MultiplyInt(new int[][]{{7,7,2}, {6,2,2}}));
-
+        
+        sameObject.PrintTwoDimensionalArray(sameObject.Multiply(new int[][]{{4,4,4,9},{3,3,1,7},{6,7,2,9}}, new int[][]{{1,1,1},{7,7,2},{4,4,1},{9,9,7}}));
 
 
 
