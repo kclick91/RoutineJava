@@ -24,6 +24,7 @@ public class RJ {
     protected double dependent;
 
     protected final double  CONSTANTEULERS = 2.7182818284590452353602874713;
+    protected final double CONSTANTPI = 3.1415926535897932384626433832;
 
     public RJ()
     {
