@@ -2566,6 +2566,35 @@ public class RJ {
         return newInt;
     }
 
+    public int[][] MultiplyByScalarInteger(int[][] arr, int s)
+    {
+        int[][] newInt = new int[arr.length][arr[0].length];
+        for (int i = 0; i < arr.length; i++)
+        {
+            for (int j = 0; j < arr[0].length;j++)
+            {
+                newInt[i][j] = arr[i][j] * s;
+            }
+
+        }
+        return newInt;
+
+    }
+
+    public double[][] MultiplyByScalarDouble(double[][] arr, int s)
+    {
+        double[][] newInt = new double[arr.length][arr[0].length];
+        for (int i = 0; i < arr.length; i++)
+        {
+            for (int j = 0; j < arr[0].length;j++)
+            {
+                newInt[i][j] = arr[i][j] * s;
+            }
+
+        }
+        return newInt;
+    }
+
     public String GetSwitch(int numb, int[] results, String[] messages)
     {
         String s = "";
