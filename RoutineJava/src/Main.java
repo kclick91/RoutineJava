@@ -411,6 +411,17 @@ public class Main {
 
         sameObject.PrintTwoDimensionalArray(sameObject.MultiplyByScalarInteger(sameObject.GetTwoDimArrInt(), 4));
 
+        RJ rjTester = new RJ(new int[][]{{4,3}, {7,3}});
+
+        int[] arrayIntegers = rjTester.StretchTwoDim(rjTester.GetTwoDimArrInt());
+        rjTester.PrintArray(arrayIntegers);
+
+
+
+
+
+
+
 
 
 

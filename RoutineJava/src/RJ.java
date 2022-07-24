@@ -72,7 +72,7 @@ public class RJ {
     }
     public RJ(int[][] twoDimAD)
     {
-        twoDimAD = twoDimAD;
+        twoDimArray = twoDimAD;
     }
     public RJ(int c, int[] iA, double[] dA, int[][] twoDimA)
     {
@@ -2330,7 +2330,47 @@ public class RJ {
         }
         return count;
     }
+    /*
+    public int CountUnique(int[][] arr)
+    {
+        int count = 1;
+        double[] newArr = SortArrayAscendingRet(arr);
+        int newLoc = 0;
+        for (int i = 1; i < newArr.length;i++)
+        {
+            if (newArr[i] == newArr[newLoc])
+            {
+                //nothing
+            }
+            else if (newArr[i] > newArr[newLoc])
+            {
+                count = count + 1;
+                newLoc = i;
+            }
+        }
+        return count;
+    }
+    public int CountUnique(double[][] arr)
+    {
+        int count = 1;
+        double[] newArr = SortArrayAscendingRet(arr);
+        int newLoc = 0;
+        for (int i = 1; i < newArr.length;i++)
+        {
+            if (newArr[i] == newArr[newLoc])
+            {
+                //nothing
+            }
+            else if (newArr[i] > newArr[newLoc])
+            {
+                count = count + 1;
+                newLoc = i;
+            }
+        }
+        return count;
+    }
 
+    */
 
     public int[][] CountedArray(int size)
     {
@@ -2989,6 +3029,39 @@ public class RJ {
         }
         return newArray;
     }
+
+    public int[] StretchTwoDim(int[][] twoDimArr)
+    {
+
+        int one = twoDimArr.length;
+        int two = twoDimArr[0].length;
+        int[] oneDim = new int[twoDimArr.length * twoDimArr[0].length];
+        int count = 0;
+        for (int i = 0; i < twoDimArr.length;i++)
+        {
+            for (int j = 0; j < twoDimArr[0].length; j++)
+            {
+                oneDim[count] = twoDimArr[i][j];
+                count = count + 1;
+            }
+        }
+        return oneDim;
+    }
+    public double[] StretchTwoDim(double[][] twoDimArr)
+    {
+        double[] oneDim = new double[twoDimArr.length * twoDimArr[0].length];
+        int count = 0;
+        for (int i = 0; i < twoDimArr.length;i++)
+        {
+            for (int j = 0; j < twoDimArr[0].length; j++)
+            {
+                oneDim[count] = twoDimArr[i][j];
+                count = count + 1;
+            }
+        }
+        return oneDim;
+    }
+
 
 
 
