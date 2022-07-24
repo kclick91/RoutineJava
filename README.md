@@ -704,6 +704,8 @@ An RJ object can operate on its own data or other data.
     public double[][] MultiplyDoub(double[][] second)
 
     public double[][] MultiplyTwoDoub(double[][] first)
+    
+    public int[] StretchTwoDim(int[][] twoDimArr)
    
 
 
