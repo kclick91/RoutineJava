@@ -463,6 +463,14 @@ public class Main {
         RJ graphForStrings = new RJ();
         graphForStrings.PrintGraphString(lls);
 
+        //Example Problems
+        RJ test = new RJ();
+        System.out.println(test.GetSwitch(3, new int[]{1,2,3,4,5}, new String[]{"Hello", "this", "is","a", "sentence"}));
+        System.out.println(test.GetSwitch(3, new int[]{3,2,1,4,5}, new String[]{"Hello", "this", "is","a", "sentence"}));
+
+
+
+
 
 
 
