@@ -29,6 +29,9 @@ public class RJ {
     protected double independent;
     protected double dependent;
 
+    protected long start;
+    protected long finish;
+
     protected final double  CONSTANTEULERS = 2.7182818284590452353602874713;
     protected final double CONSTANTPI = 3.1415926535897932384626433832;
 
@@ -1285,6 +1288,28 @@ public class RJ {
     }
 
 
+    public char[] ReverseArrayChar(char[] wor)
+    {
+        char[] newWor = new char[wor.length];
+        int count = 0;
+        for (int i = wor.length - 1; i >= 0; i--)
+        {
+
+            newWor[count] = wor[i];
+            count = count + 1;
+        }
+        return newWor;
+    }
+
+    public void PrintReverseArrayChar(char[] wor)
+    {
+        for (int i = wor.length - 1; i >= 0; i--)
+        {
+            System.out.print(wor[i]);
+
+        }
+    }
+
     public void PrintReversedArrayInt(int[] arrInt)
     {
         for (int i = arrInt.length - 1; i >= 0; i--)
@@ -1573,7 +1598,65 @@ public class RJ {
         return count;
 
     }
-    public double CountofMatchValueandPosition(double[] arrOne, double[] arrTwo)
+
+    public boolean DoesItMatchValueandPosition(int[] arrOne, int[] arrTwo)
+    {
+        int count = 0;
+        boolean matchedVandP = false;
+        for(int i = 0; i < arrOne.length;i++)
+        {
+            if (arrOne[i] == arrTwo[i])
+            {
+                count = count + 1;
+            }
+        }
+        if ((count == arrOne.length) && (arrOne.length == arrTwo.length))
+        {
+            matchedVandP = true;
+        }
+        return matchedVandP;
+
+    }
+
+    public boolean DoesItMatchValueandPosition(double[] arrOne, double[] arrTwo)
+    {
+        int count = 0;
+        boolean matchedVandP = false;
+        for(int i = 0; i < arrOne.length;i++)
+        {
+            if (arrOne[i] == arrTwo[i])
+            {
+                count = count + 1;
+            }
+        }
+        if ((count == arrOne.length) && (arrOne.length == arrTwo.length))
+        {
+            matchedVandP = true;
+        }
+        return matchedVandP;
+
+    }
+
+    public boolean DoesItMatchValueandPosition(char[] arrOne, char[] arrTwo)
+    {
+        int count = 0;
+        boolean matchedVandP = false;
+        for(int i = 0; i < arrOne.length;i++)
+        {
+            if (arrOne[i] == arrTwo[i])
+            {
+                count = count + 1;
+            }
+        }
+        if ((count == arrOne.length) && (arrOne.length == arrTwo.length))
+        {
+            matchedVandP = true;
+        }
+        return matchedVandP;
+
+    }
+
+    public int CountofMatchValueandPosition(double[] arrOne, double[] arrTwo)
     {
         int count = 0;
         boolean matchedVandP = false;
@@ -3165,9 +3248,61 @@ public class RJ {
             System.out.println();
         }
     }
+    public long StartWatch()
+    {
+        start = System.currentTimeMillis();
+        System.out.println(start);
+        return start;
+    }
 
+    public long StopWatch()
+    {
+        finish = System.currentTimeMillis();
+        System.out.println(start);
+        System.out.println(finish);
+        long time = finish - start;
+        return time;
+    }
 
+    public int[] PartOfArrayInt(int[] arr, int loc)
+    {
+        int[] part = new int[loc + 1];
+        for(int i = 0; i < part.length; i++)
+        {
+            part[i] = arr[i];
+        }
+        return part;
+    }
 
+    public double[] PartOfArrayInt(double[] arr, int loc)
+    {
+        double[] part = new double[loc + 1];
+        for(int i = 0; i < part.length; i++)
+        {
+            part[i] = arr[i];
+        }
+        return part;
+    }
+
+    public String[] PartOfArrayInt(String[] arr, int loc)
+    {
+        String[] part = new String[loc + 1];
+        for(int i = 0; i < part.length; i++)
+        {
+            part[i] = arr[i];
+        }
+        return part;
+    }
+
+    public char[] PartOfArrayInt(char[] arr, int loc)
+    {
+        char[] part = new char[loc + 1];
+        for(int i = 0; i < part.length; i++)
+        {
+            part[i] = arr[i];
+        }
+        return part;
+    }
 
 
 

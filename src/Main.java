@@ -463,43 +463,43 @@ public class Main {
         RJ graphForStrings = new RJ();
         graphForStrings.PrintGraphString(lls);
 
-        //Example Problems
         RJ test = new RJ();
         System.out.println(test.GetSwitch(3, new int[]{1,2,3,4,5}, new String[]{"Hello", "this", "is","a", "sentence"}));
         System.out.println(test.GetSwitch(3, new int[]{3,2,1,4,5}, new String[]{"Hello", "this", "is","a", "sentence"}));
 
+        test.PrintArray(test.GetByFrequency(new int[]{1,1,1,2,2,2,3,3,2,2,1}));
+        test.PrintArray(test.GetByFrequency(new int[]{4,4,2,2,2,6,7,7,7}));
+
+
+        //Example Exercises
+        int[] values = new int[]{5,4,4,7,8,2};
+        RJ exerciseOne = new RJ();
+        System.out.println("Exercise 1");
+        System.out.print("Find the largest of ");
+        exerciseOne.PrintArray(values);
+        System.out.println(exerciseOne.PeekFirst(exerciseOne.SortArrayDescendingRet(values)));
+
+        RJ exerciseTwo = new RJ();
+        System.out.println("Exercise 2");
+        System.out.println("Is this string a palindrome: racecar");
+        System.out.println(exerciseTwo.DoesItMatchValueandPosition(exerciseTwo.ReverseArrayChar("racecar".toCharArray()), "racecar".toCharArray()));
+        System.out.println(exerciseTwo.DoesItMatchValueandPosition(exerciseTwo.ReverseArrayChar("build".toCharArray()), "build".toCharArray()));
+
+        RJ exerciseThree = new RJ();
+        System.out.println("Exercise 3");
+        System.out.print("Print out running total of ");
+        exerciseThree.SetIntArray(new int[]{34, 12, 15, 21});
+        exerciseThree.PrintArray(exerciseThree.GetIntArray());
 
 
 
+        exerciseThree.StartWatch();
 
+        for (int i = 0; i < exerciseThree.GetIntArray().length; i++)
+        {
+            exerciseThree.PrintArrayAndSum(exerciseOne.PartOfArrayInt(exerciseThree.GetIntArray(), i));
+        }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        System.out.println(exerciseThree.StopWatch());
     }
 }
