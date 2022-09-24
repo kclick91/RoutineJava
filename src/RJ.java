@@ -950,6 +950,8 @@ public class RJ {
         return doubleArray[doubleArray.length - 1];
     }
 
+
+
     public boolean SearchArray(int[] arr,int number, int min, int max, int increment)
     {
         boolean isFound = false;
@@ -3304,12 +3306,87 @@ public class RJ {
         return part;
     }
 
+    //Store 2 values
+    //1.value and 2.count
+    public int[] StoreInt(int[] iArray, String comparison)
+    {
+        int[] arr = new int[2];
+        if (comparison.equals("larger"))
+        {
+            arr[0] = iArray[0];
+            arr[1] = 1;
+        }
+        else if (comparison.equals("smaller"))
+        {
+            arr[0] = iArray[0];
+            arr[1] = iArray.length;
+        }
+
+        int count = 1;
+        int countTwo = arr[1];
+        for (int i = 1; i < iArray.length; i++)
+        {
+            if (comparison.equals("larger"))
+            {
+                if (iArray[i] == iArray[i - 1])
+                {
+                    count = count + 1;
+                    if (count > arr[1])
+                    {
+                        arr[1] = count;
+                        arr[0] = iArray[i];
+                    }
+                }
+                else
+                {
+                    count = 1;
+                }
+            }
+
+            else if(comparison.equals("smaller"))
+            {
+                if (iArray[i] != iArray[i - 1])
+                {
+                    countTwo = count;
+                    if (countTwo < arr[1])
+                    {
+                        arr[1] = countTwo;
+                        arr[0] = iArray[i - 1];
+                    }
+                    count = 1;
+                }
+                else
+                {
+                    count = count + 1;
+                }
+            }
+
+
+        }
+
+        return arr;
+    }
+
+    public double StoreDoub(double[] dArray, String comparison)
+    {
+        if (comparison.equals("larger"))
+        {
+
+        }
+        else if(comparison.equals("smaller"))
+        {
+
+        }
+        return 0;
+    }
 
 
 
 
 
 
+
+    //Dynamic arrays
 
 
 

@@ -497,9 +497,26 @@ public class Main {
 
         for (int i = 0; i < exerciseThree.GetIntArray().length; i++)
         {
-            exerciseThree.PrintArrayAndSum(exerciseOne.PartOfArrayInt(exerciseThree.GetIntArray(), i));
+            exerciseThree.PrintArrayAndSum(exerciseThree.PartOfArrayInt(exerciseThree.GetIntArray(), i));
         }
 
         System.out.println(exerciseThree.StopWatch());
+
+        RJ exerciseFour = new RJ();
+        int[] shortestStreak = exerciseFour.StoreInt(new int[]{5,5,6,5,5,5,7,7}, "smaller");
+        exerciseFour.PrintArray(shortestStreak);
+        int[] longestStreak = exerciseFour.StoreInt(new int[]{5,5,2,2,2,2,4,4,4,4,8,8,8,8,8,8,8,2}, "larger");
+        exerciseFour.PrintArray(longestStreak);
+        int[] shortestStreakTwo = exerciseFour.StoreInt(new int[]{9,9,9,9,3,3,3,7,7,7,7,8,8,8,8,8,8,8}, "smaller");
+        exerciseFour.PrintArray(shortestStreakTwo);
+        int[] longestStreakTwo = exerciseFour.StoreInt(new int[]{5,5,2,2,2,2,4,4,4,4,4,4,4,8,8,8,8,2}, "larger");
+        exerciseFour.PrintArray(longestStreakTwo);
+
+
+
+
+
+
+
     }
 }
