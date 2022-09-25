@@ -512,6 +512,12 @@ public class Main {
         int[] longestStreakTwo = exerciseFour.StoreInt(new int[]{5,5,2,2,2,2,4,4,4,4,4,4,4,8,8,8,8,2}, "larger");
         exerciseFour.PrintArray(longestStreakTwo);
 
+        //RJ object's values and history
+        RJ rjrj = new RJ();
+        rjrj.ShowValues();
+
+
+
 
 
 

@@ -4,10 +4,10 @@ import java.util.Random;
 public class RJ {
 
     protected int count;
-    protected int[] intArray;
-    protected double[] doubleArray;
-    protected int[][] twoDimArray;
-    protected double[][] twoDimArrayDoub;
+    protected int[] intArray = new int[]{0,0};
+    protected double[] doubleArray = new double[]{0.0,0.0};
+    protected int[][] twoDimArray = new int[][]{{0,0},{0,0}};
+    protected double[][] twoDimArrayDoub = new double[][]{{0.0,0.0},{0.0,0.0}};
     protected String[] stringArray;
     private String name = "";
     private String intarrayName = "";
@@ -3367,7 +3367,7 @@ public class RJ {
         return arr;
     }
 
-    public double StoreDoub(double[] dArray, String comparison)
+    public double StoreDoubRange(double[] dArray, String comparison)
     {
         if (comparison.equals("larger"))
         {
@@ -3380,6 +3380,35 @@ public class RJ {
         return 0;
     }
 
+    /*
+    protected int count;
+    protected int[] intArray;
+    protected double[] doubleArray;
+    protected int[][] twoDimArray;
+    protected double[][] twoDimArrayDoub;
+    protected String[] stringArray;
+    private String name = "";
+    private String intarrayName = "";
+    private String doubleArrayName = "";
+    private String twodimarrayName = "";
+    private String twodimarrayDoubName = "";
+    private String stringarrayName = "";
+     */
+
+    public void ShowValues()
+    {
+        System.out.println("count: " + count);
+        System.out.println("intArray: ");
+        PrintArray(intArray);
+        System.out.println("doubleArray:");
+        PrintArray(doubleArray);
+        System.out.println("twoDimArray: " );
+        PrintTwoDimensionalArray(twoDimArray);
+        System.out.println("twoDimArrayDoub: ");
+        PrintTwoDimensionalArray(twoDimArrayDoub);
+
+
+    }
 
 
 
