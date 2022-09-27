@@ -512,9 +512,33 @@ public class Main {
         int[] longestStreakTwo = exerciseFour.StoreInt(new int[]{5,5,2,2,2,2,4,4,4,4,4,4,4,8,8,8,8,2}, "larger");
         exerciseFour.PrintArray(longestStreakTwo);
 
+
         //RJ object's values and history
         RJ rjrj = new RJ();
         rjrj.ShowValues();
+
+
+        RJ rjRJ = new RJ();
+        List<List<RJ>> rjList = new ArrayList<List<RJ>>();
+        RJ rjOne = new RJ(new double[]{0.4, 6.8, 5.9, 7.3});
+        RJ rjTwo = new RJ(new double[]{7.7, 2.7, 2.2, 5.4, 8.1, 3.1});
+        RJ rjThree = new RJ(new double[]{2.1, 4.1, 3.1, 8.8});
+
+        List<RJ> firstList = new ArrayList<RJ>();
+        firstList.add(rjOne);
+        firstList.add(rjThree);
+        rjList.add(firstList);
+        List<RJ> secondList = new ArrayList<RJ>();
+        secondList.add(rjTwo);
+        rjList.add(secondList);
+        List<RJ> thirdList = new ArrayList<RJ>();
+        thirdList.add(rjThree);
+        thirdList.add(rjOne);
+        rjList.add(thirdList);
+
+        rjRJ.PrintGraphRJ(rjList);
+
+
 
 
 

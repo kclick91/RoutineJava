@@ -8,7 +8,8 @@ public class RJ {
     protected double[] doubleArray = new double[]{0.0,0.0};
     protected int[][] twoDimArray = new int[][]{{0,0},{0,0}};
     protected double[][] twoDimArrayDoub = new double[][]{{0.0,0.0},{0.0,0.0}};
-    protected String[] stringArray;
+    protected String[] stringArray = new String[]{"None", "None"};
+    protected String[][] stringArrayDoub = new String[][]{{"None", "None"}, {"None", "None"}};
     private String name = "";
     private String intarrayName = "";
     private String doubleArrayName = "";
@@ -25,6 +26,8 @@ public class RJ {
     protected List<List<String>> stringGraph;
     protected List<List<Integer>> integerGraph;
     protected List<List<Double>> doubleGraph;
+    protected List<List<RJ>> rjGraph;
+
 
     protected double independent;
     protected double dependent;
@@ -3189,6 +3192,13 @@ public class RJ {
         stringGraph = iG;
         return iG;
     }
+
+    public List<List<RJ>> InitializeGraphRJ(List<List<RJ>> rJ)
+    {
+        rjGraph = rJ;
+        return rJ;
+    }
+
     //Print Graphs
 
     public void PrintGraphInteger(List<List<Integer>> llo)
@@ -3250,6 +3260,27 @@ public class RJ {
             System.out.println();
         }
     }
+    public void PrintGraphRJ(List<List<RJ>> rJ)
+    {
+        int size = rJ.size();
+        for (int i = 0; i < size; i++)
+        {
+            int sizeTwo = rJ.get(i).size();
+            for (int j = 0; j < sizeTwo; j++)
+            {
+                if (j == 0)
+                {
+                    rJ.get(i).get(j).ShowValues();
+                    System.out.print(" | ");
+                }
+                else {
+                    rJ.get(i).get(j).ShowValues();
+                }
+            }
+            System.out.println();
+        }
+    }
+
     public long StartWatch()
     {
         start = System.currentTimeMillis();
@@ -3402,10 +3433,15 @@ public class RJ {
         PrintArray(intArray);
         System.out.println("doubleArray:");
         PrintArray(doubleArray);
+        System.out.println("stringArray: ");
+        PrintArray(stringArray);
         System.out.println("twoDimArray: " );
         PrintTwoDimensionalArray(twoDimArray);
         System.out.println("twoDimArrayDoub: ");
         PrintTwoDimensionalArray(twoDimArrayDoub);
+        System.out.println("twoDimArrayDoub: ");
+        //PrintTwoDimensionalArray(stringArrayDoub);
+
 
 
     }
@@ -3416,8 +3452,6 @@ public class RJ {
 
 
     //Dynamic arrays
-
-
 
 
 }
