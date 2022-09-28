@@ -10,7 +10,7 @@ public class RJ {
     protected double[][] twoDimArrayDoub = new double[][]{{0.0,0.0},{0.0,0.0}};
     protected String[] stringArray = new String[]{"None", "None"};
     protected String[][] stringArrayDoub = new String[][]{{"None", "None"}, {"None", "None"}};
-    private String name = "";
+    private String name = "DEFAULT NAME";
     private String intarrayName = "";
     private String doubleArrayName = "";
     private String twodimarrayName = "";
@@ -1136,6 +1136,17 @@ public class RJ {
     }
 
     public void PrintTwoDimensionalArray(boolean[][] arr)
+    {
+        for (int i = 0; i < arr.length; i++)
+        {
+            for (int j = 0; j < arr[0].length; j++)
+            {
+                System.out.print(arr[i][j] + " ");
+            }
+            System.out.println();
+        }
+    }
+    public void PrintTwoDimensionalArray(String[][] arr)
     {
         for (int i = 0; i < arr.length; i++)
         {
@@ -3265,13 +3276,14 @@ public class RJ {
         int size = rJ.size();
         for (int i = 0; i < size; i++)
         {
+            System.out.println("CURRENT");
             int sizeTwo = rJ.get(i).size();
             for (int j = 0; j < sizeTwo; j++)
             {
                 if (j == 0)
                 {
                     rJ.get(i).get(j).ShowValues();
-                    System.out.print(" | ");
+                    System.out.println(" /////// ");
                 }
                 else {
                     rJ.get(i).get(j).ShowValues();
@@ -3428,6 +3440,7 @@ public class RJ {
 
     public void ShowValues()
     {
+        System.out.println("Name: " + name);
         System.out.println("count: " + count);
         System.out.println("intArray: ");
         PrintArray(intArray);
@@ -3439,8 +3452,9 @@ public class RJ {
         PrintTwoDimensionalArray(twoDimArray);
         System.out.println("twoDimArrayDoub: ");
         PrintTwoDimensionalArray(twoDimArrayDoub);
-        System.out.println("twoDimArrayDoub: ");
-        //PrintTwoDimensionalArray(stringArrayDoub);
+        System.out.println("stringArrayDoub: ");
+        PrintTwoDimensionalArray(stringArrayDoub);
+        System.out.println("");
 
 
 
