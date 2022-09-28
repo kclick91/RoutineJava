@@ -3438,6 +3438,22 @@ public class RJ {
     private String stringarrayName = "";
      */
 
+    public List<List<Integer>> addToListInt(List<List<Integer>> list,List<Integer> intl)
+    {
+        list.add(intl);
+        return list;
+    }
+    public List<List<Double>> addToListDoub(List<List<Double>> list,List<Double> intl)
+    {
+        list.add(intl);
+        return list;
+    }
+    public List<List<String>> addToListStr(List<List<String>> list,List<String> intl)
+    {
+        list.add(intl);
+        return list;
+    }
+
     public void ShowValues()
     {
         System.out.println("Name: " + name);
@@ -3455,9 +3471,6 @@ public class RJ {
         System.out.println("stringArrayDoub: ");
         PrintTwoDimensionalArray(stringArrayDoub);
         System.out.println("");
-
-
-
     }
 
 
