@@ -5,6 +5,34 @@ public class Main {
 
     public static void main(String[] args)
     {
+
+        System.out.println("Simple Examples.");
+        System.out.println("1. Initiate an RJ object.");
+        RJ simple = new RJ();
+        System.out.println("2. Initiate an RJ object with parameters.");
+        RJ simpleParam = new RJ(3, new int[]{5,5,2,2,3}, new double[]{7.7, 7.5, 1.1, 1.2}, new int[][]{{9,9,7,8,8,1}, {1,1,1,6,8,2}}, new double[][]{{7.7,4.4,4.3}, {3.1, 4.4, 4.8}}, new String[]{"Many", "strings", "are", "great"});
+        System.out.println("3. Print the object's array of integers.");
+        simpleParam.PrintArrayInt();
+        System.out.println("4. Print the object's array of doubles.");
+        simpleParam.PrintArrayDoub();
+        System.out.println("5. Print the object's array strings");
+        simpleParam.PrintArrayStr();
+        System.out.println("6. Print the object's two dimensional array of integers.");
+        simpleParam.PrintTwoDimensionalArrayInt();
+        System.out.println("7. Print the object's two dimensional array of doubles.");
+        simpleParam.PrintTwoDimensionalArrayDoub();
+        System.out.println("8. Print any integer array.");
+        simple.PrintArray(new int[]{4,4,6,6,4,4,2,2});
+        System.out.println("9. Print any double array.");
+        simple.PrintArray(new double[]{3.9, 9.3, 9.8, 7.9});
+        System.out.println("10. Print any string array");
+        simple.PrintArray(new String[]{"New", "array", "will", "be", "printed"});
+
+
+
+        System.out.println("End of simple examples.\n");
+
+
         /*RJ rj = new RJ();
         int[] numbers = new int[]{3,2,3,7,8};
         System.out.println(rj.SearchArray(numbers, 7, 0,numbers.length, 1));

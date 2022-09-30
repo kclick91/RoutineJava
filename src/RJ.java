@@ -1092,7 +1092,7 @@ public class RJ {
                 System.out.print(twoDimArray[i][j] + " ");
             }
             System.out.println();
-            System.out.print("-----");
+            //System.out.print("-----");
         }
     }
     public void PrintTwoDimensionalArrayDoub()
