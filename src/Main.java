@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 public class Main {
 
@@ -7,9 +8,9 @@ public class Main {
     {
 
         System.out.println("Simple Examples.");
-        System.out.println("1. Initiate an RJ object.");
+        System.out.println("1. Instantiate an RJ object.");
         RJ simple = new RJ();
-        System.out.println("2. Initiate an RJ object with parameters.");
+        System.out.println("2. Instantiate an RJ object with parameters.");
         RJ simpleParam = new RJ(3, new int[]{5,5,2,2,3}, new double[]{7.7, 7.5, 1.1, 1.2}, new int[][]{{9,9,7,8,8,1}, {1,1,1,6,8,2}}, new double[][]{{7.7,4.4,4.3}, {3.1, 4.4, 4.8}}, new String[]{"Many", "strings", "are", "great"});
         System.out.println("3. Print the object's array of integers.");
         simpleParam.PrintArrayInt();
@@ -31,6 +32,8 @@ public class Main {
 
 
         System.out.println("End of simple examples.\n");
+
+
 
 
         /*RJ rj = new RJ();
@@ -565,6 +568,13 @@ public class Main {
         rjList.add(thirdList);
 
         rjRJ.PrintGraphRJ(rjList);
+
+        RJ usingRJClass = new RJ(new int[]{56,89,32,34,55}, new double[]{3.1, 3.2, 3.6,1.1}, new String[]{"One", "Two", "Three"});
+
+        System.out.println("Select\n" +  "1.Integers\n" +  "2.Doubles\n" +  "3.Strings\n");
+        Scanner scan = new Scanner(System.in);
+        int intSelected = scan.nextInt();
+        System.out.println(usingRJClass.GetSwitch(intSelected, new int[]{1,2,3}, new String[]{usingRJClass.ReturnArrayInt().toString(), usingRJClass.ReturnArrayDoub().toString(), usingRJClass.ReturnArrayString().toString()}));
 
 
 

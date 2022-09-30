@@ -1220,6 +1220,38 @@ public class RJ {
         System.out.println();
     }
 
+    public StringBuffer ReturnArrayInt()
+    {
+        StringBuffer s = new StringBuffer();
+        for (int i = 0; i < intArray.length; i++)
+        {
+            s.append(intArray[i] + " ");
+        }
+        s.append("\n");
+        return s;
+    }
+    public StringBuffer ReturnArrayDoub()
+    {
+        StringBuffer s = new StringBuffer();
+        for (int i = 0; i < doubleArray.length; i++)
+        {
+            s.append(doubleArray[i] + " ");
+        }
+        s.append("\n");
+        return s;
+    }
+
+    public StringBuffer ReturnArrayString()
+    {
+        StringBuffer s = new StringBuffer();
+        for (int i = 0; i < stringArray.length; i++)
+        {
+            s.append(stringArray[i] + " ");
+        }
+        s.append("\n");
+        return s;
+    }
+
     public void SortArrayAscending(int[] array)
     {
         while (IsSortedAscending(array) == false)
