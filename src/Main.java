@@ -571,10 +571,14 @@ public class Main {
 
         RJ usingRJClass = new RJ(new int[]{56,89,32,34,55}, new double[]{3.1, 3.2, 3.6,1.1}, new String[]{"One", "Two", "Three"});
 
-        System.out.println("Select\n" +  "1.Integers\n" +  "2.Doubles\n" +  "3.Strings\n");
-        Scanner scan = new Scanner(System.in);
-        int intSelected = scan.nextInt();
-        System.out.println(usingRJClass.GetSwitch(intSelected, new int[]{1,2,3}, new String[]{usingRJClass.ReturnArrayInt().toString(), usingRJClass.ReturnArrayDoub().toString(), usingRJClass.ReturnArrayString().toString()}));
+        int intSelected = 0;
+        while(intSelected != 4) {
+
+            System.out.println("Select\n" + "1.Integers\n" + "2.Doubles\n" + "3.Strings\n" + "4.Exit\n");
+            Scanner scan = new Scanner(System.in);
+            intSelected = scan.nextInt();
+            System.out.println(usingRJClass.GetSwitch(intSelected, new int[]{1, 2, 3, 4}, new String[]{usingRJClass.ReturnArrayInt().toString(), usingRJClass.ReturnArrayDoub().toString(), usingRJClass.ReturnArrayString().toString(), "Ok. Exited."}));
+        }
 
 
 
