@@ -4,6 +4,9 @@ import java.util.Random;
 public class RJ {
 
     protected int count;
+    protected double doubl;
+    protected String strin;
+    protected Boolean bool;
     protected int[] intArray = new int[]{0,0};
     protected double[] doubleArray = new double[]{0.0,0.0};
     protected int[][] twoDimArray = new int[][]{{0,0},{0,0}};
@@ -47,6 +50,13 @@ public class RJ {
     public RJ(int c)
     {
         count = c;
+    }
+
+    public RJ(int c, double doub, String str)
+    {
+        count = c;
+        doubl = doub;
+        strin = str;
     }
 
     public RJ(int c, int[] iA)
