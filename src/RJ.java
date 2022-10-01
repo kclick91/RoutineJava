@@ -2327,6 +2327,71 @@ public class RJ {
         stringArr[loc] = val;
     }
 
+    //Shift one over and insert
+
+    public int[] ShiftOneRightInsert(int[] iA, int numb, int place)
+    {
+        int[] newArray = new int[iA.length + 1];
+        for (int i = 0; i < iA.length;i++)
+        {
+            if (i < place)
+            {
+                newArray[i] = iA[i];
+            }
+            else if (i == place)
+            {
+                newArray[place] = numb;
+            }
+            else if (i > place)
+            {
+                newArray[i] = iA[i - 1];
+            }
+        }
+        return newArray;
+    }
+
+    public double[] ShiftOneRightInsert(double[] iA, double numb, int place)
+    {
+        double[] newArray = new double[iA.length + 1];
+        for (int i = 0; i < iA.length;i++)
+        {
+            if (i < place)
+            {
+                newArray[i] = iA[i];
+            }
+            else if (i == place)
+            {
+                newArray[place] = numb;
+            }
+            else if (i > place)
+            {
+                newArray[i] = iA[i - 1];
+            }
+        }
+        return newArray;
+    }
+
+
+    public String[] ShiftOneRightInsert(String[] iA, String str, int place)
+    {
+        String[] newArray = new String[iA.length + 1];
+        for (int i = 0; i < iA.length;i++)
+        {
+            if (i < place)
+            {
+                newArray[i] = iA[i];
+            }
+            else if (i == place)
+            {
+                newArray[place] = str;
+            }
+            else if (i > place)
+            {
+                newArray[i] = iA[i - 1];
+            }
+        }
+        return newArray;
+    }
 
     public void SwapIntArray(RJ rj)
     {
