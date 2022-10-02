@@ -14,11 +14,11 @@ public class RJ {
     protected String[] stringArray = new String[]{"None", "None"};
     protected String[][] stringArrayDoub = new String[][]{{"None", "None"}, {"None", "None"}};
     private String name = "DEFAULT NAME";
-    private String intarrayName = "";
-    private String doubleArrayName = "";
-    private String twodimarrayName = "";
-    private String twodimarrayDoubName = "";
-    private String stringarrayName = "";
+    private String intarrayName = "DEFAULT INT ARRAY NAME";
+    private String doubleArrayName = "DFAULT DOUBLE ARRAY NAME";
+    private String twodimarrayName = "DEFAULT 2D ARRAY NAME";
+    private String twodimarrayDoubName = "DEFAULT 2D DOUBLE ARRAY NAME";
+    private String stringarrayName = "DEFAULT STRING ARRAY NAME";
 
     protected RJ nextRJ;
     protected RJ prevRJ;
