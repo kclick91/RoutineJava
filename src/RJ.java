@@ -15,10 +15,12 @@ public class RJ {
     protected String[][] stringArrayDoub = new String[][]{{"None", "None"}, {"None", "None"}};
     private String name = "DEFAULT NAME";
     private String intarrayName = "DEFAULT INT ARRAY NAME";
-    private String doubleArrayName = "DFAULT DOUBLE ARRAY NAME";
-    private String twodimarrayName = "DEFAULT 2D ARRAY NAME";
+    private String doubleArrayName = "DEFAULT DOUBLE ARRAY NAME";
+    private String twodimarrayName = "DEFAULT 2D INTEGER ARRAY NAME";
     private String twodimarrayDoubName = "DEFAULT 2D DOUBLE ARRAY NAME";
     private String stringarrayName = "DEFAULT STRING ARRAY NAME";
+    private String stringTwoDArrayName = "DEFAULT 2D STRING ARRAY NAME";
+
 
     protected RJ nextRJ;
     protected RJ prevRJ;
@@ -46,6 +48,27 @@ public class RJ {
 
     }
 
+    public RJ(int c, double doub, String s, boolean b, int[] iArray, double[] dArray, int[][] twoDArr, double[][] twoDArrayDoub, String[] sArr, String[][] twoDSArr, String n, String iArrN, String doubArrN, String twoDIntArrN,String twoDDoubArrN, String twoDSArrN, String strArrN, String strTDArrN)
+    {
+        count = c;
+        doubl = doubl;
+        name = s;
+        bool = b;
+        doubleArray = dArray;
+        twoDimArray = twoDArr;
+        twoDimArrayDoub = twoDArrayDoub;
+        stringArray = sArr;
+        stringArrayDoub = twoDSArr;
+        intarrayName = iArrN;
+        doubleArrayName = doubArrN;
+        twodimarrayName = twoDIntArrN;
+        twodimarrayDoubName = twoDDoubArrN;
+        stringarrayName = strArrN;
+        stringTwoDArrayName = strTDArrN;
+
+
+
+    }
 
     public RJ(int c)
     {
@@ -3530,20 +3553,6 @@ public class RJ {
         return 0;
     }
 
-    /*
-    protected int count;
-    protected int[] intArray;
-    protected double[] doubleArray;
-    protected int[][] twoDimArray;
-    protected double[][] twoDimArrayDoub;
-    protected String[] stringArray;
-    private String name = "";
-    private String intarrayName = "";
-    private String doubleArrayName = "";
-    private String twodimarrayName = "";
-    private String twodimarrayDoubName = "";
-    private String stringarrayName = "";
-     */
 
     public List<List<Integer>> addToListInt(List<List<Integer>> list,List<Integer> intl)
     {
