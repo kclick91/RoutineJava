@@ -569,7 +569,8 @@ public class Main {
 
         rjRJ.PrintGraphRJ(rjList);
 
-        RJ usingRJClass = new RJ(new int[]{56,89,32,34,55}, new double[]{3.1, 3.2, 3.6,1.1}, new String[]{"One", "Two", "Three"});
+        RJ usingRJClass = new RJ(new int[]{56,89,32,34,55}, new double[]{3.1, 3.2, 3.6,1.1}, new String[]{"Working memory and the mind seem to have spatial dimensions.", "Imagining a line of 9 small solid circles is harder than imagining 3 rows of 3 small solid circles.", "This is " +
+                "as if there is limited space in each direction in the mind."});
 
         int intSelected = 0;
         while(intSelected != 4) {
