@@ -22,8 +22,10 @@ public class RJ {
     private String stringTwoDArrayName = "DEFAULT 2D STRING ARRAY NAME";
 
 
+    //As in a chain
     protected RJ nextRJ;
     protected RJ prevRJ;
+    //As in a binary tree
     protected RJ leftRJ;
     protected RJ rightRJ;
 
@@ -926,6 +928,15 @@ public class RJ {
     public void AddNextRJ(RJ rj)
     {
         nextRJ = rj;
+    }
+
+    public void AddLeftRJ(RJ rj)
+    {
+        leftRJ = rj;
+    }
+    public void AddRightRJ(RJ rj)
+    {
+        rightRJ = rj;
     }
 
     public RJ GetPrevRJ()

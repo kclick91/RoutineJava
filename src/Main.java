@@ -572,6 +572,36 @@ public class Main {
         RJ usingRJClass = new RJ(new int[]{56,89,32,34,55}, new double[]{3.1, 3.2, 3.6,1.1}, new String[]{"Working memory and the mind seem to have spatial dimensions.", "Imagining a line of 9 small solid circles is harder than imagining 3 rows of 3 small solid circles.", "This is " +
                 "as if there is limited space in each direction in the mind."});
 
+        System.out.println("Trees/Chains");
+
+        RJ parent = new RJ(new int[]{1,2,3});
+        RJ childOne = new RJ(new int[]{5,2,2});
+        RJ childTwo = new RJ(new int[]{1,1,1});
+
+        parent.AddLeftRJ(childOne);
+        parent.AddRightRJ(childTwo);
+
+        parent.PrintArrayInt();
+        parent.GetLeftRJ().PrintArrayInt();
+        parent.GetRightRJ().PrintArrayInt();
+
+
+        RJ first = new RJ(new int[]{4,4,3});
+        RJ second = new RJ(new int[]{9,0,9});
+        RJ third = new RJ(new int[]{3,5,3});
+
+        first.AddNextRJ(second);
+        second.AddPrevRJ(first);
+        second.AddNextRJ(third);
+        third.AddPrevRJ(second);;
+
+        first.PrintArrayInt();
+        first.GetNextRJ().PrintArrayInt();
+        second.GetNextRJ().PrintArrayInt();
+        third.GetPrevRJ().PrintArrayInt();
+        second.GetPrevRJ().PrintArrayInt();
+        first.PrintArrayInt();
+
         int intSelected = 0;
         while(intSelected != 4) {
 
