@@ -1,3 +1,4 @@
+import java.io.*;
 import java.util.List;
 import java.util.Random;
 
@@ -3580,6 +3581,131 @@ public class RJ {
         list.add(intl);
         return list;
     }
+
+    public String IntArrToString()
+    {
+        String s = "";
+        for (int i = 0; i < intArray.length; i++)
+        {
+            s += intArray[i] + " ";
+        }
+        return s;
+    }
+
+    public String DoubArrToString()
+    {
+        String s = "";
+        for (int i = 0; i < doubleArray.length; i++)
+        {
+            s += doubleArray[i] + " ";
+        }
+        return s;
+    }
+
+    public String TDIntArrToString()
+    {
+        String s = "";
+        for (int i = 0; i < twoDimArray.length; i++)
+        {
+            for (int j = 0; j < twoDimArray[0].length; j++)
+            {
+                s += twoDimArray[i][j] + " ";
+            }
+            s += "\n";
+        }
+        return s;
+    }
+
+    public String TDDouArrToString()
+    {
+        String s = "";
+        for (int i = 0; i < twoDimArrayDoub.length; i++)
+        {
+            for (int j = 0; j < twoDimArrayDoub[0].length; j++)
+            {
+                s += twoDimArrayDoub[i][j] + " ";
+            }
+            s += "\n";
+        }
+        return s;
+    }
+
+    public String NewDoubArrToString(double[] doub)
+    {
+        String s = "";
+        for (int i = 0; i < doub.length; i++)
+        {
+            s += doub[i] + " ";
+        }
+        return s;
+    }
+
+    public String NewIntArrToString(int[] intArr)
+    {
+        String s = "";
+        for (int i = 0; i < intArr.length; i++)
+        {
+            s += intArr[i] + " ";
+        }
+        return s;
+    }
+
+    public String NewTDIntArrToString(int[][] tdIntArr)
+    {
+        String s = "";
+        for (int i = 0; i < tdIntArr.length; i++)
+        {
+            for (int j = 0; j < tdIntArr[0].length; j++)
+            {
+                s += tdIntArr[i][j] + " ";
+            }
+            s += "\n";
+        }
+        return s;
+    }
+
+    public String NewTDDoubArrToString(double[][] tDDoub)
+    {
+        String s = "";
+        for (int i = 0; i < tDDoub.length; i++)
+        {
+            for (int j = 0; j < tDDoub[0].length; j++)
+            {
+                s += tDDoub[i][j] + " ";
+            }
+            s += "\n";
+        }
+        return s;
+    }
+
+    public void WritetoFile(String str, String file)
+    {
+        try(FileWriter writer1 = new FileWriter(new File(file), true);) {
+
+            writer1.write(str);
+
+        } catch (IOException ex) {
+            System.err.println(ex);
+        }
+    }
+
+    public void ReadfromFile(String file)
+    {
+        try (
+                FileReader reader = new FileReader(file)
+        ) {
+            int charRead = -1;
+
+            while ((charRead = reader.read()) != -1) {
+                System.out.print((char) charRead);
+            }
+        } catch (FileNotFoundException ex) {
+            System.err.println("File not found error: " + ex);
+        } catch (IOException ex) {
+            System.err.println("I/O error: " + ex);
+        }
+    }
+
 
     public void ShowValues()
     {

@@ -7,7 +7,7 @@ public class Main {
     public static void main(String[] args)
     {
 
-        System.out.println("Simple Examples.");
+        /*System.out.println("Simple Examples.");
         System.out.println("1. Instantiate an RJ object.");
         RJ simple = new RJ();
         System.out.println("2. Instantiate an RJ object with parameters.");
@@ -36,7 +36,7 @@ public class Main {
 
 
 
-        /*RJ rj = new RJ();
+        *//*RJ rj = new RJ();
         int[] numbers = new int[]{3,2,3,7,8};
         System.out.println(rj.SearchArray(numbers, 7, 0,numbers.length, 1));
         System.out.println(rj.SearchArray(numbers, 9, 0,numbers.length, 1));
@@ -380,7 +380,7 @@ public class Main {
         RJ jr = new RJ(new int[]{9,4,4,9,7});
         jr.PrintArrayInt();
         jr.AddIntArrayToIntArray(new int[]{6,7,7,6,5});
-        jr.PrintArrayInt();*/
+        jr.PrintArrayInt();*//*
 
         RJ sameObject = new RJ(new int[]{8,7,9,9,1,2,9,4,3}, new double[]{7.7, 9.9, 9.5, 7.6, 1.6});
 
@@ -568,11 +568,11 @@ public class Main {
         rjList.add(thirdList);
 
         rjRJ.PrintGraphRJ(rjList);
-
+        */
         RJ usingRJClass = new RJ(new int[]{56,89,32,34,55}, new double[]{3.1, 3.2, 3.6,1.1}, new String[]{"Working memory and the mind seem to have spatial dimensions.", "Imagining a line of 9 small solid circles is harder than imagining 3 rows of 3 small solid circles.", "This is " +
                 "as if there is limited space in each direction in the mind."});
 
-        System.out.println("Trees/Chains");
+        /*System.out.println("Trees/Chains");
 
         RJ parent = new RJ(new int[]{1,2,3});
         RJ childOne = new RJ(new int[]{5,2,2});
@@ -600,7 +600,7 @@ public class Main {
         second.GetNextRJ().PrintArrayInt();
         third.GetPrevRJ().PrintArrayInt();
         second.GetPrevRJ().PrintArrayInt();
-        first.PrintArrayInt();
+        first.PrintArrayInt();*/
 
         int intSelected = 0;
         while(intSelected != 4) {
@@ -611,9 +611,26 @@ public class Main {
             System.out.println(usingRJClass.GetSwitch(intSelected, new int[]{1, 2, 3, 4}, new String[]{usingRJClass.ReturnArrayInt().toString(), usingRJClass.ReturnArrayDoub().toString(), usingRJClass.ReturnArrayString().toString(), "Ok. Exited."}));
         }
 
-        System.out.println("Final Values");
-        System.out.println("============");
+        //System.out.println("Final Values");
+        //System.out.println("============");
         usingRJClass.ShowValues();
+
+        usingRJClass.WritetoFile("Written to values.txt\n", "values.txt");
+        usingRJClass.ReadfromFile("values.txt");
+        usingRJClass.WritetoFile("", "values.txt");
+
+        System.out.println("Arrays to be written to file:");
+        usingRJClass.PrintArrayInt();
+        usingRJClass.SetDoubleTwo(new double[][]{{4.5, 4.1, 8.5},{1.9, 1.8, 1.7}});
+        usingRJClass.PrintTwoDimensionalArrayDoub();
+        usingRJClass.WritetoFile(usingRJClass.IntArrToString() + "\n", "values.txt");
+        usingRJClass.WritetoFile(usingRJClass.TDDouArrToString(), "values.txt");
+        System.out.println("Everything read from File:\n");
+        usingRJClass.ReadfromFile("values.txt");
+
+
+
+
 
 
 
