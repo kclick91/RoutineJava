@@ -602,10 +602,14 @@ public class Main {
         second.GetPrevRJ().PrintArrayInt();
         first.PrintArrayInt();*/
 
+
+
         int intSelected = 0;
         while(intSelected != 4) {
 
-            System.out.println("Select\n" + "1.View " + usingRJClass.GetNameOfIntArray() + "\n" + "2.View " +  usingRJClass.GetNameOfDoubleArray() + "\n" + "3.View " + usingRJClass.GetNameOfStringArray() + "\n" + "4.Exit\n");
+            System.out.println("Select\n" + "1.View " + usingRJClass.GetNameOfIntArray() + "\n" + "2.View " +  usingRJClass.GetNameOfDoubleArray() + "\n" + "3.View " + usingRJClass.GetNameOfStringArray() + "\n");
+
+            System.out.println("4.Exit\n");
             Scanner scan = new Scanner(System.in);
             intSelected = scan.nextInt();
             System.out.println(usingRJClass.GetSwitch(intSelected, new int[]{1, 2, 3, 4}, new String[]{usingRJClass.ReturnArrayInt().toString(), usingRJClass.ReturnArrayDoub().toString(), usingRJClass.ReturnArrayString().toString(), "Ok. Exited."}));
@@ -627,6 +631,7 @@ public class Main {
         usingRJClass.WritetoFile(usingRJClass.TDDouArrToString(), "values.txt");
         System.out.println("Everything read from File:\n");
         usingRJClass.ReadfromFile("values.txt");
+
 
 
 

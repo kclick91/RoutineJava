@@ -6,21 +6,31 @@ public class RJ {
 
     protected int count;
     protected double doubl;
+    protected float flo;
+    protected long lon;
     protected String strin;
     protected Boolean bool;
     protected int[] intArray = new int[]{0,0};
     protected double[] doubleArray = new double[]{0.0,0.0};
+    protected float[] floArray = new float[]{0,0};
+    protected long[] lonArray = new long[]{0,0};
     protected int[][] twoDimArray = new int[][]{{0,0},{0,0}};
+    protected float[][] twoDimFloArray = new float[][]{{0,0}, {0,0}};
+    protected long[][] twoDimLonArray = new long[][]{{0,0}, {0,0}};
     protected double[][] twoDimArrayDoub = new double[][]{{0.0,0.0},{0.0,0.0}};
     protected String[] stringArray = new String[]{"None", "None"};
     protected String[][] stringArrayDoub = new String[][]{{"None", "None"}, {"None", "None"}};
-    private String name = "DEFAULT NAME";
-    private String intarrayName = "DEFAULT INT ARRAY NAME";
-    private String doubleArrayName = "DEFAULT DOUBLE ARRAY NAME";
-    private String twodimarrayName = "DEFAULT 2D INTEGER ARRAY NAME";
-    private String twodimarrayDoubName = "DEFAULT 2D DOUBLE ARRAY NAME";
-    private String stringarrayName = "DEFAULT STRING ARRAY NAME";
-    private String stringTwoDArrayName = "DEFAULT 2D STRING ARRAY NAME";
+    protected String name = "DEFAULT NAME";
+    protected String intarrayName = "DEFAULT INT ARRAY NAME";
+    protected String doubleArrayName = "DEFAULT DOUBLE ARRAY NAME";
+    protected String floArrayName = "DEFAULT FLOAT ARRAY NAME";
+    protected String lonArrName = "DEFAULT LONG ARRAY NAME";
+    protected String twodimarrayName = "DEFAULT 2D INTEGER ARRAY NAME";
+    protected String twodimarrayDoubName = "DEFAULT 2D DOUBLE ARRAY NAME";
+    protected String stringarrayName = "DEFAULT STRING ARRAY NAME";
+    protected String stringTwoDArrayName = "DEFAULT 2D STRING ARRAY NAME";
+    protected String twodimarrayFloName = "DEFAULT 2D FLOAT ARRAY NAME";
+    protected String twodimarrayLonName = "DEFAULT 2D LONG ARRAY NAME";
 
 
     //As in a chain
@@ -51,6 +61,34 @@ public class RJ {
 
     }
 
+    public RJ(int c, double doub, String s, boolean b, int[] iArray, double[] dArray, int[][] twoDArr, double[][] twoDArrayDoub, String[] sArr, String[][] twoDSArr, float fl, long l, float[] fArr, long[] lArr, float[][] fTDArr, long[][] lTDArr, String n, String iArrN, String doubArrN, String twoDIntArrN,String twoDDoubArrN, String twoDSArrN, String strArrN, String strTDArrN)
+    {
+        count = c;
+        doubl = doubl;
+        name = s;
+        bool = b;
+        doubleArray = dArray;
+        twoDimArray = twoDArr;
+        twoDimArrayDoub = twoDArrayDoub;
+        stringArray = sArr;
+        stringArrayDoub = twoDSArr;
+        flo = fl;
+        lon = l;
+        floArray = fArr;
+        lonArray = lArr;
+        twoDimFloArray = fTDArr;
+        twoDimLonArray = lTDArr;
+        intarrayName = iArrN;
+        doubleArrayName = doubArrN;
+        twodimarrayName = twoDIntArrN;
+        twodimarrayDoubName = twoDDoubArrN;
+        stringarrayName = strArrN;
+        stringTwoDArrayName = strTDArrN;
+
+
+
+    }
+
     public RJ(int c, double doub, String s, boolean b, int[] iArray, double[] dArray, int[][] twoDArr, double[][] twoDArrayDoub, String[] sArr, String[][] twoDSArr, String n, String iArrN, String doubArrN, String twoDIntArrN,String twoDDoubArrN, String twoDSArrN, String strArrN, String strTDArrN)
     {
         count = c;
@@ -72,7 +110,6 @@ public class RJ {
 
 
     }
-
     public RJ(int c)
     {
         count = c;
