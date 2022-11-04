@@ -4,12 +4,12 @@ import java.util.Random;
 
 public class RJ {
 
-    protected int count;
-    protected double doubl;
-    protected float flo;
-    protected long lon;
-    protected String strin;
-    protected Boolean bool;
+    protected int count = 0;
+    protected double doubl = 0.0;
+    protected float flo = 0.0f;
+    protected long lon = 0L;
+    protected String strin = "DEFAULT";
+    protected Boolean bool = true;
     protected int[] intArray = new int[]{0,0};
     protected double[] doubleArray = new double[]{0.0,0.0};
     protected float[] floArray = new float[]{0,0};
@@ -45,7 +45,7 @@ public class RJ {
     protected RJ leftRJ;
     protected RJ rightRJ;
     //Anything in a chain or tree
-    
+
 
 
 

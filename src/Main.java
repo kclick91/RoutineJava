@@ -603,8 +603,8 @@ public class Main {
         second.GetPrevRJ().PrintArrayInt();
         first.PrintArrayInt();*/
 
-
-
+        //BEG
+        /*
         int intSelected = 0;
         while(intSelected != 4) {
 
@@ -632,8 +632,27 @@ public class Main {
         usingRJClass.WritetoFile(usingRJClass.TDDouArrToString(), "values.txt");
         System.out.println("Everything read from File:\n");
         usingRJClass.ReadfromFile("values.txt");
+        */
 
+        RJ rj = new RJ();
+        rj.StartWatch();
+        for (int i = 0; i < 1000000; i++)
+        {
+            //System.out.println(i);
+        }
+        long first = rj.StopWatch();
+        int i = 0;
+        rj.StartWatch();
+        while(i < 1000000)
+        {
+            i++;
+            //System.out.println(i);
+        }
+        long second = rj.StopWatch();
 
+        System.out.println(first);
+        System.out.println(second);
+        //FILL
 
 
 
