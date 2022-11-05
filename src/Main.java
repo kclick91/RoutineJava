@@ -638,7 +638,7 @@ public class Main {
         rj.StartWatch();
         for (int i = 0; i < 1000000; i++)
         {
-            //System.out.println(i);
+            System.out.println(i);
         }
         long first = rj.StopWatch();
         int i = 0;
@@ -646,12 +646,15 @@ public class Main {
         while(i < 1000000)
         {
             i++;
-            //System.out.println(i);
+            System.out.println(i);
         }
         long second = rj.StopWatch();
 
         System.out.println(first);
         System.out.println(second);
+        RJ rjFile = new RJ();
+        rjFile.WritetoFile(first + " milliseconds\n", "Time.txt");
+        rjFile.WritetoFile(second + " milliseconds\n", "Time.txt");
         //FILL
 
 
