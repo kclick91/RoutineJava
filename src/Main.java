@@ -655,8 +655,13 @@ public class Main {
         RJ rjFile = new RJ();
         rjFile.WritetoFile(first + " milliseconds\n", "Time.txt");
         rjFile.WritetoFile(second + " milliseconds\n", "Time.txt");
+
+
+
         //FILL
 
+        //Show Values
+        rjFile.ShowValues();
 
 
 

@@ -19,7 +19,7 @@ public class RJ {
     protected long[][] twoDimLonArray = new long[][]{{0,0}, {0,0}};
     protected double[][] twoDimArrayDoub = new double[][]{{0.0,0.0},{0.0,0.0}};
     protected String[] stringArray = new String[]{"None", "None"};
-    protected String[][] stringArrayDoub = new String[][]{{"None", "None"}, {"None", "None"}};
+    protected String[][] stringArrayTD = new String[][]{{"None", "None"}, {"None", "None"}};
     protected String name = "DEFAULT NAME";
     protected String intName = "DEFAULT INT NAME";
     protected String doubleName = "DEFAULT DOUBLE NAME";
@@ -80,7 +80,7 @@ public class RJ {
         twoDimArray = twoDArr;
         twoDimArrayDoub = twoDArrayDoub;
         stringArray = sArr;
-        stringArrayDoub = twoDSArr;
+        stringArrayTD = twoDSArr;
         lon = l;
         floArray = fArr;
         lonArray = lArr;
@@ -104,7 +104,7 @@ public class RJ {
         twoDimArray = twoDArr;
         twoDimArrayDoub = twoDArrayDoub;
         stringArray = sArr;
-        stringArrayDoub = twoDSArr;
+        stringArrayTD = twoDSArr;
         flo = fl;
         lon = l;
         floArray = fArr;
@@ -402,6 +402,18 @@ public class RJ {
         }
         return doubleFound;
     }
+    public void PrintTwoDimensionalArrayString()
+    {
+        for (int i = 0; i < stringArrayTD.length; i++)
+        {
+            for (int j = 0; j < stringArrayTD[0].length; j++)
+            {
+                System.out.print(stringArrayTD[i][j] + " ");
+            }
+            System.out.println();
+            //System.out.print("-----");
+        }
+    }
 
     public void PrintTwoDimensionalArrayInt()
     {
@@ -427,6 +439,29 @@ public class RJ {
         }
     }
 
+    public void PrintTwoDimensionalArrayFlo()
+    {
+        for (int i = 0; i < twoDimFloArray.length; i++)
+        {
+            for (int j = 0; j < twoDimFloArray[0].length; j++)
+            {
+                System.out.print(twoDimFloArray[i][j] + " ");
+            }
+            System.out.println();
+        }
+    }
+
+    public void PrintTwoDimensionalArrayLon()
+    {
+        for (int i = 0; i < twoDimLonArray.length; i++)
+        {
+            for (int j = 0; j < twoDimLonArray[0].length; j++)
+            {
+                System.out.print(twoDimLonArray[i][j] + " ");
+            }
+            System.out.println();
+        }
+    }
 
 
     public void PrintTwoDimensionalArray(int[][] arr)
@@ -478,6 +513,8 @@ public class RJ {
         }
     }
 
+
+
     public void PrintArray(int[] arr)
     {
         for (int i = 0; i < arr.length; i++)
@@ -485,6 +522,30 @@ public class RJ {
             System.out.print(arr[i] + " ");
         }
         System.out.println();
+    }
+
+    public void PrintTwoDimensionalArrayFlo(float[][] arr)
+    {
+        for (int i = 0; i < arr.length; i++)
+        {
+            for (int j = 0; j < arr[0].length; j++)
+            {
+                System.out.print(arr[i][j] + " ");
+            }
+            System.out.println();
+        }
+    }
+
+    public void PrintTwoDimensionalArray(long[][] arr)
+    {
+        for (int i = 0; i < arr.length; i++)
+        {
+            for (int j = 0; j < arr[0].length; j++)
+            {
+                System.out.print(arr[i][j] + " ");
+            }
+            System.out.println();
+        }
     }
 
     public void PrintArrayInt()
@@ -536,6 +597,24 @@ public class RJ {
         for (int i = 0; i < arr.length; i++)
         {
             System.out.print(arr[i] + " ");
+        }
+        System.out.println();
+    }
+
+    public void PrintArrayFlo()
+    {
+        for (int i = 0; i < floArray.length; i++)
+        {
+            System.out.print(floArray[i] + " ");
+        }
+        System.out.println();
+    }
+
+    public void PrintArrayLon()
+    {
+        for (int i = 0; i < lonArray.length; i++)
+        {
+            System.out.print(lonArray[i] + " ");
         }
         System.out.println();
     }
@@ -2989,24 +3068,85 @@ public class RJ {
         }
     }
 
-
     public void ShowValues()
     {
-        System.out.println("Name: " + name);
-        System.out.println("count: " + count);
-        System.out.println("intArray: ");
-        PrintArray(intArray);
-        System.out.println("doubleArray:");
-        PrintArray(doubleArray);
-        System.out.println("stringArray: ");
-        PrintArray(stringArray);
-        System.out.println("twoDimArray: " );
-        PrintTwoDimensionalArray(twoDimArray);
-        System.out.println("twoDimArrayDoub: ");
-        PrintTwoDimensionalArray(twoDimArrayDoub);
-        System.out.println("stringArrayDoub: ");
-        PrintTwoDimensionalArray(stringArrayDoub);
-        System.out.println("");
+        System.out.println(intName + ": ");
+        System.out.println(count);
+        System.out.println(doubleName + ": ");
+        System.out.println(doubl);
+        System.out.println(floatName + ": ");
+        System.out.println(flo);
+        System.out.println(longName + ": ");
+        System.out.println(lon);
+        System.out.println(name + ": ");
+        System.out.println(strin);
+        System.out.println(boolName + ": ");
+        System.out.println(bool);
+        System.out.println(intarrayName + ": ");
+        PrintArrayInt();
+        System.out.println(doubleArrayName + ": ");
+        PrintArrayDoub();
+        System.out.println(floArrayName + ": ");
+        PrintArrayFlo();
+        System.out.println(lonArrName + ": ");
+        PrintArrayLon();
+        System.out.println(twodimarrayName + ": ");
+        PrintTwoDimensionalArrayInt();
+        System.out.println(twodimarrayLonName + ": ");
+        PrintTwoDimensionalArrayLon();
+        System.out.println(twodimarrayFloName + ": ");
+        PrintTwoDimensionalArrayFlo();
+        System.out.println(twodimarrayDoubName + ": ");
+        PrintTwoDimensionalArrayDoub();
+        System.out.println(stringTwoDArrayName + ": ");
+        PrintTwoDimensionalArrayString();
+
+    }
+    //Record to text file
+    public void Record()
+    {
+        WritetoFile(intName, "RecordFile.txt");
+        System.out.println(count);
+        System.out.println(doubleName + ": ");
+        System.out.println(doubl);
+        System.out.println(floatName + ": ");
+        System.out.println(flo);
+        System.out.println(longName + ": ");
+        System.out.println(lon);
+        System.out.println(name + ": ");
+        System.out.println(strin);
+        System.out.println(boolName + ": ");
+        System.out.println(bool);
+        System.out.println(intarrayName + ": ");
+        PrintArrayInt();
+        System.out.println(doubleArrayName + ": ");
+        PrintArrayDoub();
+        System.out.println(floArrayName + ": ");
+        PrintArrayFlo();
+        System.out.println(lonArrName + ": ");
+        PrintArrayLon();
+        /*
+        System.out.println(intName + ": ");
+        System.out.println(count);
+        System.out.println(doubleName + ": ");
+        System.out.println(doubl);
+        System.out.println(floatName + ": ");
+        System.out.println(flo);
+        System.out.println(longName + ": ");
+        System.out.println(lon);
+        System.out.println(name + ": ");
+        System.out.println(strin);
+        System.out.println(boolName + ": ");
+        System.out.println(bool);
+        System.out.println(intarrayName + ": ");
+        PrintArrayInt();
+        System.out.println(doubleArrayName + ": ");
+        PrintArrayDoub();
+        System.out.println(floArrayName + ": ");
+        PrintArrayFlo();
+        System.out.println(lonArrName + ": ");
+        PrintArrayLon();
+         */
     }
 
 
