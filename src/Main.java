@@ -662,6 +662,7 @@ public class Main {
 
         //Show Values
         rjFile.ShowValues();
+        rjFile.Record();
 
 
 

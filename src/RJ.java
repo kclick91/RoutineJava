@@ -402,6 +402,7 @@ public class RJ {
         }
         return doubleFound;
     }
+    //Start of print methods
     public void PrintTwoDimensionalArrayString()
     {
         for (int i = 0; i < stringArrayTD.length; i++)
@@ -618,7 +619,7 @@ public class RJ {
         }
         System.out.println();
     }
-
+    //Start of Return Methods
     public StringBuffer ReturnArrayInt()
     {
         StringBuffer s = new StringBuffer();
@@ -650,7 +651,129 @@ public class RJ {
         s.append("\n");
         return s;
     }
+    //Continue return functions
+    /*
+    System.out.println(intarrayName + ": ");
+        PrintArrayInt();
+        System.out.println(doubleArrayName + ": ");
+        PrintArrayDoub();
+        System.out.println(floArrayName + ": ");
+        PrintArrayFlo();
+        System.out.println(lonArrName + ": ");
+        PrintArrayLon();
+        System.out.println(twodimarrayName + ": ");
+        PrintTwoDimensionalArrayInt();
+        System.out.println(twodimarrayLonName + ": ");
+        PrintTwoDimensionalArrayLon();
+        System.out.println(twodimarrayFloName + ": ");
+        PrintTwoDimensionalArrayFlo();
+        System.out.println(twodimarrayDoubName + ": ");
+        PrintTwoDimensionalArrayDoub();
+        System.out.println(stringTwoDArrayName + ": ");
+        PrintTwoDimensionalArrayString();
+     */
+    public StringBuffer ReturnArray()
+    {
+        StringBuffer s = new StringBuffer();
+        for (int i = 0; i < stringArray.length; i++)
+        {
+            s.append(stringArray[i] + " ");
+        }
+        s.append("\n");
+        return s;
+    }
 
+    public StringBuffer ReturnArrayFloat()
+    {
+        StringBuffer s = new StringBuffer();
+        for (int i = 0; i < floArray.length; i++)
+        {
+            s.append(floArray[i] + " ");
+        }
+        s.append("\n");
+        return s;
+    }
+    public StringBuffer ReturnArrayLong()
+    {
+        StringBuffer s = new StringBuffer();
+        for (int i = 0; i < lonArray.length; i++)
+        {
+            s.append(lonArray[i] + " ");
+        }
+        s.append("\n");
+        return s;
+    }
+
+    public StringBuffer ReturnArrayTDString()
+    {
+        StringBuffer s = new StringBuffer();
+        for (int i = 0; i < stringArrayTD.length; i++)
+        {
+            for (int j = 0; j < stringArrayTD[0].length; j++)
+            {
+                s.append(stringArrayTD[i][j] + " ");
+            }
+            s.append("\n");
+        }
+        s.append("\n");
+        return s;
+    }
+    public StringBuffer ReturnArrayTDInt()
+    {
+        StringBuffer s = new StringBuffer();
+        for (int i = 0; i < twoDimArray.length; i++)
+        {
+            for (int j = 0; j < twoDimArray[0].length; j++)
+            {
+                s.append(twoDimArray[i][j] + " ");
+            }
+            s.append("\n");
+        }
+        s.append("\n");
+        return s;
+    }
+    public StringBuffer ReturnArrayTDDoub()
+    {
+        StringBuffer s = new StringBuffer();
+        for (int i = 0; i < twoDimArrayDoub.length; i++)
+        {
+            for (int j = 0; j < twoDimArrayDoub[0].length; j++)
+            {
+                s.append(twoDimArrayDoub[i][j] + " ");
+            }
+            s.append("\n");
+        }
+        s.append("\n");
+        return s;
+    }
+    public StringBuffer ReturnArrayTDFloat()
+    {
+        StringBuffer s = new StringBuffer();
+        for (int i = 0; i < twoDimFloArray.length; i++)
+        {
+            for (int j = 0; j < twoDimFloArray[0].length; j++)
+            {
+                s.append(twoDimFloArray[i][j] + " ");
+            }
+            s.append("\n");
+        }
+        s.append("\n");
+        return s;
+    }
+    public StringBuffer ReturnArrayTDLong()
+    {
+        StringBuffer s = new StringBuffer();
+        for (int i = 0; i < twoDimLonArray.length; i++)
+        {
+            for (int j = 0; j < twoDimLonArray[0].length; j++)
+            {
+                s.append(twoDimLonArray[i][j] + " ");
+            }
+            s.append("\n");
+        }
+        s.append("\n");
+        return s;
+    }
     public void SortArrayAscending(int[] array)
     {
         while (IsSortedAscending(array) == false)
@@ -3105,48 +3228,41 @@ public class RJ {
     //Record to text file
     public void Record()
     {
-        WritetoFile(intName, "RecordFile.txt");
-        System.out.println(count);
-        System.out.println(doubleName + ": ");
-        System.out.println(doubl);
-        System.out.println(floatName + ": ");
-        System.out.println(flo);
-        System.out.println(longName + ": ");
-        System.out.println(lon);
-        System.out.println(name + ": ");
-        System.out.println(strin);
-        System.out.println(boolName + ": ");
-        System.out.println(bool);
-        System.out.println(intarrayName + ": ");
-        PrintArrayInt();
-        System.out.println(doubleArrayName + ": ");
-        PrintArrayDoub();
-        System.out.println(floArrayName + ": ");
-        PrintArrayFlo();
-        System.out.println(lonArrName + ": ");
-        PrintArrayLon();
-        /*
-        System.out.println(intName + ": ");
-        System.out.println(count);
-        System.out.println(doubleName + ": ");
-        System.out.println(doubl);
-        System.out.println(floatName + ": ");
-        System.out.println(flo);
-        System.out.println(longName + ": ");
-        System.out.println(lon);
-        System.out.println(name + ": ");
-        System.out.println(strin);
-        System.out.println(boolName + ": ");
-        System.out.println(bool);
-        System.out.println(intarrayName + ": ");
-        PrintArrayInt();
-        System.out.println(doubleArrayName + ": ");
-        PrintArrayDoub();
-        System.out.println(floArrayName + ": ");
-        PrintArrayFlo();
-        System.out.println(lonArrName + ": ");
-        PrintArrayLon();
-         */
+        WritetoFile(intName + ": \n", "RecordFile.txt");
+        WritetoFile(String.valueOf(count) + "\n", "RecordFile.txt");
+        WritetoFile(doubleName + ": \n", "RecordFile.txt");
+        WritetoFile(String.valueOf(doubl) + "\n", "RecordFile.txt");
+        WritetoFile(floatName + ": \n", "RecordFile.txt");
+        WritetoFile(String.valueOf(flo) + "\n", "RecordFile.txt");
+        WritetoFile(longName + ": \n", "RecordFile.txt");
+        WritetoFile(String.valueOf(lon) + "\n", "RecordFile.txt");
+        WritetoFile(name + ": \n", "RecordFile.txt");
+        WritetoFile(strin + "\n", "RecordFile.txt");
+        WritetoFile(boolName + ": \n", "RecordFile.txt");
+        WritetoFile(String.valueOf(bool) + "\n", "RecordFile.txt");
+        WritetoFile(intarrayName + ": ", "RecordFile.txt");
+        WritetoFile(ReturnArrayInt().toString(), "RecordFile.txt");
+        WritetoFile(doubleArrayName + ": ", "RecordFile.txt");
+        WritetoFile(ReturnArrayDoub().toString(), "RecordFile.txt");
+        WritetoFile(floArrayName + ": ", "RecordFile.txt");
+        WritetoFile(ReturnArrayFloat().toString(), "RecordFile.txt");
+        WritetoFile(lonArrName + ": ", "RecordFile.txt");
+        WritetoFile(ReturnArrayLong().toString(), "RecordFile.txt");
+        WritetoFile(twodimarrayName + ": ", "RecordFile.txt");
+        WritetoFile(ReturnArrayTDInt().toString(), "RecordFile.txt");
+        WritetoFile(twodimarrayLonName + ": ", "RecordFile.txt");
+        WritetoFile(ReturnArrayTDLong().toString(), "RecordFile.txt");
+        WritetoFile(twodimarrayDoubName + ": ", "RecordFile.txt");
+        WritetoFile(ReturnArrayTDDoub().toString(), "RecordFile.txt");
+        WritetoFile(twodimarrayFloName + ": ", "RecordFile.txt");
+        WritetoFile(ReturnArrayTDFloat().toString(), "RecordFile.txt");
+        WritetoFile(stringTwoDArrayName + ": ", "RecordFile.txt");
+        WritetoFile(ReturnArrayTDString().toString(), "RecordFile.txt");
+
+
+
+
+
     }
 
 
