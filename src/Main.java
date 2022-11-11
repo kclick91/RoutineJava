@@ -569,9 +569,12 @@ public class Main {
 
         rjRJ.PrintGraphRJ(rjList);
         */
-        RJ usingRJClass = new RJ(0, 0.0, 0.0f, "", true, new int[]{56,89,32,34,55},new double[]{3.1, 3.2, 3.6,1.1}, new int[][]{{0,0},{0,0}}, new double[][]{{0.0,0.0},{0.0,0.0}}, new String[]{"Working memory and the mind seem to have spatial dimensions.", "Imagining a line of 9 small solid circles is harder than imagining 3 rows of 3 small solid circles.", "This is " +
+
+
+        /*RJ usingRJClass = new RJ(0, 0.0, 0.0f, "", true, new int[]{56,89,32,34,55},new double[]{3.1, 3.2, 3.6,1.1}, new int[][]{{0,0},{0,0}}, new double[][]{{0.0,0.0},{0.0,0.0}}, new String[]{"Working memory and the mind seem to have spatial dimensions.", "Imagining a line of 9 small solid circles is harder than imagining 3 rows of 3 small solid circles.", "This is " +
             "as if there is limited space in each direction in the mind."},
-            new String[][]{{"", ""},{"", ""}}, 0L, new float[]{0.0f, 0.0f},new long[]{0L, 0L}, new float[][]{{0.0f, 0.0f},{0.0f, 0.0f}},new long[][]{{0L, 0L},{0L, 0L}});
+            new String[][]{{"", ""},{"", ""}}, 0L, new float[]{0.0f, 0.0f},new long[]{0L, 0L}, new float[][]{{0.0f, 0.0f},{0.0f, 0.0f}},new long[][]{{0L, 0L},{0L, 0L}});*/
+
 
         /*System.out.println("Trees/Chains");
 
@@ -662,7 +665,13 @@ public class Main {
 
         //Show Values
         rjFile.ShowValues();
-        rjFile.Record();
+        rjFile.Record("RecordFile.txt");
+
+        RJ usingRJClass = new RJ(0, 0.0, 0.0f, "", true, new int[]{56,89,32,34,55},new double[]{3.1, 3.2, 3.6,1.1}, new int[][]{{0,0},{0,0}}, new double[][]{{0.0,0.0},{0.0,0.0}}, new String[]{"Working memory and the mind seem to have spatial dimensions.", "Imagining a line of 9 small solid circles is harder than imagining 3 rows of 3 small solid circles.", "This is " +
+                "as if there is limited space in each direction in the mind."},
+                new String[][]{{"", ""},{"", ""}}, 0L, new float[]{0.0f, 0.0f},new long[]{0L, 0L}, new float[][]{{0.0f, 0.0f},{0.0f, 0.0f}},new long[][]{{0L, 0L},{0L, 0L}});
+        usingRJClass.Record("Data_from_using_RJClassObject.txt");
+
 
 
 

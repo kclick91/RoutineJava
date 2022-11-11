@@ -72,10 +72,11 @@ public class RJ {
               String[][] twoDSArr, long l, float[] fArr, long[] lArr, float[][] fTDArr, long[][] lTDArr)
     {
         count = c;
-        doubl = doubl;
+        doubl = doub;
         flo = f;
         name = s;
         bool = b;
+        intArray = iArray;
         doubleArray = dArray;
         twoDimArray = twoDArr;
         twoDimArrayDoub = twoDArrayDoub;
@@ -96,10 +97,11 @@ public class RJ {
             , String twoDimArrayN, String twoDimArrayDoubleN, String arrayN, String arrayTwoDN, String arrayTwoDFloatN, String arrayTwoDLongN)
     {
         count = c;
-        doubl = doubl;
+        doubl = doub;
         flo = f;
         name = s;
         bool = b;
+        intArray = iArray;
         doubleArray = dArray;
         twoDimArray = twoDArr;
         twoDimArrayDoub = twoDArrayDoub;
@@ -3226,38 +3228,39 @@ public class RJ {
 
     }
     //Record to text file
-    public void Record()
+    public void Record(String recordFileTXT)
     {
-        WritetoFile(intName + ": \n", "RecordFile.txt");
-        WritetoFile(String.valueOf(count) + "\n", "RecordFile.txt");
-        WritetoFile(doubleName + ": \n", "RecordFile.txt");
-        WritetoFile(String.valueOf(doubl) + "\n", "RecordFile.txt");
-        WritetoFile(floatName + ": \n", "RecordFile.txt");
-        WritetoFile(String.valueOf(flo) + "\n", "RecordFile.txt");
-        WritetoFile(longName + ": \n", "RecordFile.txt");
-        WritetoFile(String.valueOf(lon) + "\n", "RecordFile.txt");
-        WritetoFile(name + ": \n", "RecordFile.txt");
-        WritetoFile(strin + "\n", "RecordFile.txt");
-        WritetoFile(boolName + ": \n", "RecordFile.txt");
-        WritetoFile(String.valueOf(bool) + "\n", "RecordFile.txt");
-        WritetoFile(intarrayName + ": ", "RecordFile.txt");
-        WritetoFile(ReturnArrayInt().toString(), "RecordFile.txt");
-        WritetoFile(doubleArrayName + ": ", "RecordFile.txt");
-        WritetoFile(ReturnArrayDoub().toString(), "RecordFile.txt");
-        WritetoFile(floArrayName + ": ", "RecordFile.txt");
-        WritetoFile(ReturnArrayFloat().toString(), "RecordFile.txt");
-        WritetoFile(lonArrName + ": ", "RecordFile.txt");
-        WritetoFile(ReturnArrayLong().toString(), "RecordFile.txt");
-        WritetoFile(twodimarrayName + ": ", "RecordFile.txt");
-        WritetoFile(ReturnArrayTDInt().toString(), "RecordFile.txt");
-        WritetoFile(twodimarrayLonName + ": ", "RecordFile.txt");
-        WritetoFile(ReturnArrayTDLong().toString(), "RecordFile.txt");
-        WritetoFile(twodimarrayDoubName + ": ", "RecordFile.txt");
-        WritetoFile(ReturnArrayTDDoub().toString(), "RecordFile.txt");
-        WritetoFile(twodimarrayFloName + ": ", "RecordFile.txt");
-        WritetoFile(ReturnArrayTDFloat().toString(), "RecordFile.txt");
-        WritetoFile(stringTwoDArrayName + ": ", "RecordFile.txt");
-        WritetoFile(ReturnArrayTDString().toString(), "RecordFile.txt");
+        WritetoFile(intName + ": \n", recordFileTXT);
+        WritetoFile(String.valueOf(count) + "\n", recordFileTXT);
+        WritetoFile(doubleName + ": \n", recordFileTXT);
+        WritetoFile(String.valueOf(doubl) + "\n", recordFileTXT);
+        WritetoFile(floatName + ": \n", recordFileTXT);
+        WritetoFile(String.valueOf(flo) + "\n", recordFileTXT);
+        WritetoFile(longName + ": \n", recordFileTXT);
+        WritetoFile(String.valueOf(lon) + "\n", recordFileTXT);
+        WritetoFile(name + ": \n", recordFileTXT);
+        WritetoFile(strin + "\n", recordFileTXT);
+        WritetoFile(boolName + ": \n", recordFileTXT);
+        WritetoFile(String.valueOf(bool) + "\n", recordFileTXT);
+        WritetoFile(intarrayName + ": ", recordFileTXT);
+        WritetoFile(ReturnArrayInt().toString(), recordFileTXT);
+        WritetoFile(doubleArrayName + ": ", recordFileTXT);
+        WritetoFile(ReturnArrayDoub().toString(), recordFileTXT);
+        WritetoFile(floArrayName + ": ", recordFileTXT);
+        WritetoFile(ReturnArrayFloat().toString(), recordFileTXT);
+        WritetoFile(lonArrName + ": ", recordFileTXT);
+        WritetoFile(ReturnArrayLong().toString(), recordFileTXT);
+        WritetoFile(twodimarrayName + ": ", recordFileTXT);
+        WritetoFile(ReturnArrayTDInt().toString(), recordFileTXT);
+        WritetoFile(twodimarrayLonName + ": ", recordFileTXT);
+        WritetoFile(ReturnArrayTDLong().toString(), recordFileTXT);
+        WritetoFile(twodimarrayDoubName + ": ", recordFileTXT);
+        WritetoFile(ReturnArrayTDDoub().toString(), recordFileTXT);
+        WritetoFile(twodimarrayFloName + ": ", recordFileTXT);
+        WritetoFile(ReturnArrayTDFloat().toString(), recordFileTXT);
+        WritetoFile(stringTwoDArrayName + ": ", recordFileTXT);
+        WritetoFile(ReturnArrayTDString().toString(), recordFileTXT);
+        System.out.println("Data written to " + recordFileTXT);
 
 
 
