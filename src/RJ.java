@@ -190,13 +190,22 @@ public class RJ {
         independent = i;
         dependent = d;
     }
-    public void SetIndependent(int i)
+    public void SetIndependent(double i)
     {
         independent = i;
     }
-    public void SetDependent(int d)
+
+    //Polynomial
+    public double SetandReturnDependent(int i, int[] polyNomValues)
     {
-        dependent = d;
+       int length = polyNomValues.length;
+       double sum = 0;
+       for (int j = length - 1; j >= 0; j--)
+       {
+           sum = sum + (polyNomValues[length - (j + 1)] * Math.pow(i, j));
+       }
+       dependent = sum;
+       return sum;
     }
 
     public void AddPrevRJ(RJ rj)

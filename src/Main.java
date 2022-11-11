@@ -672,6 +672,16 @@ public class Main {
                 new String[][]{{"", ""},{"", ""}}, 0L, new float[]{0.0f, 0.0f},new long[]{0L, 0L}, new float[][]{{0.0f, 0.0f},{0.0f, 0.0f}},new long[][]{{0L, 0L},{0L, 0L}});
         usingRJClass.Record("Data_from_using_RJClassObject.txt");
 
+        //Test polynomial
+        int[] array = new int[]{4,6,3};
+        RJ iD = new RJ();
+        System.out.println(iD.SetandReturnDependent(3, array));//(4 * (3^2)) + (6 * (3^1)) + (3*(3^0)) = 36 + 18 + 3 = 57
+        int[] arrayTwo = new int[]{4,7,1,2};
+        System.out.println(iD.SetandReturnDependent(2, arrayTwo));//(4 * (2^3)) + (7 * (2^2)) + (1*(2^1)) + (2 * (2^0)) = 32 + 28 + 2 + 2 = 64
+
+
+
+
 
 
 
