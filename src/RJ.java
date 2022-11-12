@@ -196,17 +196,32 @@ public class RJ {
     }
 
     //Polynomial
-    public double SetandReturnDependent(int i, int[] polyNomValues)
+    public double Polynomial(int i, int[] polyNomCoeff)
     {
-       int length = polyNomValues.length;
+       int length = polyNomCoeff.length;
        double sum = 0;
        for (int j = length - 1; j >= 0; j--)
        {
-           sum = sum + (polyNomValues[length - (j + 1)] * Math.pow(i, j));
+           sum = sum + (polyNomCoeff[length - (j + 1)] * Math.pow(i, j));
        }
        dependent = sum;
        return sum;
     }
+
+    public double Polynomial(double i, double[] polyNomCoeff)
+    {
+        int length = polyNomCoeff.length;
+        double sum = 0;
+        for (int j = length - 1; j >= 0; j--)
+        {
+            sum = sum + (polyNomCoeff[length - (j + 1)] * Math.pow(i, j));
+        }
+        dependent = sum;
+        return sum;
+    }
+
+
+
 
     public void AddPrevRJ(RJ rj)
     {
@@ -491,6 +506,17 @@ public class RJ {
     }
 
     public void PrintTwoDimensionalArray(double[][] arr)
+    {
+        for (int i = 0; i < arr.length; i++)
+        {
+            for (int j = 0; j < arr[0].length; j++)
+            {
+                System.out.print(arr[i][j] + " ");
+            }
+            System.out.println();
+        }
+    }
+    public void PrintTwoDimensionalArray(float[][] arr)
     {
         for (int i = 0; i < arr.length; i++)
         {
@@ -2418,7 +2444,7 @@ public class RJ {
 
     //multiply matrices
 
-    public int[][] Multiply(int[][] first, int[][] second)
+    public int[][] MultiplyMat(int[][] first, int[][] second)
     {
         int one = first[0].length;
         int two = second.length;
@@ -2484,6 +2510,139 @@ public class RJ {
 
     }
 
+    //TEST
+    //TEST
+    //TEST
+    public double[][] MultiplyMatDoub(double[][] first, double[][] second)
+    {
+        int one = first[0].length;
+        int two = second.length;
+        System.out.println("First: " + one);
+        System.out.println("Second " + two);
+
+
+
+        double[][] mult = new double[first.length][second[0].length];
+        for (int i = 0; i < first.length; i++)
+        {
+            for (int j = 0; j < second[0].length; j++)
+            {
+                mult[i][j] = 0;
+            }
+
+
+        }
+        PrintTwoDimensionalArray(first);
+        PrintTwoDimensionalArray(second);
+        if (one == two)
+        {
+            System.out.println("One equals Two.");
+            PrintTwoDimensionalArray(mult);
+            double[][] returnedArray = new double[first[0].length][second.length];
+            System.out.println("first.length:" + first.length);
+            System.out.println("first[0].length:" + first[0].length);
+            System.out.println("second.length:" + second.length);
+            System.out.println("second[0].length:" + second[0].length);
+
+            for (int i = 0; i < first.length; i++)
+            {
+
+                for (int j = 0; j < second[0].length; j++)
+                {
+                    double collectedSum = 0;
+                    int count = 0;
+
+                    while(count < first[0].length)//or second.length
+                    {
+                        collectedSum = collectedSum + (first[i][count] * second[count][j]);
+                        count = count + 1;
+                        System.out.println(count);
+                    }
+                    System.out.println("Collected Sum:" + collectedSum);
+                    mult[i][j] = collectedSum;
+
+
+
+                }
+                System.out.println();
+
+            }
+
+
+
+        }
+        else
+        {
+            System.out.println("Wrong dimensions");
+        }
+        return mult;
+
+    }
+    public float[][] MultiplyMatFloat(float[][] first, float[][] second)
+    {
+        int one = first[0].length;
+        int two = second.length;
+        System.out.println("First: " + one);
+        System.out.println("Second " + two);
+
+
+
+        float[][] mult = new float[first.length][second[0].length];
+        for (int i = 0; i < first.length; i++)
+        {
+            for (int j = 0; j < second[0].length; j++)
+            {
+                mult[i][j] = 0;
+            }
+
+
+        }
+        PrintTwoDimensionalArray(first);
+        PrintTwoDimensionalArray(second);
+        if (one == two)
+        {
+            System.out.println("One equals Two.");
+            PrintTwoDimensionalArray(mult);
+            float[][] returnedArray = new float[first[0].length][second.length];
+            System.out.println("first.length:" + first.length);
+            System.out.println("first[0].length:" + first[0].length);
+            System.out.println("second.length:" + second.length);
+            System.out.println("second[0].length:" + second[0].length);
+
+            for (int i = 0; i < first.length; i++)
+            {
+
+                for (int j = 0; j < second[0].length; j++)
+                {
+                    float collectedSum = 0;
+                    int count = 0;
+
+                    while(count < first[0].length)//or second.length
+                    {
+                        collectedSum = collectedSum + (first[i][count] * second[count][j]);
+                        count = count + 1;
+                        System.out.println(count);
+                    }
+                    System.out.println("Collected Sum:" + collectedSum);
+                    mult[i][j] = collectedSum;
+
+
+
+                }
+                System.out.println();
+
+            }
+
+
+
+        }
+        else
+        {
+            System.out.println("Wrong dimensions");
+        }
+        return mult;
+
+    }
     public int[][] MultiplyInt(int[][] first)
     {
         int one = first[0].length;

@@ -408,19 +408,19 @@ public class Main {
 
         System.out.println("Multiply 2D Arrays");
 
-        //sameObject.PrintTwoDimensionalArray(sameObject.Multiply(new int[][]{{2,2},{2,2}}, new int[][]{{2,2}, {2,2}}));
+        //sameObject.PrintTwoDimensionalArray(sameObject.MultiplyMat(new int[][]{{2,2},{2,2}}, new int[][]{{2,2}, {2,2}}));
 
 
         //int[][] one = new int[][]{{2,3,3}, {4,1,1}};
         //int[][] two = new int[][]{{2,3,3}, {4,1,1}, {3,7,7}};
-        //sameObject.Multiply(one, two);
+        //sameObject.MultiplyMat(one, two);
 
 
-        sameObject.PrintTwoDimensionalArray(sameObject.Multiply(new int[][]{{1,5},{3,4}},new int[][]{{3,2}, {4,1}}));
+        sameObject.PrintTwoDimensionalArray(sameObject.MultiplyMat(new int[][]{{1,5},{3,4}},new int[][]{{3,2}, {4,1}}));
 
-        sameObject.PrintTwoDimensionalArray(sameObject.Multiply(new int[][]{{1,5,4},{3,4,0}},new int[][]{{3,2}, {4,1}, {1,1}}));
+        sameObject.PrintTwoDimensionalArray(sameObject.MultiplyMat(new int[][]{{1,5,4},{3,4,0}},new int[][]{{3,2}, {4,1}, {1,1}}));
 
-        sameObject.PrintTwoDimensionalArray(sameObject.Multiply(new int[][]{{6,5},{8,4}},new int[][]{{3,2}, {4,1}}));
+        sameObject.PrintTwoDimensionalArray(sameObject.MultiplyMat(new int[][]{{6,5},{8,4}},new int[][]{{3,2}, {4,1}}));
 
         sameObject.PrintTwoDimensionalArray(sameObject.AddTwoDimensionalArr(new int[][]{{9,8},{3,3}}, new int[][]{{9,7}, {2,1}}));
 
@@ -675,9 +675,18 @@ public class Main {
         //Test polynomial
         int[] array = new int[]{4,6,3};
         RJ iD = new RJ();
-        System.out.println(iD.SetandReturnDependent(3, array));//(4 * (3^2)) + (6 * (3^1)) + (3*(3^0)) = 36 + 18 + 3 = 57
+        System.out.println(iD.Polynomial(3, array));//(4 * (3^2)) + (6 * (3^1)) + (3*(3^0)) = 36 + 18 + 3 = 57
         int[] arrayTwo = new int[]{4,7,1,2};
-        System.out.println(iD.SetandReturnDependent(2, arrayTwo));//(4 * (2^3)) + (7 * (2^2)) + (1*(2^1)) + (2 * (2^0)) = 32 + 28 + 2 + 2 = 64
+        System.out.println(iD.Polynomial(2, arrayTwo));//(4 * (2^3)) + (7 * (2^2)) + (1*(2^1)) + (2 * (2^0)) = 32 + 28 + 2 + 2 = 64
+
+
+        RJ matT = new RJ();
+        matT.PrintTwoDimensionalArray(matT.MultiplyMat(new int[][]{{2, 2}}, new int[][]{{1}, {3}}));//should be 8
+        matT.PrintTwoDimensionalArray(matT.MultiplyMat(new int[][]{{2, 3}, {1, 1}}, new int[][]{{4},{4}}));//should be {{20}, {8}}
+
+
+
+
 
 
 
