@@ -1867,12 +1867,14 @@ public class RJ {
         twoDimArrayDoub[locOne][locTwo] = val;
     }
 
+    public void ReplaceSpecificTD(float val , int locOne, int locTwo)
+    {
+        twoDimFloArray[locOne][locTwo] = val;
+    }
+
 
     //Two dimensional string array
-    public void ReplaceSpecificTD(String val, int locOne, int locTwo)
-    {
-
-    }
+    public void ReplaceSpecificTD(String val, int locOne, int locTwo) { stringArrayTD[locOne][locTwo] = val; }
 
     public void ReplaceSpecific(double val, int loc)
     {
@@ -1884,6 +1886,26 @@ public class RJ {
         doubArr[loc] = val;
     }
 
+    public void ReplaceSpecific(float val, int loc)
+    {
+        floArray[loc] = val;
+    }
+
+    public void ReplaceSpecific(float[] fArr,float val, int loc)
+    {
+        fArr[loc] = val;
+    }
+
+    public void ReplaceSpecific(long val, int loc)
+    {
+        lonArray[loc] = val;
+    }
+
+    public void ReplaceSpecific(long[] lArr,long val, int loc)
+    {
+        lArr[loc] = val;
+    }
+
     public void ReplaceSpecific(String val, int loc)
     {
         stringArray[loc] = val;
@@ -1892,6 +1914,23 @@ public class RJ {
     public void ReplaceSpecific(String[] stringArr, String val, int loc)
     {
         stringArr[loc] = val;
+    }
+
+    public int[][] ReplaceSpecific(int value, int first, int second, int[][] intArrTD) {
+        intArrTD[first][second] = value;
+        return intArrTD;
+    }
+    public double[][] ReplaceSpecific(double value, int first, int second, double[][] doubArrTD) {
+        doubArrTD[first][second] = value;
+        return doubArrTD;
+    }
+    public float[][] ReplaceSpecific(float value, int first, int second, float[][]  floArrTD) {
+        floArrTD[first][second] = value;
+        return floArrTD;
+    }
+    public long[][] ReplaceSpecific(long value, int first, int second, long[][] lonArrTD) {
+        lonArrTD[first][second] = value;
+        return lonArrTD;
     }
 
     //Shift one over and insert
