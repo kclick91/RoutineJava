@@ -1366,6 +1366,8 @@ public class RJ {
         twoDimArrayDoub = arr;
     }
 
+    public void SetStringTwo(String[][] arr){stringArrayTD = arr;}
+
     public int GetCount()
     {
         return count;
