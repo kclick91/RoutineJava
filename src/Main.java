@@ -684,6 +684,8 @@ public class Main {
         matT.PrintTwoDimensionalArray(matT.MultiplyMat(new int[][]{{2, 2}}, new int[][]{{1}, {3}}));//should be 8
         matT.PrintTwoDimensionalArray(matT.MultiplyMat(new int[][]{{2, 3}, {1, 1}}, new int[][]{{4},{4}}));//should be {{20}, {8}}
 
+
+
         //Replace Specific
         RJ testRS = new RJ();
         int[] test = new int[]{3,3,1,3};
@@ -692,6 +694,8 @@ public class Main {
         int[][] testTD = new int[][]{{4,4,4}, {3,3,3}};
         testRS.ReplaceSpecific(5, 1, 2, testTD);
         testRS.PrintTwoDimensionalArray(testTD);
+
+
 
 
 
