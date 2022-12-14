@@ -696,6 +696,14 @@ public class Main {
         testRS.PrintTwoDimensionalArray(testTD);
 
 
+        System.out.println(testRS.ViewSpecific(3, new int[]{5,5,8,8,6,1}));//8
+        System.out.println(testRS.ViewSpecificDoub(3, new double[]{5.1,5.5,8.3,8.2,6.0,1.9}));//8.2
+
+
+
+
+
+
 
 
 

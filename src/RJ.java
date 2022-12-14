@@ -299,6 +299,81 @@ public class RJ {
         return doubleArray[doubleArray.length - 1];
     }
 
+    //View specific
+
+    public int ViewSpecific(int ind)
+    {
+        return intArray[ind];
+    }
+
+    public double ViewSpecificDoub(int ind)
+    {
+        return doubleArray[ind];
+    }
+    public float ViewSpecificFlo(int ind)
+    {
+        return floArray[ind];
+    }
+    public String ViewSpecificStr(int ind)
+    {
+        return stringArray[ind];
+    }
+    public int ViewSpecificIntTD(int ind, int indTwo)
+    {
+        return twoDimArray[ind][indTwo];
+    }
+    public double ViewSpecificDoubTD(int ind, int indTwo)
+    {
+        return twoDimArrayDoub[ind][indTwo];
+    }
+    public float ViewSpecificFlo(int ind, int indTwo)
+    {
+        return twoDimFloArray[ind][indTwo];
+    }
+    public String ViewSpecificStr(int ind, int indTwo)
+    {
+        return stringArrayTD[ind][indTwo];
+    }
+
+    //Take arrays as argument
+    public int ViewSpecific(int ind, int[] newInt)
+    {
+        return newInt[ind];
+    }
+
+    public double ViewSpecificDoub(int ind, double[] newDoub)
+    {
+        return newDoub[ind];
+    }
+    public float ViewSpecificFlo(int ind, float[] newFlo)
+    {
+        return newFlo[ind];
+    }
+    public String ViewSpecificStr(int ind, String[] newStr)
+    {
+        return newStr[ind];
+    }
+    public int ViewSpecificIntTD(int ind, int indTwo, int[][] newIntTD)
+    {
+        return newIntTD[ind][indTwo];
+    }
+    public double ViewSpecificDoubTD(int ind, int indTwo, double[][] newDoubTD)
+    {
+        return newDoubTD[ind][indTwo];
+    }
+    public float ViewSpecificFlo(int ind, int indTwo, float[][] newFloTD)
+    {
+        return newFloTD[ind][indTwo];
+    }
+    public String ViewSpecificStr(int ind, int indTwo, String[][] newStrTD)
+    {
+        return newStrTD[ind][indTwo];
+    }
+
+
+
+
+
 
 
     public boolean SearchArray(int[] arr,int number, int min, int max, int increment)
